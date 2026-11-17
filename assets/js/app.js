@@ -546,7 +546,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* ------------------------------------------------------------------------
-     7. Contact & Comments Form (comments.html) — FormSubmit AJAX
+     7. Contact & Comments Form (comments.html) — FormSubmit AJAX + Fallback
      ------------------------------------------------------------------------ */
   const contactForm = document.getElementById('contact-form');
   if (contactForm) {
@@ -554,11 +554,29 @@ document.addEventListener('DOMContentLoaded', () => {
     const emailInput = document.getElementById('contact-email');
     const msgInput = document.getElementById('contact-message');
     const honeyInput = contactForm.querySelector('input[name="_honey"]');
+    const nextInput = contactForm.querySelector('input[name="_next"]');
     const errName = document.getElementById('error-name');
     const errEmail = document.getElementById('error-email');
     const errMsg = document.getElementById('error-message');
     const statusBox = document.getElementById('form-status');
+    const fallbackBar = document.getElementById('form-fallback-bar');
+    const fallbackBtn = document.getElementById('form-fallback-btn');
     const submitBtn = document.getElementById('contact-submit');
+
+    // Keep _next pointing cleanly back to comments.html?sent=1 on HTTP/HTTPS
+    if (nextInput && window.location.protocol !== 'file:') {
+      nextInput.value = `${window.location.origin}${window.location.pathname}?sent=1`;
+    }
+
+    // Show success banner if redirected back from standard FormSubmit fallback
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('sent') === '1') {
+      statusBox.className = 'form-status success';
+      statusBox.textContent = t('form_success_msg');
+      if (window.history && window.history.replaceState) {
+        window.history.replaceState({}, document.title, window.location.pathname);
+      }
+    }
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -602,6 +620,18 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
+    // Direct HTML POST fallback handler (bypasses AJAX blockers)
+    if (fallbackBtn) {
+      fallbackBtn.addEventListener('click', () => {
+        if (!validateForm()) return;
+        // Disable blank optional email input so FormSubmit never tries to validate ""
+        if (!emailInput.value.trim()) {
+          emailInput.disabled = true;
+        }
+        contactForm.submit();
+      });
+    }
+
     contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
 
@@ -612,12 +642,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
       statusBox.className = 'form-status';
       statusBox.textContent = '';
+      if (fallbackBar) fallbackBar.classList.remove('visible');
 
       if (!validateForm()) return;
 
       // FormSubmit requires HTTP/HTTPS origin
       if (window.location.protocol === 'file:') {
-        statusBox.className = 'form-status error';
+        statusBox.className = 'form-status warning';
         statusBox.textContent = t('form_error_local');
         return;
       }
@@ -627,14 +658,18 @@ document.addEventListener('DOMContentLoaded', () => {
       if (submitLabel) submitLabel.textContent = t('form_sending');
 
       try {
+        // CRITICAL: Only include `email` when actually provided; FormSubmit rejects non-email strings
         const payload = {
           name: nameInput.value.trim(),
-          email: emailInput.value.trim() || 'Not provided',
           message: msgInput.value.trim(),
           _subject: 'رسالة جديدة من منصة بودكاستك (Podcastak)',
           _template: 'table',
           _captcha: 'false'
         };
+        const emailVal = emailInput.value.trim();
+        if (emailVal) {
+          payload.email = emailVal;
+        }
 
         const response = await fetch('https://formsubmit.co/ajax/moazaldebawy@gmail.com', {
           method: 'POST',
@@ -645,17 +680,29 @@ document.addEventListener('DOMContentLoaded', () => {
           body: JSON.stringify(payload)
         });
 
-        const result = await response.json();
+        let result = {};
+        try {
+          result = await response.json();
+        } catch (_) {
+          result = {};
+        }
+
+        const rawMsg = String(result.message || '').toLowerCase();
+
         if (response.ok && (result.success === 'true' || result.success === true)) {
           statusBox.className = 'form-status success';
           statusBox.textContent = t('form_success_msg');
           contactForm.reset();
+        } else if (rawMsg.includes('activat') || rawMsg.includes('confirm')) {
+          statusBox.className = 'form-status warning';
+          statusBox.textContent = t('form_activation_msg');
         } else {
-          throw new Error(result.message || 'Submission failed');
+          throw new Error(result.message || `HTTP ${response.status}`);
         }
       } catch (err) {
         statusBox.className = 'form-status error';
         statusBox.textContent = t('form_error_generic');
+        if (fallbackBar) fallbackBar.classList.add('visible');
       } finally {
         submitBtn.disabled = false;
         if (submitLabel) submitLabel.textContent = t('form_submit');
