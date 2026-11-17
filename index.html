@@ -1,55 +1,78 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar" dir="rtl" data-theme="dark">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>بودكاستك | دليلك لتطوير العقل وبناء الفهم الديني</title>
-  <meta name="description" content="منصة تعليمية وتربوية تضم أفضل دروس البودكاست وتطوير الذات والدين والكتب برعاية معاذ مصطفى الديباوي." />
+  <title data-i18n="page_title_home">بودكاستك | منصة للتعلم والوعي والفهم وتطوير النفس</title>
+  <meta name="description" content="بودكاستك: منصة للتعلم والوعي والفهم وتطوير النفس. تصفح وشاهد دروس تطوير الذات والصحة النفسية والدراسات الإسلامية والوعي العام مباشرة." />
   <meta name="theme-color" content="#0B0F19" />
 
   <!-- Open Graph / Meta -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="بودكاستك | أهلاً بكم في بودكاستك" />
-  <meta property="og:description" content="حصيلة سنتين من الاستماع لأفضل حلقات البودكاست في تطوير النفس والعقل وبناء الفهم الديني الصحيح." />
+  <meta property="og:title" content="بودكاستك | منصة للتعلم والوعي والفهم وتطوير النفس" />
+  <meta property="og:description" content="منصة تعليمية وتوعوية تجمع أهم دروس تطوير النفس، الفهم الديني الواعي، المهارات الحياتية، والكتب المختارة." />
+
+  <!-- Prevent theme/direction flash -->
+  <script>
+    (function(){
+      var t = localStorage.getItem('podcastak_theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', t);
+      var l = localStorage.getItem('podcastak_lang') || 'ar';
+      document.documentElement.lang = l;
+      document.documentElement.dir = l === 'en' ? 'ltr' : 'rtl';
+    })();
+  </script>
 
   <!-- Typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Core Stylesheet -->
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
-<body>
-  <!-- Accessibility Skip Link -->
-  <a href="#main-content" class="skip-link">تخطي إلى المحتوى الرئيسي</a>
+<body data-page="home">
+  <a href="#main-content" class="skip-link" data-i18n="skip_link">تخطي إلى المحتوى الرئيسي</a>
 
   <!-- Header & Navigation -->
   <header class="site-header">
     <div class="container nav-wrap">
-      <a href="index.html" class="brand-logo" aria-label="الصفحة الرئيسية لبودكاستك">
+      <a href="index.html" class="brand-logo" aria-label="بودكاستك">
         <span class="logo-dot" aria-hidden="true"></span>
-        <span>بودكاستك</span>
+        <span data-i18n="brand_name">بودكاستك</span>
       </a>
 
       <!-- Desktop Nav -->
-      <nav aria-label="التنقل الرئيسي">
+      <nav class="desktop-nav" aria-label="التنقل الرئيسي">
         <ul class="nav-links">
-          <li><a href="index.html" class="nav-item active">الرئيسية</a></li>
-          <li><a href="left-sidebar.html" class="nav-item">نصائح ومقالات</a></li>
-          <li><a href="right-sidebar.html" class="nav-item">بودكاست إيه المشكلة</a></li>
-          <li><a href="no-sidebar.html" class="nav-item">كتب مختارة</a></li>
+          <li><a href="index.html" class="nav-item active" data-i18n="nav_home">الرئيسية</a></li>
+          <li><a href="#self-dev" class="nav-item" data-i18n="nav_self_dev">تطوير الذات</a></li>
+          <li><a href="#moaz" class="nav-item" data-i18n="nav_islamic">دروس دينية</a></li>
+          <li><a href="left-sidebar.html" class="nav-item" data-i18n="nav_tips">نصائح ومقالات</a></li>
+          <li><a href="right-sidebar.html" class="nav-item" data-i18n="nav_podcast">بودكاست</a></li>
+          <li><a href="no-sidebar.html" class="nav-item" data-i18n="nav_books">كتب</a></li>
+          <li><a href="comments.html" class="nav-item" data-i18n="nav_comments">التواصل والتعليقات</a></li>
         </ul>
       </nav>
 
-      <!-- Mobile Hamburger Button -->
-      <button class="mobile-nav-toggle" aria-label="فتح قائمة التنقل" aria-expanded="false">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <line x1="3" y1="12" x2="21" y2="12"></line>
-          <line x1="3" y1="6" x2="21" y2="6"></line>
-          <line x1="3" y1="18" x2="21" y2="18"></line>
-        </svg>
-      </button>
+      <!-- Language, Theme & Mobile Menu Controls -->
+      <div class="header-controls">
+        <button type="button" class="control-btn lang-toggle" aria-label="تغيير اللغة / Switch language">
+          <span class="lang-flag">🇬🇧</span>
+          <span class="lang-label-text">EN</span>
+        </button>
+        <button type="button" class="control-btn theme-toggle" aria-label="تبديل المظهر / Toggle theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button type="button" class="mobile-nav-toggle" aria-label="فتح قائمة التنقل" aria-expanded="false">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -58,21 +81,34 @@
     <div class="mobile-drawer-header">
       <div class="brand-logo">
         <span class="logo-dot"></span>
-        <span>بودكاستك</span>
+        <span data-i18n="brand_name">بودكاستك</span>
       </div>
-      <button class="mobile-drawer-close" aria-label="إغلاق القائمة">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <button type="button" class="mobile-drawer-close" aria-label="إغلاق القائمة">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <line x1="18" y1="6" x2="6" y2="18"></line>
           <line x1="6" y1="6" x2="18" y2="18"></line>
         </svg>
       </button>
     </div>
     <ul class="mobile-drawer-links">
-      <li><a href="index.html" class="nav-item active">الرئيسية</a></li>
-      <li><a href="left-sidebar.html" class="nav-item">نصائح ومقالات</a></li>
-      <li><a href="right-sidebar.html" class="nav-item">بودكاست إيه المشكلة</a></li>
-      <li><a href="no-sidebar.html" class="nav-item">كتب مختارة</a></li>
+      <li><a href="index.html" class="nav-item active" data-i18n="nav_home">الرئيسية</a></li>
+      <li><a href="#self-dev" class="nav-item" data-i18n="nav_self_dev">تطوير الذات</a></li>
+      <li><a href="#moaz" class="nav-item" data-i18n="nav_islamic">دروس دينية</a></li>
+      <li><a href="left-sidebar.html" class="nav-item" data-i18n="nav_tips">نصائح ومقالات</a></li>
+      <li><a href="right-sidebar.html" class="nav-item" data-i18n="nav_podcast">بودكاست</a></li>
+      <li><a href="no-sidebar.html" class="nav-item" data-i18n="nav_books">كتب</a></li>
+      <li><a href="comments.html" class="nav-item" data-i18n="nav_comments">التواصل والتعليقات</a></li>
     </ul>
+    <div class="mobile-drawer-controls">
+      <button type="button" class="control-btn lang-toggle" style="flex: 1;">
+        <span class="lang-flag">🇬🇧</span>
+        <span class="lang-label-text">English</span>
+      </button>
+      <button type="button" class="control-btn theme-toggle" aria-label="تبديل المظهر">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+    </div>
   </div>
 
   <!-- Main Content -->
@@ -83,68 +119,95 @@
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
         </svg>
-        <span>ترتيب وإعداد: معاذ مصطفى الديباوي</span>
+        <span data-i18n="home_pill">منصة تعليمية وتوعوية • بإعداد معاذ مصطفى الديباوي</span>
       </div>
-      <h1 class="hero-title">
+      <h1 class="hero-title" data-i18n-html="home_hero_title_html">
         أهلاً بكم في <span class="highlight">بودكاستك</span>
       </h1>
-      <p class="hero-subtitle">
-        السلام عليكم، أنا معاذ. كنت في يوم من الأيام ينقصني فهم الكثير من الأفكار في الدين والدنيا. فقمت بعمل هذا الدليل بترتيبي الخاص، بناءً على خلاصة سنتين من الاستماع لأفضل حلقات البودكاست. نبدأ بدروس تطوير النفس وتعزيز العقل، وبمجرد الضغط على الدرس ستنتقل مباشرة للحلقة على يوتيوب.
+      <p class="hero-identity" data-i18n="home_hero_identity">منصة للتعلم والوعي والفهم وتطوير النفس</p>
+      <p class="hero-subtitle" data-i18n="home_hero_sub">
+        السلام عليكم، أنا معاذ. أنشأت هذه المنصة التعليمية لتكون دليلاً مرتباً ومنظماً يجمع أهم الدروس المعرفية، والبودكاست التربوي، والفهم الديني الواعي، وتطوير العقل والنفس. تصفح الأقسام، ابحث عن الموضوع الذي يشغلك، وشاهد الدروس مباشرة داخل المنصة بكل سهولة.
       </p>
       <div class="hero-actions">
         <a href="#self-dev" class="btn btn-primary">
-          <span>ابدأ بالدروس</span>
+          <span data-i18n="home_cta_start">استكشف الدروس</span>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <polyline points="6 9 12 15 18 9"></polyline>
           </svg>
         </a>
         <a href="right-sidebar.html" class="btn btn-secondary">
-          <span>سلسلة إيه المشكلة؟</span>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <polyline points="15 18 9 12 15 6"></polyline>
-          </svg>
+          <span data-i18n="home_cta_podcast">سلسلة إيه المشكلة؟</span>
         </a>
+        <a href="comments.html" class="btn btn-outline">
+          <span data-i18n="home_cta_comments">شاركنا رأيك</span>
+        </a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-value">+55</span>
+          <span class="stat-label" data-i18n="stat_lessons_label">درساً وحلقة مختارة</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-value">6</span>
+          <span class="stat-label" data-i18n="stat_categories_label">تصنيفات تعليمية</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-value">5+</span>
+          <span class="stat-label" data-i18n="stat_books_label">كتب ومراجع قيّمة</span>
+        </div>
       </div>
     </section>
 
-    <!-- Controls: Live Search & Category Filter Pills -->
+    <!-- Controls: Live Search & Multi-Category Filter Pills -->
     <div class="controls-bar">
       <div class="search-input-wrap">
         <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <circle cx="11" cy="11" r="8"></circle>
           <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
         </svg>
-        <input 
-          type="search" 
-          class="search-input" 
-          placeholder="ابحث عن درس، موضوع، أو حلقة بودكاست..." 
+        <input
+          type="search"
+          class="search-input"
+          placeholder="ابحث عن درس، موضوع، أو حلقة بودكاست بالعنوان أو الوصف..."
+          data-i18n-placeholder="search_placeholder_home"
           aria-label="البحث في الدروس والحلقات"
         />
       </div>
       <div class="filter-pills" role="tablist" aria-label="تصنيفات الدروس">
-        <button class="filter-pill active" data-filter="all" role="tab" aria-selected="true">جميع الدروس</button>
-        <button class="filter-pill" data-filter="self-dev" role="tab" aria-selected="false">تطوير الذات والصحة النفسية</button>
-        <button class="filter-pill" data-filter="faith" role="tab" aria-selected="false">بودكاست دين وأهم الدروس</button>
+        <button type="button" class="filter-pill active" data-filter="all" role="tab" aria-selected="true" data-i18n="filter_all">جميع الدروس</button>
+        <button type="button" class="filter-pill" data-filter="self-dev" role="tab" aria-selected="false" data-i18n="filter_self_dev">تطوير الذات</button>
+        <button type="button" class="filter-pill" data-filter="mental-health" role="tab" aria-selected="false" data-i18n="filter_mental">الصحة النفسية</button>
+        <button type="button" class="filter-pill" data-filter="life-skills" role="tab" aria-selected="false" data-i18n="filter_life_skills">مهارات الحياة والنمو</button>
+        <button type="button" class="filter-pill" data-filter="faith" role="tab" aria-selected="false" data-i18n="filter_faith">الدراسات الإسلامية والعقيدة</button>
+        <button type="button" class="filter-pill" data-filter="worship" role="tab" aria-selected="false" data-i18n="filter_worship">العبادات والخشوع</button>
+        <button type="button" class="filter-pill" data-filter="awareness" role="tab" aria-selected="false" data-i18n="filter_awareness">الوعي العام والثقافة</button>
+      </div>
+      <div class="search-results-meta">
+        <span><span data-i18n="results_showing">النتائج المعروضة:</span> <strong class="results-count">0</strong></span>
+        <button type="button" class="clear-filter-btn" data-i18n="results_reset">إعادة ضبط البحث</button>
       </div>
     </div>
 
-    <!-- Section 1: Self-Development & Mindset -->
-    <section id="self-dev" aria-labelledby="self-dev-heading">
+    <!-- =====================================================================
+         SECTION 1: Self-Development, Mental Health & Personal Growth
+         ===================================================================== -->
+    <section id="self-dev" class="content-section" aria-labelledby="self-dev-heading">
       <div class="section-header">
         <h2 class="section-title" id="self-dev-heading">
           <span>🌱</span>
-          <span>دروس تطوير النفس وتعزيز العقل</span>
-          <span class="section-badge">10 حلقات مختارة</span>
+          <span data-i18n="sec_self_dev_title">تطوير الذات والصحة النفسية</span>
+          <span class="section-badge" data-i18n="sec_self_dev_badge">13 درساً مختاراً</span>
         </h2>
       </div>
 
       <div class="card-grid">
         <!-- 1. ليه أنا معقد -->
-        <article class="card" data-category="self-dev">
+        <article class="card" data-category="mental-health self-dev">
           <div class="card-media">
             <img src="images/1 modfiy 1.jpg" alt="غلاف حلقة ليه أنا معقد" loading="lazy" decoding="async" />
-            <span class="card-tag">صحة نفسية</span>
-            <a href="https://youtu.be/7aKCm7jXT20?si=MfG--jfBsaABZrYt" target="_blank" rel="noopener noreferrer" class="card-play-overlay" aria-label="مشاهدة حلقة ليه أنا معقد">
+            <span class="card-tag purple" data-en="Mental Health">صحة نفسية</span>
+            <a href="https://youtu.be/7aKCm7jXT20?si=MfG--jfBsaABZrYt" class="card-play-overlay" aria-label="مشاهدة حلقة ليه أنا معقد">
               <div class="play-icon-circle">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
               </div>
@@ -152,15 +215,15 @@
           </div>
           <div class="card-content">
             <h3 class="card-title">
-              <a href="https://youtu.be/7aKCm7jXT20?si=MfG--jfBsaABZrYt" target="_blank" rel="noopener noreferrer">ليه أنا معقد</a>
+              <a href="https://youtu.be/7aKCm7jXT20?si=MfG--jfBsaABZrYt" data-en="Why Do I Feel Complicated?">ليه أنا معقد</a>
             </h3>
-            <p class="card-desc">فهم العقد النفسية والجذور التي تجعلنا نشعر بالتعقيد، وطريقة التحرر منها بخطوات واعية.</p>
+            <p class="card-desc" data-en="Understanding emotional complexes, uncovering their roots, and taking mindful steps toward inner peace.">فهم العقد النفسية والجذور التي تجعلنا نشعر بالتعقيد، وطريقة التحرر منها بخطوات واعية.</p>
             <div class="card-footer">
-              <a href="https://youtu.be/7aKCm7jXT20?si=MfG--jfBsaABZrYt" target="_blank" rel="noopener noreferrer" class="card-cta">
-                <span>مشاهدة الدرس على يوتيوب</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+              <a href="https://youtu.be/7aKCm7jXT20?si=MfG--jfBsaABZrYt" class="card-cta">
+                <span data-i18n="watch_lesson">شاهد الدرس الآن</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
               </a>
-              <button class="share-btn" data-url="https://youtu.be/7aKCm7jXT20?si=MfG--jfBsaABZrYt" aria-label="مشاركة رابط الدرس">
+              <button type="button" class="share-btn" data-url="https://youtu.be/7aKCm7jXT20?si=MfG--jfBsaABZrYt" aria-label="نسخ رابط الدرس">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
               </button>
             </div>
@@ -168,11 +231,11 @@
         </article>
 
         <!-- 2. التفكير الزائد والقلق -->
-        <article class="card" data-category="self-dev">
+        <article class="card" data-category="mental-health self-dev">
           <div class="card-media">
             <img src="images/2.jpg" alt="غلاف حلقة التفكير الزائد والقلق" loading="lazy" decoding="async" />
-            <span class="card-tag">راحة البال</span>
-            <a href="https://youtu.be/YoZ2s8jMeYA?si=ttABwnEubLxJRcjX" target="_blank" rel="noopener noreferrer" class="card-play-overlay" aria-label="مشاهدة حلقة التفكير الزائد والقلق">
+            <span class="card-tag purple" data-en="Mental Health">الصحة النفسية</span>
+            <a href="https://youtu.be/YoZ2s8jMeYA?si=ttABwnEubLxJRcjX" class="card-play-overlay" aria-label="مشاهدة حلقة التفكير الزائد والقلق">
               <div class="play-icon-circle">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
               </div>
@@ -180,15 +243,15 @@
           </div>
           <div class="card-content">
             <h3 class="card-title">
-              <a href="https://youtu.be/YoZ2s8jMeYA?si=ttABwnEubLxJRcjX" target="_blank" rel="noopener noreferrer">التفكير الزائد والقلق</a>
+              <a href="https://youtu.be/YoZ2s8jMeYA?si=ttABwnEubLxJRcjX" data-en="Overthinking & Anxiety">التفكير الزائد والقلق</a>
             </h3>
-            <p class="card-desc">كيف تتخلص من دوامة الأفكار المرهقة (Overthinking) واستعادة الهدوء والتركيز الذهني.</p>
+            <p class="card-desc" data-en="Practical strategies to break free from exhausting overthinking loops and restore mental calm and focus.">كيف تتخلص من دوامة الأفكار المرهقة (Overthinking) واستعادة الهدوء والتركيز الذهني.</p>
             <div class="card-footer">
-              <a href="https://youtu.be/YoZ2s8jMeYA?si=ttABwnEubLxJRcjX" target="_blank" rel="noopener noreferrer" class="card-cta">
-                <span>مشاهدة الدرس على يوتيوب</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+              <a href="https://youtu.be/YoZ2s8jMeYA?si=ttABwnEubLxJRcjX" class="card-cta">
+                <span data-i18n="watch_lesson">شاهد الدرس الآن</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
               </a>
-              <button class="share-btn" data-url="https://youtu.be/YoZ2s8jMeYA?si=ttABwnEubLxJRcjX" aria-label="مشاركة رابط الدرس">
+              <button type="button" class="share-btn" data-url="https://youtu.be/YoZ2s8jMeYA?si=ttABwnEubLxJRcjX" aria-label="نسخ رابط الدرس">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
               </button>
             </div>
@@ -196,11 +259,11 @@
         </article>
 
         <!-- 3. كيف تبني عقلا قويا -->
-        <article class="card" data-category="self-dev">
+        <article class="card" data-category="self-dev life-skills">
           <div class="card-media">
             <img src="images/3.jpg" alt="غلاف حلقة كيف تبني عقلا قويا" loading="lazy" decoding="async" />
-            <span class="card-tag">تطوير عقلي</span>
-            <a href="https://youtu.be/amXfgu56hkg?si=1TAjIpzmD_q_1Cpm" target="_blank" rel="noopener noreferrer" class="card-play-overlay" aria-label="مشاهدة حلقة كيف تبني عقلا قويا">
+            <span class="card-tag" data-en="Self Development">تطوير عقلي</span>
+            <a href="https://youtu.be/amXfgu56hkg?si=1TAjIpzmD_q_1Cpm" class="card-play-overlay" aria-label="مشاهدة حلقة كيف تبني عقلا قويا">
               <div class="play-icon-circle">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
               </div>
@@ -208,15 +271,15 @@
           </div>
           <div class="card-content">
             <h3 class="card-title">
-              <a href="https://youtu.be/amXfgu56hkg?si=1TAjIpzmD_q_1Cpm" target="_blank" rel="noopener noreferrer">كيف تبني عقلا قويا</a>
+              <a href="https://youtu.be/amXfgu56hkg?si=1TAjIpzmD_q_1Cpm" data-en="How to Build a Strong Mind">كيف تبني عقلا قويا</a>
             </h3>
-            <p class="card-desc">تمارين وبناء مناعة فكرية تمكنك من مواجهة الشتات وتطوير قدرتك التحليلية والعملية.</p>
+            <p class="card-desc" data-en="Mental habits and cognitive resilience techniques to overcome distraction and sharpen analytical thinking.">تمارين وبناء مناعة فكرية تمكنك من مواجهة الشتات وتطوير قدرتك التحليلية والعملية.</p>
             <div class="card-footer">
-              <a href="https://youtu.be/amXfgu56hkg?si=1TAjIpzmD_q_1Cpm" target="_blank" rel="noopener noreferrer" class="card-cta">
-                <span>مشاهدة الدرس على يوتيوب</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+              <a href="https://youtu.be/amXfgu56hkg?si=1TAjIpzmD_q_1Cpm" class="card-cta">
+                <span data-i18n="watch_lesson">شاهد الدرس الآن</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
               </a>
-              <button class="share-btn" data-url="https://youtu.be/amXfgu56hkg?si=1TAjIpzmD_q_1Cpm" aria-label="مشاركة رابط الدرس">
+              <button type="button" class="share-btn" data-url="https://youtu.be/amXfgu56hkg?si=1TAjIpzmD_q_1Cpm" aria-label="نسخ رابط الدرس">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
               </button>
             </div>
@@ -224,11 +287,11 @@
         </article>
 
         <!-- 4. تعفن الدماغ؟ -->
-        <article class="card" data-category="self-dev">
+        <article class="card" data-category="mental-health awareness">
           <div class="card-media">
             <img src="images/4.jpg" alt="غلاف حلقة تعفن الدماغ" loading="lazy" decoding="async" />
-            <span class="card-tag">الوعي الرقمي</span>
-            <a href="https://youtu.be/uWnlgkYWRpY?si=J7Rwkq5Qv9FU7JlH" target="_blank" rel="noopener noreferrer" class="card-play-overlay" aria-label="مشاهدة حلقة تعفن الدماغ">
+            <span class="card-tag blue" data-en="Digital Awareness">الوعي الرقمي</span>
+            <a href="https://youtu.be/uWnlgkYWRpY?si=J7Rwkq5Qv9FU7JlH" class="card-play-overlay" aria-label="مشاهدة حلقة تعفن الدماغ">
               <div class="play-icon-circle">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
               </div>
@@ -236,15 +299,15 @@
           </div>
           <div class="card-content">
             <h3 class="card-title">
-              <a href="https://youtu.be/uWnlgkYWRpY?si=J7Rwkq5Qv9FU7JlH" target="_blank" rel="noopener noreferrer">تعفن الدماغ؟</a>
+              <a href="https://youtu.be/uWnlgkYWRpY?si=J7Rwkq5Qv9FU7JlH" data-en="Brain Rot & Attention Drain?">تعفن الدماغ؟</a>
             </h3>
-            <p class="card-desc">تأثير الفيديوهات القصيرة والسوشيال ميديا على انتباهنا ودوبامين الدماغ وكيف ننقذ أنفسنا.</p>
+            <p class="card-desc" data-en="How short-form videos and constant scrolling hijack dopamine and attention—and how to reclaim your mind.">تأثير الفيديوهات القصيرة والسوشيال ميديا على انتباهنا ودوبامين الدماغ وكيف ننقذ أنفسنا.</p>
             <div class="card-footer">
-              <a href="https://youtu.be/uWnlgkYWRpY?si=J7Rwkq5Qv9FU7JlH" target="_blank" rel="noopener noreferrer" class="card-cta">
-                <span>مشاهدة الدرس على يوتيوب</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+              <a href="https://youtu.be/uWnlgkYWRpY?si=J7Rwkq5Qv9FU7JlH" class="card-cta">
+                <span data-i18n="watch_lesson">شاهد الدرس الآن</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
               </a>
-              <button class="share-btn" data-url="https://youtu.be/uWnlgkYWRpY?si=J7Rwkq5Qv9FU7JlH" aria-label="مشاركة رابط الدرس">
+              <button type="button" class="share-btn" data-url="https://youtu.be/uWnlgkYWRpY?si=J7Rwkq5Qv9FU7JlH" aria-label="نسخ رابط الدرس">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
               </button>
             </div>
@@ -252,11 +315,11 @@
         </article>
 
         <!-- 5. لماذا أنت حزين معظم الوقت؟ -->
-        <article class="card" data-category="self-dev">
+        <article class="card" data-category="mental-health">
           <div class="card-media">
             <img src="images/2 modify.jpg" alt="غلاف حلقة لماذا أنت حزين معظم الوقت" loading="lazy" decoding="async" />
-            <span class="card-tag">صحة نفسية</span>
-            <a href="https://youtu.be/Gjh3AsIW35Q?si=5gCdegtg5yT2s_qN" target="_blank" rel="noopener noreferrer" class="card-play-overlay" aria-label="مشاهدة حلقة لماذا أنت حزين معظم الوقت">
+            <span class="card-tag purple" data-en="Mental Health">صحة نفسية</span>
+            <a href="https://youtu.be/Gjh3AsIW35Q?si=5gCdegtg5yT2s_qN" class="card-play-overlay" aria-label="مشاهدة حلقة لماذا أنت حزين معظم الوقت">
               <div class="play-icon-circle">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
               </div>
@@ -264,15 +327,15 @@
           </div>
           <div class="card-content">
             <h3 class="card-title">
-              <a href="https://youtu.be/Gjh3AsIW35Q?si=5gCdegtg5yT2s_qN" target="_blank" rel="noopener noreferrer">لماذا أنت حزين معظم الوقت؟</a>
+              <a href="https://youtu.be/Gjh3AsIW35Q?si=5gCdegtg5yT2s_qN" data-en="Why Are You Sad Most of the Time?">لماذا أنت حزين معظم الوقت؟</a>
             </h3>
-            <p class="card-desc">تحليل أسباب الحزن الخفي، وغياب الشغف، وكيف تعيد بناء اتصالك بروحك ويومك.</p>
+            <p class="card-desc" data-en="Exploring the hidden causes behind persistent sadness and loss of drive, and how to reconnect with meaning.">تحليل أسباب الحزن الخفي، وغياب الشغف، وكيف تعيد بناء اتصالك بروحك ويومك.</p>
             <div class="card-footer">
-              <a href="https://youtu.be/Gjh3AsIW35Q?si=5gCdegtg5yT2s_qN" target="_blank" rel="noopener noreferrer" class="card-cta">
-                <span>مشاهدة الدرس على يوتيوب</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+              <a href="https://youtu.be/Gjh3AsIW35Q?si=5gCdegtg5yT2s_qN" class="card-cta">
+                <span data-i18n="watch_lesson">شاهد الدرس الآن</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
               </a>
-              <button class="share-btn" data-url="https://youtu.be/Gjh3AsIW35Q?si=5gCdegtg5yT2s_qN" aria-label="مشاركة رابط الدرس">
+              <button type="button" class="share-btn" data-url="https://youtu.be/Gjh3AsIW35Q?si=5gCdegtg5yT2s_qN" aria-label="نسخ رابط الدرس">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
               </button>
             </div>
@@ -280,11 +343,11 @@
         </article>
 
         <!-- 6. ليش التعلق يدمرنا -->
-        <article class="card" data-category="self-dev">
+        <article class="card" data-category="mental-health self-dev">
           <div class="card-media">
             <img src="images/6.jpg" alt="غلاف حلقة ليش التعلق يدمرنا" loading="lazy" decoding="async" />
-            <span class="card-tag">علاقات</span>
-            <a href="https://youtu.be/9_HaE9ptJ5U?si=EbAlsxmJm5mOFt-w" target="_blank" rel="noopener noreferrer" class="card-play-overlay" aria-label="مشاهدة حلقة ليش التعلق يدمرنا">
+            <span class="card-tag rose" data-en="Relationships">علاقات وتوازن</span>
+            <a href="https://youtu.be/9_HaE9ptJ5U?si=EbAlsxmJm5mOFt-w" class="card-play-overlay" aria-label="مشاهدة حلقة ليش التعلق يدمرنا">
               <div class="play-icon-circle">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
               </div>
@@ -292,15 +355,15 @@
           </div>
           <div class="card-content">
             <h3 class="card-title">
-              <a href="https://youtu.be/9_HaE9ptJ5U?si=EbAlsxmJm5mOFt-w" target="_blank" rel="noopener noreferrer">ليش التعلق يدمرنا</a>
+              <a href="https://youtu.be/9_HaE9ptJ5U?si=EbAlsxmJm5mOFt-w" data-en="Why Unhealthy Attachment Hurts Us">ليش التعلق يدمرنا</a>
             </h3>
-            <p class="card-desc">الفرق بين الحب الحقيقي والتعلق المرضي بالأشخاص، وكيف تحمي قلبك واستقلاليتك النفسية.</p>
+            <p class="card-desc" data-en="Distinguishing healthy love from destructive emotional dependency and safeguarding your inner balance.">الفرق بين الحب الحقيقي والتعلق المرضي بالأشخاص، وكيف تحمي قلبك واستقلاليتك النفسية.</p>
             <div class="card-footer">
-              <a href="https://youtu.be/9_HaE9ptJ5U?si=EbAlsxmJm5mOFt-w" target="_blank" rel="noopener noreferrer" class="card-cta">
-                <span>مشاهدة الدرس على يوتيوب</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+              <a href="https://youtu.be/9_HaE9ptJ5U?si=EbAlsxmJm5mOFt-w" class="card-cta">
+                <span data-i18n="watch_lesson">شاهد الدرس الآن</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
               </a>
-              <button class="share-btn" data-url="https://youtu.be/9_HaE9ptJ5U?si=EbAlsxmJm5mOFt-w" aria-label="مشاركة رابط الدرس">
+              <button type="button" class="share-btn" data-url="https://youtu.be/9_HaE9ptJ5U?si=EbAlsxmJm5mOFt-w" aria-label="نسخ رابط الدرس">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
               </button>
             </div>
@@ -308,11 +371,11 @@
         </article>
 
         <!-- 7. الإحباط | ياسر الحزيمي -->
-        <article class="card" data-category="self-dev">
+        <article class="card" data-category="mental-health self-dev">
           <div class="card-media">
             <img src="images/7.jpg" alt="غلاف حلقة الإحباط مع ياسر الحزيمي" loading="lazy" decoding="async" />
-            <span class="card-tag">تطوير الذات</span>
-            <a href="https://youtu.be/rLOmk9Oy9nY?si=TzEV3YPnExN7Mnu-" target="_blank" rel="noopener noreferrer" class="card-play-overlay" aria-label="مشاهدة حلقة الإحباط">
+            <span class="card-tag" data-en="Self Development">تطوير الذات</span>
+            <a href="https://youtu.be/rLOmk9Oy9nY?si=TzEV3YPnExN7Mnu-" class="card-play-overlay" aria-label="مشاهدة حلقة الإحباط">
               <div class="play-icon-circle">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
               </div>
@@ -320,15 +383,15 @@
           </div>
           <div class="card-content">
             <h3 class="card-title">
-              <a href="https://youtu.be/rLOmk9Oy9nY?si=TzEV3YPnExN7Mnu-" target="_blank" rel="noopener noreferrer">الإحباط | ياسر الحزيمي</a>
+              <a href="https://youtu.be/rLOmk9Oy9nY?si=TzEV3YPnExN7Mnu-" data-en="Overcoming Frustration | Yasser Al-Hazimi">الإحباط | ياسر الحزيمي</a>
             </h3>
-            <p class="card-desc">تشخيص دقيق لمشاعر الإحباط واليأس، وآليات عملية للنهوض مجدداً بقوة وثبات.</p>
+            <p class="card-desc" data-en="Diagnosing feelings of discouragement and despair with practical methods to rise again with strength.">تشخيص دقيق لمشاعر الإحباط واليأس، وآليات عملية للنهوض مجدداً بقوة وثبات.</p>
             <div class="card-footer">
-              <a href="https://youtu.be/rLOmk9Oy9nY?si=TzEV3YPnExN7Mnu-" target="_blank" rel="noopener noreferrer" class="card-cta">
-                <span>مشاهدة الدرس على يوتيوب</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+              <a href="https://youtu.be/rLOmk9Oy9nY?si=TzEV3YPnExN7Mnu-" class="card-cta">
+                <span data-i18n="watch_lesson">شاهد الدرس الآن</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
               </a>
-              <button class="share-btn" data-url="https://youtu.be/rLOmk9Oy9nY?si=TzEV3YPnExN7Mnu-" aria-label="مشاركة رابط الدرس">
+              <button type="button" class="share-btn" data-url="https://youtu.be/rLOmk9Oy9nY?si=TzEV3YPnExN7Mnu-" aria-label="نسخ رابط الدرس">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
               </button>
             </div>
@@ -336,11 +399,11 @@
         </article>
 
         <!-- 8. ازاي تتعامل مع المشاكل والازمات -->
-        <article class="card" data-category="self-dev">
+        <article class="card" data-category="life-skills self-dev">
           <div class="card-media">
             <img src="images/8.jpg" alt="غلاف حلقة إزاي تتعامل مع المشاكل والأزمات" loading="lazy" decoding="async" />
-            <span class="card-tag">إدارة الأزمات</span>
-            <a href="https://youtu.be/LbX9x5KfuE4?si=DOXFDiDNAnkRS9xP" target="_blank" rel="noopener noreferrer" class="card-play-overlay" aria-label="مشاهدة حلقة المشاكل والأزمات">
+            <span class="card-tag blue" data-en="Life Skills">إدارة الأزمات</span>
+            <a href="https://youtu.be/LbX9x5KfuE4?si=DOXFDiDNAnkRS9xP" class="card-play-overlay" aria-label="مشاهدة حلقة المشاكل والأزمات">
               <div class="play-icon-circle">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
               </div>
@@ -348,15 +411,15 @@
           </div>
           <div class="card-content">
             <h3 class="card-title">
-              <a href="https://youtu.be/LbX9x5KfuE4?si=DOXFDiDNAnkRS9xP" target="_blank" rel="noopener noreferrer">ازاي تتعامل مع المشاكل والازمات</a>
+              <a href="https://youtu.be/LbX9x5KfuE4?si=DOXFDiDNAnkRS9xP" data-en="How to Handle Problems & Crises">ازاي تتعامل مع المشاكل والازمات</a>
             </h3>
-            <p class="card-desc">دليل عملي للتعامل مع الضغوط والصدمات المفاجئة بعقلانية وهدوء نفسي مدروس.</p>
+            <p class="card-desc" data-en="A grounded guide to navigating life's sudden setbacks and pressures with composure and clear thinking.">دليل عملي للتعامل مع الضغوط والصدمات المفاجئة بعقلانية وهدوء نفسي مدروس.</p>
             <div class="card-footer">
-              <a href="https://youtu.be/LbX9x5KfuE4?si=DOXFDiDNAnkRS9xP" target="_blank" rel="noopener noreferrer" class="card-cta">
-                <span>مشاهدة الدرس على يوتيوب</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+              <a href="https://youtu.be/LbX9x5KfuE4?si=DOXFDiDNAnkRS9xP" class="card-cta">
+                <span data-i18n="watch_lesson">شاهد الدرس الآن</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
               </a>
-              <button class="share-btn" data-url="https://youtu.be/LbX9x5KfuE4?si=DOXFDiDNAnkRS9xP" aria-label="مشاركة رابط الدرس">
+              <button type="button" class="share-btn" data-url="https://youtu.be/LbX9x5KfuE4?si=DOXFDiDNAnkRS9xP" aria-label="نسخ رابط الدرس">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
               </button>
             </div>
@@ -367,8 +430,8 @@
         <article class="card" data-category="self-dev">
           <div class="card-media">
             <img src="images/9.jpg" alt="غلاف حلقة الثقة بالنفس" loading="lazy" decoding="async" />
-            <span class="card-tag">بناء الشخصية</span>
-            <a href="https://youtu.be/cLOj2XEVV_U?si=GbXO1bM_1PSphow-" target="_blank" rel="noopener noreferrer" class="card-play-overlay" aria-label="مشاهدة حلقة الثقة بالنفس">
+            <span class="card-tag" data-en="Self Development">بناء الشخصية</span>
+            <a href="https://youtu.be/cLOj2XEVV_U?si=GbXO1bM_1PSphow-" class="card-play-overlay" aria-label="مشاهدة حلقة الثقة بالنفس">
               <div class="play-icon-circle">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
               </div>
@@ -376,15 +439,15 @@
           </div>
           <div class="card-content">
             <h3 class="card-title">
-              <a href="https://youtu.be/cLOj2XEVV_U?si=GbXO1bM_1PSphow-" target="_blank" rel="noopener noreferrer">الثقه بالنفس</a>
+              <a href="https://youtu.be/cLOj2XEVV_U?si=GbXO1bM_1PSphow-" data-en="Building Genuine Self-Confidence">الثقه بالنفس</a>
             </h3>
-            <p class="card-desc">كيف تبني تقديراً حقيقياً لذاتك بعيداً عن الغرور الزائف أو التردد المدمر.</p>
+            <p class="card-desc" data-en="How to cultivate grounded self-worth without falling into arrogance or crippling self-doubt.">كيف تبني تقديراً حقيقياً لذاتك بعيداً عن الغرور الزائف أو التردد المدمر.</p>
             <div class="card-footer">
-              <a href="https://youtu.be/cLOj2XEVV_U?si=GbXO1bM_1PSphow-" target="_blank" rel="noopener noreferrer" class="card-cta">
-                <span>مشاهدة الدرس على يوتيوب</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+              <a href="https://youtu.be/cLOj2XEVV_U?si=GbXO1bM_1PSphow-" class="card-cta">
+                <span data-i18n="watch_lesson">شاهد الدرس الآن</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
               </a>
-              <button class="share-btn" data-url="https://youtu.be/cLOj2XEVV_U?si=GbXO1bM_1PSphow-" aria-label="مشاركة رابط الدرس">
+              <button type="button" class="share-btn" data-url="https://youtu.be/cLOj2XEVV_U?si=GbXO1bM_1PSphow-" aria-label="نسخ رابط الدرس">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
               </button>
             </div>
@@ -392,11 +455,11 @@
         </article>
 
         <!-- 10. متي العلاقات تكون صحيحه -->
-        <article class="card" data-category="self-dev">
+        <article class="card" data-category="self-dev life-skills">
           <div class="card-media">
             <img src="images/11.jpg" alt="غلاف حلقة متى العلاقات تكون صحيحة" loading="lazy" decoding="async" />
-            <span class="card-tag">علاقات</span>
-            <a href="https://youtu.be/wBfIWspteMo?si=lCcpypx-tU2NUN70" target="_blank" rel="noopener noreferrer" class="card-play-overlay" aria-label="مشاهدة حلقة متى العلاقات تكون صحيحة">
+            <span class="card-tag rose" data-en="Relationships">علاقات</span>
+            <a href="https://youtu.be/wBfIWspteMo?si=lCcpypx-tU2NUN70" class="card-play-overlay" aria-label="مشاهدة حلقة متى العلاقات تكون صحيحة">
               <div class="play-icon-circle">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
               </div>
@@ -404,15 +467,102 @@
           </div>
           <div class="card-content">
             <h3 class="card-title">
-              <a href="https://youtu.be/wBfIWspteMo?si=lCcpypx-tU2NUN70" target="_blank" rel="noopener noreferrer">متي العلاقات تكون صحيحه</a>
+              <a href="https://youtu.be/wBfIWspteMo?si=lCcpypx-tU2NUN70" data-en="When Are Relationships Truly Healthy?">متي العلاقات تكون صحيحه</a>
             </h3>
-            <p class="card-desc">معايير النضج في العلاقات، وكيف تختار من يستحق أن يشاركك مسيرة حياتك بأمان وصدق.</p>
+            <p class="card-desc" data-en="Recognizing emotional maturity in relationships and choosing companions who bring trust and growth.">معايير النضج في العلاقات، وكيف تختار من يستحق أن يشاركك مسيرة حياتك بأمان وصدق.</p>
             <div class="card-footer">
-              <a href="https://youtu.be/wBfIWspteMo?si=lCcpypx-tU2NUN70" target="_blank" rel="noopener noreferrer" class="card-cta">
-                <span>مشاهدة الدرس على يوتيوب</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+              <a href="https://youtu.be/wBfIWspteMo?si=lCcpypx-tU2NUN70" class="card-cta">
+                <span data-i18n="watch_lesson">شاهد الدرس الآن</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
               </a>
-              <button class="share-btn" data-url="https://youtu.be/wBfIWspteMo?si=lCcpypx-tU2NUN70" aria-label="مشاركة رابط الدرس">
+              <button type="button" class="share-btn" data-url="https://youtu.be/wBfIWspteMo?si=lCcpypx-tU2NUN70" aria-label="نسخ رابط الدرس">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- NEW VIDEO 1: xgda-KGBfMQ (Personal Growth & Life Skills) -->
+        <article class="card" data-category="life-skills self-dev">
+          <div class="card-media">
+            <img src="https://i.ytimg.com/vi/xgda-KGBfMQ/hqdefault.jpg" alt="غلاف درس ٧ حاجات مشتركين بين كل الناجحين" loading="lazy" decoding="async" />
+            <span class="card-tag blue" data-en="Personal Growth & Life Skills">مهارات الحياة والنمو</span>
+            <span class="card-new-badge" data-i18n="badge_new">جديد</span>
+            <a href="https://youtu.be/xgda-KGBfMQ?si=JnN8jDevznx2vU44" class="card-play-overlay" aria-label="مشاهدة درس ٧ حاجات مشتركين بين كل الناجحين">
+              <div class="play-icon-circle">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </div>
+            </a>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">
+              <a href="https://youtu.be/xgda-KGBfMQ?si=JnN8jDevznx2vU44" data-en="7 Habits Shared by All Successful People | Droos Online">٧ حاجات مشتركين بين كل الناجحين | دروس أونلاين</a>
+            </h3>
+            <p class="card-desc" data-en="Ahmed Abouzaid explores 7 core habits shared by successful individuals across fields: health and exercise, lifelong reading and learning, daily routine, discipline, and consistency.">يستعرض أحمد أبو زيد أهم 7 عادات مشتركة بين الناجحين في مختلف المجالات: الاهتمام بالصحة والرياضة، القراءة والتعلم المستمر، الالتزام بالروتين اليومي والانضباط، وقوة الاستمرارية.</p>
+            <div class="card-footer">
+              <a href="https://youtu.be/xgda-KGBfMQ?si=JnN8jDevznx2vU44" class="card-cta">
+                <span data-i18n="watch_lesson">شاهد الدرس الآن</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </a>
+              <button type="button" class="share-btn" data-url="https://youtu.be/xgda-KGBfMQ?si=JnN8jDevznx2vU44" aria-label="نسخ رابط الدرس">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- NEW VIDEO 4: m3Ro6tIsndU (Mental Health & Psychology / Strong Personality) -->
+        <article class="card" data-category="mental-health self-dev">
+          <div class="card-media">
+            <img src="https://i.ytimg.com/vi/m3Ro6tIsndU/hqdefault.jpg" alt="غلاف درس أركان الشخصية القوية وإدارة الانفعالات" loading="lazy" decoding="async" />
+            <span class="card-tag purple" data-en="Mental Health & Psychology">الصحة النفسية</span>
+            <span class="card-new-badge" data-i18n="badge_new">جديد</span>
+            <a href="https://youtu.be/m3Ro6tIsndU?si=Eh6baOUOQ9SMqSHC" class="card-play-overlay" aria-label="مشاهدة درس أركان الشخصية القوية">
+              <div class="play-icon-circle">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </div>
+            </a>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">
+              <a href="https://youtu.be/m3Ro6tIsndU?si=Eh6baOUOQ9SMqSHC" data-en="The 4 Pillars of a Strong Personality & Emotional Mastery">أركان الشخصية القوية وإدارة الانفعالات | أ. ياسر الحزيمي</a>
+            </h3>
+            <p class="card-desc" data-en="Breaks down the four pillars of a strong personality—self-assertion, performance confidence, self-esteem, and self-acceptance—showing that true strength is mastering one's emotions.">شرح لأركان الشخصية القوية الأربعة: توكيد الذات، الثقة المرتبطة بالأداء، تقدير الذات، وتقبلها؛ موضحاً أن القوة الحقيقية تكمن في فن إدارة الانفعالات والتحكم بالمشاعر.</p>
+            <div class="card-footer">
+              <a href="https://youtu.be/m3Ro6tIsndU?si=Eh6baOUOQ9SMqSHC" class="card-cta">
+                <span data-i18n="watch_lesson">شاهد الدرس الآن</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </a>
+              <button type="button" class="share-btn" data-url="https://youtu.be/m3Ro6tIsndU?si=Eh6baOUOQ9SMqSHC" aria-label="نسخ رابط الدرس">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- NEW VIDEO 5: rHokT2KpVB0 (Self Development & Purification) -->
+        <article class="card" data-category="self-dev">
+          <div class="card-media">
+            <img src="https://i.ytimg.com/vi/rHokT2KpVB0/hqdefault.jpg" alt="غلاف درس تطوير الذات وتزكية النفس بدون تشتت" loading="lazy" decoding="async" />
+            <span class="card-tag" data-en="Self Development">تطوير الذات</span>
+            <span class="card-new-badge" data-i18n="badge_new">جديد</span>
+            <a href="https://youtu.be/rHokT2KpVB0?si=bwC_MnHP0VTY0ZPu" class="card-play-overlay" aria-label="مشاهدة درس تطوير الذات بدون تشتت">
+              <div class="play-icon-circle">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </div>
+            </a>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">
+              <a href="https://youtu.be/rHokT2KpVB0?si=bwC_MnHP0VTY0ZPu" data-en="Self-Purification & Personal Growth Without Distraction">تطوير الذات وتزكية النفس بدون تشتت | أ. ياسر الحزيمي</a>
+            </h3>
+            <p class="card-desc" data-en="From the Bidon Waraq podcast: Yasser Al-Hazimi outlines how to purify and develop oneself without self-deception, embracing accountability, humility, and deliberate character building.">من بودكاست بدون ورق: يشرح أ. ياسر الحزيمي منهج تزكية النفس وتحمل مسؤولية التغيير دون تبرير، والفرق بين التواضع والغرور، وكيف يُبنى النضج بالتطبّع والعمل المستمر.</p>
+            <div class="card-footer">
+              <a href="https://youtu.be/rHokT2KpVB0?si=bwC_MnHP0VTY0ZPu" class="card-cta">
+                <span data-i18n="watch_lesson">شاهد الدرس الآن</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </a>
+              <button type="button" class="share-btn" data-url="https://youtu.be/rHokT2KpVB0?si=bwC_MnHP0VTY0ZPu" aria-label="نسخ رابط الدرس">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
               </button>
             </div>
@@ -422,35 +572,37 @@
     </section>
 
     <!-- Spotlight Transition Banner: Islamic Category -->
-    <div class="spotlight-card">
+    <div class="spotlight-card js-hide-on-filter">
       <div>
         <span class="hero-pill">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
-          <span>قسم الفهم الديني</span>
+          <span data-i18n="spotlight_faith_pill">قسم الفهم الديني والعقيدة</span>
         </span>
-        <h2 style="font-family: var(--font-display); font-size: 1.65rem; margin-bottom: 0.75rem; color: #fff;">
-          فئة بودكاست دين: يفهمك كل حاجة بطريقة تحببك في دينك
+        <h2 class="spotlight-title" data-i18n="spotlight_faith_title">
+          دروس الفهم الديني: لتفهم دينك بوعي ومحبة ويقين
         </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 1rem; line-height: 1.7;">
-          دروس مركزة ومختارة بعناية تجيب عن الأسئلة الكبرى، وتوضح حكمة الأحكام الشرعية، وتقدم قصص القرآن والسيرة النبوية برؤية معاصرة وقريبة من القلب.
+        <p class="spotlight-desc" data-i18n="spotlight_faith_desc">
+          دروس مركزة ومختارة بعناية تجيب عن الأسئلة الكبرى، وتوضح حكمة العبادات والأحكام الشرعية، وتقدم قصص القرآن والسيرة النبوية والردود العلمية الموثقة برؤية معاصرة وقريبة من القلب.
         </p>
         <a href="#moaz" class="btn btn-primary">
-          <span>تصفح الدروس الدينية</span>
+          <span data-i18n="spotlight_faith_cta">تصفح الدروس الدينية</span>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
         </a>
       </div>
       <div class="spotlight-media">
-        <img src="images/header.jpg" alt="غلاف فئة بودكاست دين" loading="lazy" decoding="async" />
+        <img src="images/header.jpg" alt="غلاف فئة الدراسات الإسلامية" loading="lazy" decoding="async" />
       </div>
     </div>
 
-    <!-- Section 2: Core Islamic & Faith Lessons -->
-    <section id="moaz" aria-labelledby="faith-heading">
+    <!-- =====================================================================
+         SECTION 2: Islamic Studies, Faith & Worship
+         ===================================================================== -->
+    <section id="moaz" class="content-section" aria-labelledby="faith-heading">
       <div class="section-header">
         <h2 class="section-title" id="faith-heading">
           <span>🕌</span>
-          <span>أهم الدروس الدينية والفكرية</span>
-          <span class="section-badge">7 دروس تأسيسية</span>
+          <span data-i18n="sec_faith_title">الدراسات الإسلامية والعقيدة والعبادات</span>
+          <span class="section-badge" data-i18n="sec_faith_badge">11 درساً تأسيسياً</span>
         </h2>
       </div>
 
@@ -459,8 +611,8 @@
         <article class="card" data-category="faith">
           <div class="card-media">
             <img src="images/17.jpg" alt="غلاف حلقة أين الله" loading="lazy" decoding="async" />
-            <span class="card-tag amber">عقيدة وإيمان</span>
-            <a href="https://youtu.be/5qzKaozM8ks?si=Kkmol-nQhyYVWuw0" target="_blank" rel="noopener noreferrer" class="card-play-overlay" aria-label="مشاهدة حلقة أين الله">
+            <span class="card-tag amber" data-en="Islamic Studies & Faith">عقيدة وإيمان</span>
+            <a href="https://youtu.be/5qzKaozM8ks?si=Kkmol-nQhyYVWuw0" class="card-play-overlay" aria-label="مشاهدة حلقة أين الله">
               <div class="play-icon-circle">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
               </div>
@@ -468,15 +620,15 @@
           </div>
           <div class="card-content">
             <h3 class="card-title">
-              <a href="https://youtu.be/5qzKaozM8ks?si=Kkmol-nQhyYVWuw0" target="_blank" rel="noopener noreferrer">اين الله</a>
+              <a href="https://youtu.be/5qzKaozM8ks?si=Kkmol-nQhyYVWuw0" data-en="Where Is Allah? Knowing Your Creator">اين الله</a>
             </h3>
-            <p class="card-desc">تأملات عميقة في معرفة الله سبحانه وتعالى وعظمته وقربه من عباده وكيف يملأ الإيمان قلبك بالطمأنينة.</p>
+            <p class="card-desc" data-en="Deep reflections on knowing Allah, His majesty and closeness, and how true faith brings serenity to the heart.">تأملات عميقة في معرفة الله سبحانه وتعالى وعظمته وقربه من عباده وكيف يملأ الإيمان قلبك بالطمأنينة.</p>
             <div class="card-footer">
-              <a href="https://youtu.be/5qzKaozM8ks?si=Kkmol-nQhyYVWuw0" target="_blank" rel="noopener noreferrer" class="card-cta">
-                <span>مشاهدة الدرس على يوتيوب</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+              <a href="https://youtu.be/5qzKaozM8ks?si=Kkmol-nQhyYVWuw0" class="card-cta">
+                <span data-i18n="watch_lesson">شاهد الدرس الآن</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
               </a>
-              <button class="share-btn" data-url="https://youtu.be/5qzKaozM8ks?si=Kkmol-nQhyYVWuw0" aria-label="مشاركة رابط الدرس">
+              <button type="button" class="share-btn" data-url="https://youtu.be/5qzKaozM8ks?si=Kkmol-nQhyYVWuw0" aria-label="نسخ رابط الدرس">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
               </button>
             </div>
@@ -487,8 +639,8 @@
         <article class="card" data-category="faith">
           <div class="card-media">
             <img src="images/13.jpg" alt="غلاف سلسلة السيرة النبوية" loading="lazy" decoding="async" />
-            <span class="card-tag amber">السيرة العطرة</span>
-            <a href="https://youtu.be/LI99lWP1zac?si=NU1IhvXDo1NL_M4T" target="_blank" rel="noopener noreferrer" class="card-play-overlay" aria-label="مشاهدة سلسلة السيرة النبوية">
+            <span class="card-tag amber" data-en="Prophetic Biography">السيرة العطرة</span>
+            <a href="https://youtu.be/LI99lWP1zac?si=NU1IhvXDo1NL_M4T" class="card-play-overlay" aria-label="مشاهدة سلسلة السيرة النبوية">
               <div class="play-icon-circle">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
               </div>
@@ -496,15 +648,15 @@
           </div>
           <div class="card-content">
             <h3 class="card-title">
-              <a href="https://youtu.be/LI99lWP1zac?si=NU1IhvXDo1NL_M4T" target="_blank" rel="noopener noreferrer">سلسله السيره النبويه</a>
+              <a href="https://youtu.be/LI99lWP1zac?si=NU1IhvXDo1NL_M4T" data-en="The Prophetic Biography (Seerah) Series">سلسله السيره النبويه</a>
             </h3>
-            <p class="card-desc">رحلة ملهمة في تفاصيل حياة النبي صلى الله عليه وسلم وكيف واجه التحديات برحمة وشجاعة لا نظير لها.</p>
+            <p class="card-desc" data-en="An inspiring journey through the life of Prophet Muhammad (PBUH) and his timeless mercy, wisdom, and courage.">رحلة ملهمة في تفاصيل حياة النبي صلى الله عليه وسلم وكيف واجه التحديات برحمة وشجاعة لا نظير لها.</p>
             <div class="card-footer">
-              <a href="https://youtu.be/LI99lWP1zac?si=NU1IhvXDo1NL_M4T" target="_blank" rel="noopener noreferrer" class="card-cta">
-                <span>مشاهدة الدرس على يوتيوب</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+              <a href="https://youtu.be/LI99lWP1zac?si=NU1IhvXDo1NL_M4T" class="card-cta">
+                <span data-i18n="watch_lesson">شاهد الدرس الآن</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
               </a>
-              <button class="share-btn" data-url="https://youtu.be/LI99lWP1zac?si=NU1IhvXDo1NL_M4T" aria-label="مشاركة رابط الدرس">
+              <button type="button" class="share-btn" data-url="https://youtu.be/LI99lWP1zac?si=NU1IhvXDo1NL_M4T" aria-label="نسخ رابط الدرس">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
               </button>
             </div>
@@ -515,8 +667,8 @@
         <article class="card" data-category="faith">
           <div class="card-media">
             <img src="images/12.jpg" alt="غلاف حلقة إيه المشكلة لو مش ملتزم" loading="lazy" decoding="async" />
-            <span class="card-tag amber">إيه المشكلة؟</span>
-            <a href="https://youtu.be/I1_1zFiNL4A?si=J_MEN3omwdpsb0Uw" target="_blank" rel="noopener noreferrer" class="card-play-overlay" aria-label="مشاهدة حلقة إيه المشكلة لو مش ملتزم">
+            <span class="card-tag amber" data-en="Eh El-Moshkela">إيه المشكلة؟</span>
+            <a href="https://youtu.be/I1_1zFiNL4A?si=J_MEN3omwdpsb0Uw" class="card-play-overlay" aria-label="مشاهدة حلقة إيه المشكلة لو مش ملتزم">
               <div class="play-icon-circle">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
               </div>
@@ -524,15 +676,15 @@
           </div>
           <div class="card-content">
             <h3 class="card-title">
-              <a href="https://youtu.be/I1_1zFiNL4A?si=J_MEN3omwdpsb0Uw" target="_blank" rel="noopener noreferrer">ايه المشكله لو مش ملتزم</a>
+              <a href="https://youtu.be/I1_1zFiNL4A?si=J_MEN3omwdpsb0Uw" data-en="What's the Problem If I'm Not Practicing?">ايه المشكله لو مش ملتزم</a>
             </h3>
-            <p class="card-desc">حوار واقعي بدون تعالي يناقش ما يخسره الإنسان عندما يبتعد عن الالتزام الحقيقي وكيف يبدأ خطواته الأولى.</p>
+            <p class="card-desc" data-en="An honest, compassionate conversation about what we lose without genuine commitment and how to take your first steps.">حوار واقعي بدون تعالي يناقش ما يخسره الإنسان عندما يبتعد عن الالتزام الحقيقي وكيف يبدأ خطواته الأولى.</p>
             <div class="card-footer">
-              <a href="https://youtu.be/I1_1zFiNL4A?si=J_MEN3omwdpsb0Uw" target="_blank" rel="noopener noreferrer" class="card-cta">
-                <span>مشاهدة الدرس على يوتيوب</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+              <a href="https://youtu.be/I1_1zFiNL4A?si=J_MEN3omwdpsb0Uw" class="card-cta">
+                <span data-i18n="watch_lesson">شاهد الدرس الآن</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
               </a>
-              <button class="share-btn" data-url="https://youtu.be/I1_1zFiNL4A?si=J_MEN3omwdpsb0Uw" aria-label="مشاركة رابط الدرس">
+              <button type="button" class="share-btn" data-url="https://youtu.be/I1_1zFiNL4A?si=J_MEN3omwdpsb0Uw" aria-label="نسخ رابط الدرس">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
               </button>
             </div>
@@ -543,8 +695,8 @@
         <article class="card" data-category="faith">
           <div class="card-media">
             <img src="images/15.jpg" alt="غلاف حلقة قصص القرآن" loading="lazy" decoding="async" />
-            <span class="card-tag amber">قرآن كريم</span>
-            <a href="https://youtu.be/ejBKVRYtY_s?si=6u31xekwL-daoYED" target="_blank" rel="noopener noreferrer" class="card-play-overlay" aria-label="مشاهدة حلقة قصص القرآن">
+            <span class="card-tag amber" data-en="Noble Qur'an">قرآن كريم</span>
+            <a href="https://youtu.be/ejBKVRYtY_s?si=6u31xekwL-daoYED" class="card-play-overlay" aria-label="مشاهدة حلقة قصص القرآن">
               <div class="play-icon-circle">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
               </div>
@@ -552,15 +704,15 @@
           </div>
           <div class="card-content">
             <h3 class="card-title">
-              <a href="https://youtu.be/ejBKVRYtY_s?si=6u31xekwL-daoYED" target="_blank" rel="noopener noreferrer">قصص القران</a>
+              <a href="https://youtu.be/ejBKVRYtY_s?si=6u31xekwL-daoYED" data-en="Stories of the Qur'an & Their Wisdom">قصص القران</a>
             </h3>
-            <p class="card-desc">بيشرحلك الحكم والمواعظ التي ذكرها ربنا سبحانه وتعالى في القرآن والابتلاءات التي تعرض لها الأنبياء والصحابة رضي الله عنهم أجمعين وكيف صبروا عليها.</p>
+            <p class="card-desc" data-en="Unpacks the timeless lessons and wisdom from Qur'anic stories and the trials endured by the Prophets and Companions.">بيشرحلك الحكم والمواعظ التي ذكرها ربنا سبحانه وتعالى في القرآن والابتلاءات التي تعرض لها الأنبياء والصحابة رضي الله عنهم أجمعين وكيف صبروا عليها.</p>
             <div class="card-footer">
-              <a href="https://youtu.be/ejBKVRYtY_s?si=6u31xekwL-daoYED" target="_blank" rel="noopener noreferrer" class="card-cta">
-                <span>مشاهدة الدرس على يوتيوب</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+              <a href="https://youtu.be/ejBKVRYtY_s?si=6u31xekwL-daoYED" class="card-cta">
+                <span data-i18n="watch_lesson">شاهد الدرس الآن</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
               </a>
-              <button class="share-btn" data-url="https://youtu.be/ejBKVRYtY_s?si=6u31xekwL-daoYED" aria-label="مشاركة رابط الدرس">
+              <button type="button" class="share-btn" data-url="https://youtu.be/ejBKVRYtY_s?si=6u31xekwL-daoYED" aria-label="نسخ رابط الدرس">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
               </button>
             </div>
@@ -571,8 +723,8 @@
         <article class="card" data-category="faith">
           <div class="card-media">
             <img src="images/16.jpg" alt="غلاف حلقة إيه المشكلة في الحب والارتباط والـ Date" loading="lazy" decoding="async" />
-            <span class="card-tag amber">إيه المشكلة؟</span>
-            <a href="https://youtu.be/AjUo-SJ5TSA?si=-Z4Bf_owypug4oHJ" target="_blank" rel="noopener noreferrer" class="card-play-overlay" aria-label="مشاهدة حلقة الحب والارتباط">
+            <span class="card-tag rose" data-en="Relationships & Faith">إيه المشكلة؟</span>
+            <a href="https://youtu.be/AjUo-SJ5TSA?si=-Z4Bf_owypug4oHJ" class="card-play-overlay" aria-label="مشاهدة حلقة الحب والارتباط">
               <div class="play-icon-circle">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
               </div>
@@ -580,15 +732,15 @@
           </div>
           <div class="card-content">
             <h3 class="card-title">
-              <a href="https://youtu.be/AjUo-SJ5TSA?si=-Z4Bf_owypug4oHJ" target="_blank" rel="noopener noreferrer">ايه المشكله ف ال حب و الارتباط و date</a>
+              <a href="https://youtu.be/AjUo-SJ5TSA?si=-Z4Bf_owypug4oHJ" data-en="Eh El-Moshkela? On Love & Casual Dating">ايه المشكله ف ال حب و الارتباط و date</a>
             </h3>
-            <p class="card-desc">بودكاست بيوضحلك ليه حرم الإسلام الارتباط والعلاقة ما بين الولد والبنت بدون إطار شرعي (خطوبة أو زواج)، وبيشرح الأضرار النفسية والعاطفية بطريقة مقنعة وعقلانية.</p>
+            <p class="card-desc" data-en="Explains with empathy and reason why Islam sets clear boundaries around unmarried relationships to protect hearts and dignity.">بودكاست بيوضحلك ليه حرم الإسلام الارتباط والعلاقة ما بين الولد والبنت بدون إطار شرعي (خطوبة أو زواج)، وبيشرح الأضرار النفسية والعاطفية بطريقة مقنعة وعقلانية.</p>
             <div class="card-footer">
-              <a href="https://youtu.be/AjUo-SJ5TSA?si=-Z4Bf_owypug4oHJ" target="_blank" rel="noopener noreferrer" class="card-cta">
-                <span>مشاهدة الدرس على يوتيوب</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+              <a href="https://youtu.be/AjUo-SJ5TSA?si=-Z4Bf_owypug4oHJ" class="card-cta">
+                <span data-i18n="watch_lesson">شاهد الدرس الآن</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
               </a>
-              <button class="share-btn" data-url="https://youtu.be/AjUo-SJ5TSA?si=-Z4Bf_owypug4oHJ" aria-label="مشاركة رابط الدرس">
+              <button type="button" class="share-btn" data-url="https://youtu.be/AjUo-SJ5TSA?si=-Z4Bf_owypug4oHJ" aria-label="نسخ رابط الدرس">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
               </button>
             </div>
@@ -599,8 +751,8 @@
         <article class="card" data-category="faith">
           <div class="card-media">
             <img src="images/4modify.jpg" alt="غلاف حلقة تجارة الدين مع أمير منير" loading="lazy" decoding="async" />
-            <span class="card-tag amber">دروس أونلاين</span>
-            <a href="https://youtu.be/vZZDe_BHt8g?si=0iHPacIRObPe82j1" target="_blank" rel="noopener noreferrer" class="card-play-overlay" aria-label="مشاهدة حلقة تجارة الدين مع أمير منير">
+            <span class="card-tag amber" data-en="Droos Podcast">دروس أونلاين</span>
+            <a href="https://youtu.be/vZZDe_BHt8g?si=0iHPacIRObPe82j1" class="card-play-overlay" aria-label="مشاهدة حلقة تجارة الدين مع أمير منير">
               <div class="play-icon-circle">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
               </div>
@@ -608,15 +760,15 @@
           </div>
           <div class="card-content">
             <h3 class="card-title">
-              <a href="https://youtu.be/vZZDe_BHt8g?si=0iHPacIRObPe82j1" target="_blank" rel="noopener noreferrer">تجاره الدين مع أمير منير | بودكاست دروس</a>
+              <a href="https://youtu.be/vZZDe_BHt8g?si=0iHPacIRObPe82j1" data-en="Sincerity vs. Exploiting Religion | Amir Mounir">تجاره الدين مع أمير منير | بودكاست دروس</a>
             </h3>
-            <p class="card-desc">حلقة استثنائية تناقش إخلاص النية في الدعوة والعمل الصالح والتفريق بين الدعوة الصادقة والتربح الزائف.</p>
+            <p class="card-desc" data-en="An insightful discussion on sincerity in Da'wah and good deeds versus commercializing religion.">حلقة استثنائية تناقش إخلاص النية في الدعوة والعمل الصالح والتفريق بين الدعوة الصادقة والتربح الزائف.</p>
             <div class="card-footer">
-              <a href="https://youtu.be/vZZDe_BHt8g?si=0iHPacIRObPe82j1" target="_blank" rel="noopener noreferrer" class="card-cta">
-                <span>مشاهدة الدرس على يوتيوب</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+              <a href="https://youtu.be/vZZDe_BHt8g?si=0iHPacIRObPe82j1" class="card-cta">
+                <span data-i18n="watch_lesson">شاهد الدرس الآن</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
               </a>
-              <button class="share-btn" data-url="https://youtu.be/vZZDe_BHt8g?si=0iHPacIRObPe82j1" aria-label="مشاركة رابط الدرس">
+              <button type="button" class="share-btn" data-url="https://youtu.be/vZZDe_BHt8g?si=0iHPacIRObPe82j1" aria-label="نسخ رابط الدرس">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
               </button>
             </div>
@@ -627,8 +779,8 @@
         <article class="card" data-category="faith">
           <div class="card-media">
             <img src="images/تشك ف الاسلام.jpg" alt="غلاف حلقة تشك في الإسلام" loading="lazy" decoding="async" />
-            <span class="card-tag amber">رد الشبهات</span>
-            <a href="https://youtu.be/5vGUZTWVpos?si=JKT7WSfnnGJJ2YXr" target="_blank" rel="noopener noreferrer" class="card-play-overlay" aria-label="مشاهدة حلقة تشك في الإسلام">
+            <span class="card-tag amber" data-en="Addressing Doubts">رد الشبهات</span>
+            <a href="https://youtu.be/5vGUZTWVpos?si=JKT7WSfnnGJJ2YXr" class="card-play-overlay" aria-label="مشاهدة حلقة تشك في الإسلام">
               <div class="play-icon-circle">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
               </div>
@@ -636,15 +788,233 @@
           </div>
           <div class="card-content">
             <h3 class="card-title">
-              <a href="https://youtu.be/5vGUZTWVpos?si=JKT7WSfnnGJJ2YXr" target="_blank" rel="noopener noreferrer">تشك في الاسلام</a>
+              <a href="https://youtu.be/5vGUZTWVpos?si=JKT7WSfnnGJJ2YXr" data-en="Addressing Doubts About Islam">تشك في الاسلام</a>
             </h3>
-            <p class="card-desc">يجيب على أغلب التساؤلات والوساوس التي يحاول الشيطان إثارتها في عقل المسلم، ويوضح كيفية تثبيت القلب على اليقين والاطمئنان.</p>
+            <p class="card-desc" data-en="Addresses common questions and whispers of doubt, guiding you toward intellectual certainty and peace of mind.">يجيب على أغلب التساؤلات والوساوس التي يحاول الشيطان إثارتها في عقل المسلم، ويوضح كيفية تثبيت القلب على اليقين والاطمئنان.</p>
             <div class="card-footer">
-              <a href="https://youtu.be/5vGUZTWVpos?si=JKT7WSfnnGJJ2YXr" target="_blank" rel="noopener noreferrer" class="card-cta">
-                <span>مشاهدة الدرس على يوتيوب</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+              <a href="https://youtu.be/5vGUZTWVpos?si=JKT7WSfnnGJJ2YXr" class="card-cta">
+                <span data-i18n="watch_lesson">شاهد الدرس الآن</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
               </a>
-              <button class="share-btn" data-url="https://youtu.be/5vGUZTWVpos?si=JKT7WSfnnGJJ2YXr" aria-label="مشاركة رابط الدرس">
+              <button type="button" class="share-btn" data-url="https://youtu.be/5vGUZTWVpos?si=JKT7WSfnnGJJ2YXr" aria-label="نسخ رابط الدرس">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- NEW VIDEO 2: 3kRDtIO6OYQ (Islamic Studies & Faith — Dunya as Testing & Reflection) -->
+        <article class="card" data-category="faith">
+          <div class="card-media">
+            <img src="https://i.ytimg.com/vi/3kRDtIO6OYQ/hqdefault.jpg" alt="غلاف درس الدنيا دار ابتلاء واعتبار لا دار جزاء" loading="lazy" decoding="async" />
+            <span class="card-tag amber" data-en="Islamic Studies & Faith">الدراسات الإسلامية والعقيدة</span>
+            <span class="card-new-badge" data-i18n="badge_new">جديد</span>
+            <a href="https://youtu.be/3kRDtIO6OYQ?si=Bw-JMUBQRP5KXPYi" class="card-play-overlay" aria-label="مشاهدة درس الدنيا دار ابتلاء واعتبار">
+              <div class="play-icon-circle">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </div>
+            </a>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">
+              <a href="https://youtu.be/3kRDtIO6OYQ?si=Bw-JMUBQRP5KXPYi" data-en="This World Is a Place of Testing & Reflection | Yasser Al-Hazimi">الدنيا دار ابتلاء واعتبار لا دار جزاء | أ. ياسر الحزيمي</a>
+            </h3>
+            <p class="card-desc" data-en="Yasser Al-Hazimi clarifies a foundational Islamic concept: this world is a place of testing and reflection (I'tibar) rather than final reward, helping you move from events to deeper meaning.">يصحح أ. ياسر الحزيمي مفهوماً جوهرياً يفسر الابتلاءات والاختبارات في الحياة: أن الدنيا دار ابتلاء واعتبار وليست دار جزاء، وكيف تعبر من الحدث إلى المعنى لتصلح نظرتك وتبدأ حياة أوعى.</p>
+            <div class="card-footer">
+              <a href="https://youtu.be/3kRDtIO6OYQ?si=Bw-JMUBQRP5KXPYi" class="card-cta">
+                <span data-i18n="watch_lesson">شاهد الدرس الآن</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </a>
+              <button type="button" class="share-btn" data-url="https://youtu.be/3kRDtIO6OYQ?si=Bw-JMUBQRP5KXPYi" aria-label="نسخ رابط الدرس">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- NEW VIDEO 3: A5TJMkwFeUo (Worship & Islamic Practices) -->
+        <article class="card" data-category="worship faith">
+          <div class="card-media">
+            <img src="https://i.ytimg.com/vi/A5TJMkwFeUo/hqdefault.jpg" alt="غلاف درس إحنا بنعبد ربنا ليه إيه لازمة العبادة" loading="lazy" decoding="async" />
+            <span class="card-tag" data-en="Worship & Practices">العبادات والخشوع</span>
+            <span class="card-new-badge" data-i18n="badge_new">جديد</span>
+            <a href="https://youtu.be/A5TJMkwFeUo" class="card-play-overlay" aria-label="مشاهدة درس إحنا بنعبد ربنا ليه">
+              <div class="play-icon-circle">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </div>
+            </a>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">
+              <a href="https://youtu.be/A5TJMkwFeUo" data-en="Why Do We Worship Allah? The True Purpose of Worship | Yasser Mamdouh">إحنا بنعبد ربنا ليه؟ إيه لازمة العبادة | ياسر ممدوح</a>
+            </h3>
+            <p class="card-desc" data-en="Yasser Mamdouh addresses the deeper purpose behind acts of worship like prayer and fasting, explaining how worship is a pathway to dedicating the heart sincerely to God alone.">يجيب ياسر ممدوح بعمق ووضوح عن الغاية الحقيقية من العبادات كالصلاة والصيام، موضحاً أنها ليست مجرد طقوس بل طريق لإخلاص القلب وتعلقه بالله وحده.</p>
+            <div class="card-footer">
+              <a href="https://youtu.be/A5TJMkwFeUo" class="card-cta">
+                <span data-i18n="watch_lesson">شاهد الدرس الآن</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </a>
+              <button type="button" class="share-btn" data-url="https://youtu.be/A5TJMkwFeUo" aria-label="نسخ رابط الدرس">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- NEW VIDEO 7: vL6U567zRbo (Islamic Studies & Faith — Heart vs Brain) -->
+        <article class="card" data-category="faith">
+          <div class="card-media">
+            <img src="https://i.ytimg.com/vi/vL6U567zRbo/hqdefault.jpg" alt="غلاف درس هل العقل في القلب أم في الدماغ د هيثم طلعت" loading="lazy" decoding="async" />
+            <span class="card-tag amber" data-en="Islamic Studies & Faith">رد الشبهات والعلم</span>
+            <span class="card-new-badge" data-i18n="badge_new">جديد</span>
+            <a href="https://youtu.be/vL6U567zRbo?si=SHaj4S8-zDexmwcU" class="card-play-overlay" aria-label="مشاهدة درس هل العقل في القلب أم في الدماغ">
+              <div class="play-icon-circle">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </div>
+            </a>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">
+              <a href="https://youtu.be/vL6U567zRbo?si=SHaj4S8-zDexmwcU" data-en="Scientifically: Is the Mind in the Heart or the Brain? | Dr. Haitham Talaat">علمياً: هل العقل في القلب أم في الدماغ؟ | د. هيثم طلعت</a>
+            </h3>
+            <p class="card-desc" data-en="Dr. Haitham Talaat examines medical and philosophical perspectives on the heart vs. the brain, distinguishing the brain's neural executive role from consciousness, meaning, and faith.">يناقش د. هيثم طلعت بالأدلة العلمية والطبية شبهة مكان العقل بين القلب والدماغ، مفرقاً بين الوظيفة العصبية التنفيذية للدماغ وبين مركز المعنى والإدراك والوعي.</p>
+            <div class="card-footer">
+              <a href="https://youtu.be/vL6U567zRbo?si=SHaj4S8-zDexmwcU" class="card-cta">
+                <span data-i18n="watch_lesson">شاهد الدرس الآن</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </a>
+              <button type="button" class="share-btn" data-url="https://youtu.be/vL6U567zRbo?si=SHaj4S8-zDexmwcU" aria-label="نسخ رابط الدرس">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- NEW VIDEO 10: 7VxCTTEP1bM (Worship & Islamic Practices — Sujood & Prayer) -->
+        <article class="card" data-category="worship faith">
+          <div class="card-media">
+            <img src="https://i.ytimg.com/vi/7VxCTTEP1bM/hqdefault.jpg" alt="غلاف درس سر السجود والخشوع د أحمد العربي" loading="lazy" decoding="async" />
+            <span class="card-tag" data-en="Worship & Practices">العبادات والخشوع</span>
+            <span class="card-new-badge" data-i18n="badge_new">جديد</span>
+            <a href="https://youtu.be/7VxCTTEP1bM?si=WACxfdWauLLwUds9" class="card-play-overlay" aria-label="مشاهدة درس سر السجود والخشوع">
+              <div class="play-icon-circle">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </div>
+            </a>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">
+              <a href="https://youtu.be/7VxCTTEP1bM?si=WACxfdWauLLwUds9" data-en="The Secret of Sujood & Humility in Prayer | Dr. Ahmed Al-Arabi">سر السجود والخشوع الذي يصلح حالك ويرتب حياتك | د. أحمد العربي</a>
+            </h3>
+            <p class="card-desc" data-en="Dr. Ahmed Al-Arabi reflects on the profound spiritual power of prostration (Sujood) in prayer—humbling oneself before Allah, calling upon Him sincerely, and finding relief from life's burdens.">يتأمل د. أحمد العربي في معاني السجود والخشوع في الصلاة، وسر القرب من الله في لحظة الانكسار والدعاء، وكيف يفرّج الله بها الكروب ويصلح بها القلب والحياة.</p>
+            <div class="card-footer">
+              <a href="https://youtu.be/7VxCTTEP1bM?si=WACxfdWauLLwUds9" class="card-cta">
+                <span data-i18n="watch_lesson">شاهد الدرس الآن</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </a>
+              <button type="button" class="share-btn" data-url="https://youtu.be/7VxCTTEP1bM?si=WACxfdWauLLwUds9" aria-label="نسخ رابط الدرس">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+              </button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         SECTION 3: General Awareness, Study & Modern Life Skills
+         ===================================================================== -->
+    <section id="awareness" class="content-section" aria-labelledby="awareness-heading">
+      <div class="section-header">
+        <h2 class="section-title" id="awareness-heading">
+          <span>💡</span>
+          <span data-i18n="sec_awareness_title">الوعي العام، الدراسة ومهارات الحياة</span>
+          <span class="section-badge" data-i18n="sec_awareness_badge">دروس معرفية جديدة</span>
+        </h2>
+      </div>
+
+      <div class="card-grid">
+        <!-- NEW VIDEO 6: -GmdqdNhk-c (General Awareness & Education — AI by El-Ghandour) -->
+        <article class="card" data-category="awareness">
+          <div class="card-media">
+            <img src="https://i.ytimg.com/vi/-GmdqdNhk-c/hqdefault.jpg" alt="غلاف حلقة الاختراع الأخير الذكاء الاصطناعي أحمد الغندور" loading="lazy" decoding="async" />
+            <span class="card-tag blue" data-en="General Awareness & Education">الوعي العام والثقافة</span>
+            <span class="card-new-badge" data-i18n="badge_new">جديد</span>
+            <a href="https://youtu.be/-GmdqdNhk-c?si=oz3m3vt6vUbbzw99" class="card-play-overlay" aria-label="مشاهدة حلقة الاختراع الأخير الذكاء الاصطناعي">
+              <div class="play-icon-circle">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </div>
+            </a>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">
+              <a href="https://youtu.be/-GmdqdNhk-c?si=oz3m3vt6vUbbzw99" data-en="The Last Invention: AI & The Future of Humanity | Ahmed El-Ghandour">الاختراع الأخير: الذكاء الاصطناعي ومستقبل العالم | أحمد الغندور</a>
+            </h3>
+            <p class="card-desc" data-en="Episode 1 of 'Aql with El-Ghandour': an insightful look at the rapid global rise of generative AI as foundational infrastructure, exploring its impact on work, responsibility, and the future.">الحلقة الأولى من سلسلة «عقل في ضيافة الغندور»: نظرة معرفية شيّقة على تسارع الذكاء الاصطناعي التوليدي، وتحوّله لبنية تحتية عالمية، وتساؤلات حول مستقبله وتأثيره على الإنسان والعمل.</p>
+            <div class="card-footer">
+              <a href="https://youtu.be/-GmdqdNhk-c?si=oz3m3vt6vUbbzw99" class="card-cta">
+                <span data-i18n="watch_lesson">شاهد الدرس الآن</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </a>
+              <button type="button" class="share-btn" data-url="https://youtu.be/-GmdqdNhk-c?si=oz3m3vt6vUbbzw99" aria-label="نسخ رابط الدرس">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- NEW VIDEO 8: nxXfj0DUJjw (General Awareness & Education — Eh El-Moshkela on Wealth) -->
+        <article class="card" data-category="awareness faith">
+          <div class="card-media">
+            <img src="https://i.ytimg.com/vi/nxXfj0DUJjw/hqdefault.jpg" alt="غلاف حلقة إيه المشكلة في الغنى" loading="lazy" decoding="async" />
+            <span class="card-tag amber" data-en="General Awareness & Education">الوعي المالي والديني</span>
+            <span class="card-new-badge" data-i18n="badge_new">جديد</span>
+            <a href="https://youtu.be/nxXfj0DUJjw?si=pVUcvhV1RD_1jSJD" class="card-play-overlay" aria-label="مشاهدة حلقة إيه المشكلة في الغنى">
+              <div class="play-icon-circle">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </div>
+            </a>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">
+              <a href="https://youtu.be/nxXfj0DUJjw?si=pVUcvhV1RD_1jSJD" data-en="Eh El-Moshkela? On Wealth & Ambition">إيه المشكلة؟ في الغنى والمال</a>
+            </h3>
+            <p class="card-desc" data-en="An insightful Eh El-Moshkela episode examining how social media distorts our view of wealth and how to balance lawful worldly ambition with contentment and purpose.">حلقة ثرية من بودكاست «إيه المشكلة» تناقش علاقة الإنسان بالمال، وتأثير مقارنات السوشيال ميديا على الشباب، وكيف نوازن بين السعي المشروع للغنى وبين القناعة وأولويات الدين.</p>
+            <div class="card-footer">
+              <a href="https://youtu.be/nxXfj0DUJjw?si=pVUcvhV1RD_1jSJD" class="card-cta">
+                <span data-i18n="watch_lesson">شاهد الدرس الآن</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </a>
+              <button type="button" class="share-btn" data-url="https://youtu.be/nxXfj0DUJjw?si=pVUcvhV1RD_1jSJD" aria-label="نسخ رابط الدرس">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- NEW VIDEO 9 (Deduplicated): 8ViQ2SJHbNA (Personal Growth & Life Skills — Studying) -->
+        <article class="card" data-category="life-skills awareness">
+          <div class="card-media">
+            <img src="https://i.ytimg.com/vi/8ViQ2SJHbNA/hqdefault.jpg" alt="غلاف حلقة إيه المشكلة في الدراسة" loading="lazy" decoding="async" />
+            <span class="card-tag blue" data-en="Personal Growth & Life Skills">الدراسة ومهارات الحياة</span>
+            <span class="card-new-badge" data-i18n="badge_new">جديد</span>
+            <a href="https://youtu.be/8ViQ2SJHbNA?si=6kLx13zjHYPKXHaH" class="card-play-overlay" aria-label="مشاهدة حلقة إيه المشكلة في الدراسة">
+              <div class="play-icon-circle">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </div>
+            </a>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">
+              <a href="https://youtu.be/8ViQ2SJHbNA?si=6kLx13zjHYPKXHaH" data-en="Eh El-Moshkela? On Studying & Character Building">إيه المشكلة؟ في الدراسة وبناء الشخصية</a>
+            </h3>
+            <p class="card-desc" data-en="Explores studying beyond grades: overcoming peer pressure, cultivating independent decision-making and leadership early, and seeking Allah's tawfiq consistently—not just before exams.">تناقش الحلقة كيف تبني الدراسة شخصيتك ومهاراتك القيادية واستقلالك في اتخاذ القرار بعيداً عن التبعية، مع التأكيد على قيمة الأخلاق والتوفيق من الله في الرخاء قبل الامتحانات.</p>
+            <div class="card-footer">
+              <a href="https://youtu.be/8ViQ2SJHbNA?si=6kLx13zjHYPKXHaH" class="card-cta">
+                <span data-i18n="watch_lesson">شاهد الدرس الآن</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </a>
+              <button type="button" class="share-btn" data-url="https://youtu.be/8ViQ2SJHbNA?si=6kLx13zjHYPKXHaH" aria-label="نسخ رابط الدرس">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
               </button>
             </div>
@@ -657,42 +1027,50 @@
   <!-- Comprehensive Footer -->
   <footer class="site-footer">
     <div class="container">
+      <div class="footer-identity">
+        <a href="index.html" class="brand-logo">
+          <span class="logo-dot"></span>
+          <span data-i18n="brand_name">بودكاستك</span>
+        </a>
+        <p data-i18n="platform_tagline">منصة للتعلم والوعي والفهم وتطوير النفس</p>
+      </div>
+
       <div class="footer-grid">
         <!-- Col 1: Channels -->
         <div class="footer-col">
           <h3 class="footer-col-title">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
-            <span>مراجع قنوات البودكاست</span>
+            <span data-i18n="footer_channels_title">مراجع قنوات البودكاست</span>
           </h3>
           <ul class="footer-list">
             <li class="footer-list-item">
-              <a href="https://youtu.be/A6_y0HuwSQw?si=c9RjCMR47G7sjmfD" target="_blank" rel="noopener noreferrer">
-                <strong>صفحة أحمد عامر</strong>
-                <span class="item-sub">على يوتيوب</span>
+              <a href="https://youtu.be/A6_y0HuwSQw?si=c9RjCMR47G7sjmfD" target="_blank" rel="noopener noreferrer" data-external="true">
+                <strong data-en="Ahmed Amer Channel">صفحة أحمد عامر</strong>
+                <span class="item-sub" data-i18n="sub_youtube">على يوتيوب</span>
               </a>
             </li>
             <li class="footer-list-item">
-              <a href="https://youtu.be/3u5uYyGKYU8?si=y0BcbqXVAtIv1-IV" target="_blank" rel="noopener noreferrer">
-                <strong>قناة إيه المشكلة</strong>
-                <span class="item-sub">على يوتيوب</span>
+              <a href="https://youtu.be/3u5uYyGKYU8?si=y0BcbqXVAtIv1-IV" target="_blank" rel="noopener noreferrer" data-external="true">
+                <strong data-en="Eh El-Moshkela Channel">قناة إيه المشكلة</strong>
+                <span class="item-sub" data-i18n="sub_youtube">على يوتيوب</span>
               </a>
             </li>
             <li class="footer-list-item">
-              <a href="https://youtu.be/y3rb67qqDSg?si=AutiTtFjpobfxTFD" target="_blank" rel="noopener noreferrer">
-                <strong>قناة واعي (تطبيق واعي)</strong>
-                <span class="item-sub">على يوتيوب وآب ستور</span>
+              <a href="https://youtu.be/y3rb67qqDSg?si=AutiTtFjpobfxTFD" target="_blank" rel="noopener noreferrer" data-external="true">
+                <strong data-en="Wa3y Channel & App">قناة واعي (تطبيق واعي)</strong>
+                <span class="item-sub" data-i18n="sub_youtube_app">على يوتيوب وآب ستور</span>
               </a>
             </li>
             <li class="footer-list-item">
-              <a href="https://youtu.be/FM3jv3U9Nh8?si=zkbh5nXc_ESIVotb" target="_blank" rel="noopener noreferrer">
-                <strong>قناة دروس أونلاين</strong>
-                <span class="item-sub">على يوتيوب</span>
+              <a href="https://youtu.be/FM3jv3U9Nh8?si=zkbh5nXc_ESIVotb" target="_blank" rel="noopener noreferrer" data-external="true">
+                <strong data-en="Droos Online Channel">قناة دروس أونلاين</strong>
+                <span class="item-sub" data-i18n="sub_youtube">على يوتيوب</span>
               </a>
             </li>
             <li class="footer-list-item">
-              <a href="https://youtu.be/pwKHR8fe8GU?si=7Um6lXHKca2VH-Kf" target="_blank" rel="noopener noreferrer">
-                <strong>صفحة ياسر ممدوح</strong>
-                <span class="item-sub">على يوتيوب</span>
+              <a href="https://youtu.be/pwKHR8fe8GU?si=7Um6lXHKca2VH-Kf" target="_blank" rel="noopener noreferrer" data-external="true">
+                <strong data-en="Yasser Mamdouh Page">صفحة ياسر ممدوح</strong>
+                <span class="item-sub" data-i18n="sub_youtube">على يوتيوب</span>
               </a>
             </li>
           </ul>
@@ -702,37 +1080,37 @@
         <div class="footer-col">
           <h3 class="footer-col-title">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-            <span>مراجع وروابط مهمة</span>
+            <span data-i18n="footer_refs_title">مراجع وروابط مهمة</span>
           </h3>
           <ul class="footer-list">
             <li class="footer-list-item">
-              <a href="https://ketabpedia.com/%D8%AA%D8%AD%D9%85%D9%8A%D9%84/%D9%83%D8%AA%D8%A7%D8%A8-%D9%81%D9%86-%D8%A7%D9%84%D9%84%D8%A7%D9%85%D8%A8%D8%A7%D9%84%D8%A7%D8%A9-pdf/" target="_blank" rel="noopener noreferrer">
-                <strong>كتب تطوير الذات</strong>
-                <span class="item-sub">وأهمهم كتاب فن اللامبالاة (PDF)</span>
+              <a href="https://ketabpedia.com/%D8%AA%D8%AD%D9%85%D9%8A%D9%84/%D9%83%D8%AA%D8%A7%D8%A8-%D9%81%D9%86-%D8%A7%D9%84%D9%84%D8%A7%D9%85%D8%A8%D8%A7%D9%84%D8%A7%D8%A9-pdf/" target="_blank" rel="noopener noreferrer" data-external="true">
+                <strong data-en="Self-Development Books">كتب تطوير الذات</strong>
+                <span class="item-sub" data-en="Featuring The Subtle Art of Not Giving a F*ck (PDF)">وأهمهم كتاب فن اللامبالاة (PDF)</span>
               </a>
             </li>
             <li class="footer-list-item">
-              <a href="https://www.google.com/search?q=%D9%83%D9%8A%D9%81%D9%8A%D9%87+%D8%AA%D9%86%D8%B8%D9%8A%D9%85+%D8%A7%D9%84%D9%88%D9%82%D8%AA&rlz=1C1GCEA_enEG1164EG1164&oq=%D9%83%D9%8A%D9%81%D9%8A%D9%87+%D8%AA%D9%86%D8%B8%D9%8A%D9%85+%D8%A7%D9%84%D9%88%D9%82%D8%AA&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCDYwNTZqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8" target="_blank" rel="noopener noreferrer">
-                <strong>كيفية تنظيم الوقت</strong>
-                <span class="item-sub">تلخيص بسيط لإدارة واستثمار الوقت</span>
+              <a href="https://www.google.com/search?q=%D9%83%D9%8A%D9%81%D9%8A%D9%87+%D8%AA%D9%86%D8%B8%D9%8A%D9%85+%D8%A7%D9%84%D9%88%D9%82%D8%AA&rlz=1C1GCEA_enEG1164EG1164&oq=%D9%83%D9%8A%D9%81%D9%8A%D9%87+%D8%AA%D9%86%D8%B8%D9%8A%D9%85+%D8%A7%D9%84%D9%88%D9%82%D8%AA&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCDYwNTZqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8" target="_blank" rel="noopener noreferrer" data-external="true">
+                <strong data-en="How to Manage Your Time">كيفية تنظيم الوقت</strong>
+                <span class="item-sub" data-en="Practical guide to time management">تلخيص بسيط لإدارة واستثمار الوقت</span>
               </a>
             </li>
             <li class="footer-list-item">
-              <a href="https://youtu.be/MFLHYRtXjSE?si=lPaIMZzVrKUVMCCH" target="_blank" rel="noopener noreferrer">
-                <strong>طريق الالتزام</strong>
-                <span class="item-sub">دليل عملي على يوتيوب</span>
+              <a href="https://youtu.be/MFLHYRtXjSE?si=lPaIMZzVrKUVMCCH" data-video-id="MFLHYRtXjSE" data-title-ar="طريق الالتزام" data-title-en="The Path to Commitment" data-desc-ar="دليل عملي لبدء طريق الالتزام والثبات." data-desc-en="A practical guide to building steady spiritual and personal commitment.">
+                <strong data-en="The Path to Commitment">طريق الالتزام</strong>
+                <span class="item-sub" data-en="Practical educational lesson">دليل عملي داخل المنصة</span>
               </a>
             </li>
             <li class="footer-list-item">
-              <a href="https://play.google.com/store/apps/details?id=com.m_s_helala.wa3y&hl=ar&pli=1" target="_blank" rel="noopener noreferrer">
-                <strong>كتب وتطبيق واعي</strong>
-                <span class="item-sub">للتعافي من إدمان الإباحية على Google Play</span>
+              <a href="https://play.google.com/store/apps/details?id=com.m_s_helala.wa3y&hl=ar&pli=1" target="_blank" rel="noopener noreferrer" data-external="true">
+                <strong data-en="Wa3y Recovery App & Books">كتب وتطبيق واعي</strong>
+                <span class="item-sub" data-en="Recovery tools on Google Play">للتعافي من إدمان الإباحية على Google Play</span>
               </a>
             </li>
             <li class="footer-list-item">
-              <a href="https://youtu.be/teJSuEuw-Wo?si=pb368U-GlJvZSOHe" target="_blank" rel="noopener noreferrer">
-                <strong>التحرر من إدمان السوشيال ميديا</strong>
-                <span class="item-sub">دليل شامل على يوتيوب</span>
+              <a href="https://youtu.be/teJSuEuw-Wo?si=pb368U-GlJvZSOHe" data-video-id="teJSuEuw-Wo" data-title-ar="التحرر من إدمان السوشيال ميديا" data-title-en="Breaking Free from Social Media Addiction" data-desc-ar="دليل شامل للتحرر من استنزاف السوشيال ميديا واستعادة تركيزك." data-desc-en="A comprehensive lesson on overcoming social media addiction and reclaiming focus.">
+                <strong data-en="Overcoming Social Media Addiction">التحرر من إدمان السوشيال ميديا</strong>
+                <span class="item-sub" data-en="Comprehensive educational guide">دليل شامل داخل المنصة</span>
               </a>
             </li>
           </ul>
@@ -742,37 +1120,37 @@
         <div class="footer-col">
           <h3 class="footer-col-title">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-            <span>معرض الفيديوهات المختارة</span>
+            <span data-i18n="footer_gallery_title">معرض الدروس المختارة</span>
           </h3>
           <div class="footer-video-grid">
-            <a href="https://youtu.be/wUpNz6MRbL4?si=BgpsOJa1coFDNn1M" target="_blank" rel="noopener noreferrer" class="footer-video-thumb" aria-label="فيديو جهاد 1">
+            <a href="https://youtu.be/wUpNz6MRbL4?si=BgpsOJa1coFDNn1M" class="footer-video-thumb" data-video-id="wUpNz6MRbL4" data-title-ar="جهاد النفس (1)" data-title-en="Self-Struggle (1)" aria-label="فيديو جهاد 1">
               <img src="images/جهاد (1).jpg" alt="فيديو جهاد 1" loading="lazy" />
             </a>
-            <a href="https://youtu.be/FM3jv3U9Nh8?si=K5aeSdueHQ9oyd2r" target="_blank" rel="noopener noreferrer" class="footer-video-thumb" aria-label="فيديو جهاد 2">
+            <a href="https://youtu.be/FM3jv3U9Nh8?si=K5aeSdueHQ9oyd2r" class="footer-video-thumb" data-video-id="FM3jv3U9Nh8" data-title-ar="جهاد النفس (2)" data-title-en="Self-Struggle (2)" aria-label="فيديو جهاد 2">
               <img src="images/جهاد (2).jpg" alt="فيديو جهاد 2" loading="lazy" />
             </a>
-            <a href="https://youtu.be/Qok7NXqopf0?si=bxCLztCOFyS9Vl8_" target="_blank" rel="noopener noreferrer" class="footer-video-thumb" aria-label="أمير منير">
+            <a href="https://youtu.be/Qok7NXqopf0?si=bxCLztCOFyS9Vl8_" class="footer-video-thumb" data-video-id="Qok7NXqopf0" data-title-ar="درس مع أمير منير" data-title-en="Lesson with Amir Mounir" aria-label="أمير منير">
               <img src="images/امير منير.jpg" alt="أمير منير" loading="lazy" />
             </a>
-            <a href="https://youtu.be/uWnlgkYWRpY?si=MfsA16K-LF7Dxzlc" target="_blank" rel="noopener noreferrer" class="footer-video-thumb" aria-label="تعفن الدماغ">
+            <a href="https://youtu.be/uWnlgkYWRpY?si=MfsA16K-LF7Dxzlc" class="footer-video-thumb" data-video-id="uWnlgkYWRpY" data-title-ar="تعفن الدماغ" data-title-en="Brain Rot & Digital Focus" aria-label="تعفن الدماغ">
               <img src="images/تعفن.png" alt="تعفن الدماغ" loading="lazy" />
             </a>
-            <a href="https://youtu.be/w4R8qcSRAKc?si=Px3L5_M7U2mCC76d" target="_blank" rel="noopener noreferrer" class="footer-video-thumb" aria-label="قمم">
+            <a href="https://youtu.be/w4R8qcSRAKc?si=Px3L5_M7U2mCC76d" class="footer-video-thumb" data-video-id="w4R8qcSRAKc" data-title-ar="قمم" data-title-en="Peaks of Ambition" aria-label="قمم">
               <img src="images/قمم (2).jpg" alt="قمم" loading="lazy" />
             </a>
-            <a href="https://youtu.be/pwKHR8fe8GU?si=Fvgu9DRj0fmNJM9A" target="_blank" rel="noopener noreferrer" class="footer-video-thumb" aria-label="افرض">
+            <a href="https://youtu.be/pwKHR8fe8GU?si=Fvgu9DRj0fmNJM9A" class="footer-video-thumb" data-video-id="pwKHR8fe8GU" data-title-ar="افرض" data-title-en="What If — Reflection" aria-label="افرض">
               <img src="images/افرض (2).jpg" alt="افرض" loading="lazy" />
             </a>
-            <a href="https://youtu.be/Fb-b95F92WA?si=uvM3Q0Kfe2BdcKg1" target="_blank" rel="noopener noreferrer" class="footer-video-thumb" aria-label="حلقة 18">
+            <a href="https://youtu.be/Fb-b95F92WA?si=uvM3Q0Kfe2BdcKg1" class="footer-video-thumb" data-video-id="Fb-b95F92WA" data-title-ar="درس مختار 18" data-title-en="Featured Lesson 18" aria-label="حلقة 18">
               <img src="images/18.jpg" alt="حلقة 18" loading="lazy" />
             </a>
-            <a href="https://youtu.be/ySLr9IF1tk8?si=uCnnmsKt2fIAEXIC" target="_blank" rel="noopener noreferrer" class="footer-video-thumb" aria-label="حلقة 19">
+            <a href="https://youtu.be/ySLr9IF1tk8?si=uCnnmsKt2fIAEXIC" class="footer-video-thumb" data-video-id="ySLr9IF1tk8" data-title-ar="درس مختار 19" data-title-en="Featured Lesson 19" aria-label="حلقة 19">
               <img src="images/19.jpg" alt="حلقة 19" loading="lazy" />
             </a>
-            <a href="https://youtu.be/-B_JLU3SQbs?si=Bq-VXk53yF-4i0b5" target="_blank" rel="noopener noreferrer" class="footer-video-thumb" aria-label="حلقة بودكاست 3">
+            <a href="https://youtu.be/-B_JLU3SQbs?si=Bq-VXk53yF-4i0b5" class="footer-video-thumb" data-video-id="-B_JLU3SQbs" data-title-ar="حلقة بودكاست 3" data-title-en="Podcast Episode 3" aria-label="حلقة بودكاست 3">
               <img src="images/3 modify.jpg" alt="حلقة بودكاست 3" loading="lazy" />
             </a>
-            <a href="https://youtu.be/ySLr9IF1tk8?si=uCnnmsKt2fIAEXIC" target="_blank" rel="noopener noreferrer" class="footer-video-thumb" aria-label="حلقة بودكاست مختارة">
+            <a href="https://youtu.be/ySLr9IF1tk8?si=uCnnmsKt2fIAEXIC" class="footer-video-thumb" data-video-id="ySLr9IF1tk8" data-title-ar="حلقة بودكاست مختارة" data-title-en="Selected Podcast Episode" aria-label="حلقة بودكاست مختارة">
               <img src="images/1.jpg" alt="حلقة بودكاست مختارة" loading="lazy" />
             </a>
           </div>
@@ -781,32 +1159,37 @@
 
       <!-- Social & Contact -->
       <div class="footer-social-wrap">
-        <h4 class="footer-social-title">أتمنى تكونوا طلعتوا بأكبر استفادة ممكنة</h4>
-        <p class="footer-social-desc">وفي النهاية لو حابب تتواصل معايا أو عندك تعليق، دي حساباتي ومواقع التواصل الخاصة بيا:</p>
+        <h4 class="footer-social-title" data-i18n="footer_social_title">أتمنى تكونوا طلعتوا بأكبر استفادة ممكنة</h4>
+        <p class="footer-social-desc" data-i18n="footer_social_desc">وفي النهاية لو حابب تتواصل معايا أو عندك تعليق أو اقتراح لدروس جديدة، يسعدني تواصلك:</p>
         <div class="social-links">
-          <a href="https://wa.me/201151387688?text=مرحبا،%20أنا%20عاوز%20أتواصل%20مع%20معاذ%20مصطفي" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="تواصل عبر واتساب">
+          <a href="https://wa.me/201011052340?text=مرحبا،%20أنا%20عاوز%20أتواصل%20مع%20معاذ%20مصطفي" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="تواصل عبر واتساب">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            <span>واتساب (WhatsApp)</span>
+            <span data-i18n="social_whatsapp">واتساب (WhatsApp)</span>
           </a>
           <a href="https://www.facebook.com/share/1Ctv5kz1CH/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="حساب فيسبوك">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-            <span>فيسبوك (Facebook)</span>
+            <span data-i18n="social_facebook">فيسبوك (Facebook)</span>
           </a>
           <a href="https://www.instagram.com/moaz_eldepawy?igsh=OWx3bG9iNHo2emll" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="حساب إنستغرام">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-            <span>إنستغرام (Instagram)</span>
+            <span data-i18n="social_instagram">إنستغرام (Instagram)</span>
+          </a>
+          <a href="comments.html" class="social-btn" aria-label="صفحة التواصل والتعليقات">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            <span data-i18n="nav_comments">التواصل والتعليقات</span>
           </a>
         </div>
       </div>
 
       <!-- Copyright -->
       <div class="footer-bottom">
-        <p>&copy; موقع بودكاستك | إعداد وتنسيق: <strong>معاذ مصطفى الديباوي</strong></p>
+        <p data-i18n-html="footer_copyright">&copy; منصة بودكاستك للتعلم والوعي وتطوير النفس | إعداد وتنسيق: <strong>معاذ مصطفى الديباوي</strong></p>
       </div>
     </div>
   </footer>
 
-  <!-- App Script -->
+  <!-- Scripts -->
+  <script src="assets/js/i18n.js"></script>
   <script src="assets/js/app.js"></script>
 </body>
 </html>

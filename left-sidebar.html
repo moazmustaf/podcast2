@@ -1,50 +1,71 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar" dir="rtl" data-theme="dark">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>نصائح وتوجيهات في إدارة الوقت والشهوات | بودكاستك</title>
-  <meta name="description" content="مقالات وتوجيهات عملية لإدارة الوقت والتعامل مع الشهوات وإدمان السوشيال ميديا، مع مراجع بالترتيب." />
+  <title data-i18n="page_title_tips">نصائح ومقالات توجيهية | بودكاستك</title>
+  <meta name="description" content="مقالات وتوجيهات عملية لإدارة الوقت والتعامل مع الشهوات وإدمان السوشيال ميديا، مع مراجع مرتبة داخل منصة بودكاستك." />
   <meta name="theme-color" content="#0B0F19" />
+
+  <!-- Prevent theme/direction flash -->
+  <script>
+    (function(){
+      var t = localStorage.getItem('podcastak_theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', t);
+      var l = localStorage.getItem('podcastak_lang') || 'ar';
+      document.documentElement.lang = l;
+      document.documentElement.dir = l === 'en' ? 'ltr' : 'rtl';
+    })();
+  </script>
 
   <!-- Typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Core Stylesheet -->
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
-<body>
-  <!-- Accessibility Skip Link -->
-  <a href="#main-content" class="skip-link">تخطي إلى المحتوى الرئيسي</a>
+<body data-page="tips">
+  <a href="#main-content" class="skip-link" data-i18n="skip_link">تخطي إلى المحتوى الرئيسي</a>
 
   <!-- Header & Navigation -->
   <header class="site-header">
     <div class="container nav-wrap">
-      <a href="index.html" class="brand-logo" aria-label="الصفحة الرئيسية لبودكاستك">
+      <a href="index.html" class="brand-logo" aria-label="بودكاستك">
         <span class="logo-dot" aria-hidden="true"></span>
-        <span>بودكاستك</span>
+        <span data-i18n="brand_name">بودكاستك</span>
       </a>
 
-      <!-- Desktop Nav -->
-      <nav aria-label="التنقل الرئيسي">
+      <nav class="desktop-nav" aria-label="التنقل الرئيسي">
         <ul class="nav-links">
-          <li><a href="index.html" class="nav-item">الرئيسية</a></li>
-          <li><a href="left-sidebar.html" class="nav-item active">نصائح ومقالات</a></li>
-          <li><a href="right-sidebar.html" class="nav-item">بودكاست إيه المشكلة</a></li>
-          <li><a href="no-sidebar.html" class="nav-item">كتب مختارة</a></li>
+          <li><a href="index.html" class="nav-item" data-i18n="nav_home">الرئيسية</a></li>
+          <li><a href="index.html#self-dev" class="nav-item" data-i18n="nav_self_dev">تطوير الذات</a></li>
+          <li><a href="index.html#moaz" class="nav-item" data-i18n="nav_islamic">دروس دينية</a></li>
+          <li><a href="left-sidebar.html" class="nav-item active" data-i18n="nav_tips">نصائح ومقالات</a></li>
+          <li><a href="right-sidebar.html" class="nav-item" data-i18n="nav_podcast">بودكاست</a></li>
+          <li><a href="no-sidebar.html" class="nav-item" data-i18n="nav_books">كتب</a></li>
+          <li><a href="comments.html" class="nav-item" data-i18n="nav_comments">التواصل والتعليقات</a></li>
         </ul>
       </nav>
 
-      <!-- Mobile Hamburger Button -->
-      <button class="mobile-nav-toggle" aria-label="فتح قائمة التنقل" aria-expanded="false">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <line x1="3" y1="12" x2="21" y2="12"></line>
-          <line x1="3" y1="6" x2="21" y2="6"></line>
-          <line x1="3" y1="18" x2="21" y2="18"></line>
-        </svg>
-      </button>
+      <div class="header-controls">
+        <button type="button" class="control-btn lang-toggle" aria-label="تغيير اللغة / Switch language">
+          <span class="lang-flag">🇬🇧</span>
+          <span class="lang-label-text">EN</span>
+        </button>
+        <button type="button" class="control-btn theme-toggle" aria-label="تبديل المظهر / Toggle theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button type="button" class="mobile-nav-toggle" aria-label="فتح قائمة التنقل" aria-expanded="false">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -53,39 +74,51 @@
     <div class="mobile-drawer-header">
       <div class="brand-logo">
         <span class="logo-dot"></span>
-        <span>بودكاستك</span>
+        <span data-i18n="brand_name">بودكاستك</span>
       </div>
-      <button class="mobile-drawer-close" aria-label="إغلاق القائمة">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <button type="button" class="mobile-drawer-close" aria-label="إغلاق القائمة">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <line x1="18" y1="6" x2="6" y2="18"></line>
           <line x1="6" y1="6" x2="18" y2="18"></line>
         </svg>
       </button>
     </div>
     <ul class="mobile-drawer-links">
-      <li><a href="index.html" class="nav-item">الرئيسية</a></li>
-      <li><a href="left-sidebar.html" class="nav-item active">نصائح ومقالات</a></li>
-      <li><a href="right-sidebar.html" class="nav-item">بودكاست إيه المشكلة</a></li>
-      <li><a href="no-sidebar.html" class="nav-item">كتب مختارة</a></li>
+      <li><a href="index.html" class="nav-item" data-i18n="nav_home">الرئيسية</a></li>
+      <li><a href="index.html#self-dev" class="nav-item" data-i18n="nav_self_dev">تطوير الذات</a></li>
+      <li><a href="index.html#moaz" class="nav-item" data-i18n="nav_islamic">دروس دينية</a></li>
+      <li><a href="left-sidebar.html" class="nav-item active" data-i18n="nav_tips">نصائح ومقالات</a></li>
+      <li><a href="right-sidebar.html" class="nav-item" data-i18n="nav_podcast">بودكاست</a></li>
+      <li><a href="no-sidebar.html" class="nav-item" data-i18n="nav_books">كتب</a></li>
+      <li><a href="comments.html" class="nav-item" data-i18n="nav_comments">التواصل والتعليقات</a></li>
     </ul>
+    <div class="mobile-drawer-controls">
+      <button type="button" class="control-btn lang-toggle" style="flex: 1;">
+        <span class="lang-flag">🇬🇧</span>
+        <span class="lang-label-text">English</span>
+      </button>
+      <button type="button" class="control-btn theme-toggle" aria-label="تبديل المظهر">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+    </div>
   </div>
 
   <!-- Main Content Area -->
   <main id="main-content" class="container">
-    <!-- Breadcrumb / Header -->
     <section class="hero" style="padding-block: 3rem 2.5rem;">
       <div class="hero-pill">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-        <span>قسم النصائح والمقالات التوجيهية</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        <span data-i18n="tips_pill">قسم النصائح والمقالات التوجيهية</span>
       </div>
-      <h1 class="hero-title">نصائح وتوجيهات عملية</h1>
-      <p class="hero-subtitle">
-        تأملات وإرشادات مبنية على تجربة شخصية في استثمار الوقت، وإدراك حقيقة الشهوات، والتحرر من السلوكيات التي تستنزف طاقتك اليومية.
+      <h1 class="hero-title" data-i18n="tips_hero_title">نصائح وتوجيهات عملية للوعي والانضباط</h1>
+      <p class="hero-subtitle" data-i18n="tips_hero_sub">
+        مقالات وإرشادات عملية في استثمار الوقت، وفهم طبيعة الشهوات وتوجيهها، والتحرر من العادات التي تستنزف طاقتك وتركيزك، مع قائمة مراجع مرتبة للاستماع.
       </p>
       <div class="hero-actions">
-        <a href="https://foulabook.com/ar/book/%D8%A5%D8%AF%D8%A7%D8%B1%D8%A9-%D8%A7%D9%84%D9%88%D9%82%D8%AA-pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+        <a href="https://foulabook.com/ar/book/%D8%A5%D8%AF%D8%A7%D8%B1%D8%A9-%D8%A7%D9%84%D9%88%D9%82%D8%AA-pdf" target="_blank" rel="noopener noreferrer" data-external="true" class="btn btn-primary">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          <span>تحميل كتاب إدارة الوقت (PDF)</span>
+          <span data-i18n="tips_book_btn">تحميل كتاب إدارة الوقت (PDF)</span>
         </a>
       </div>
     </section>
@@ -94,216 +127,163 @@
     <div class="editorial-layout">
       <!-- Main Column: Editorial Articles -->
       <div class="editorial-main">
-        <!-- Feature Video Banner -->
+        <!-- Feature Video Banner (Plays Inside Platform) -->
         <div style="margin-bottom: 2.5rem;">
           <div class="card-media" style="border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
             <img src="images/الوقت.jpg" alt="غلاف حلقة قيمة الوقت" loading="lazy" />
-            <a href="https://youtu.be/nncVRXEQxE8?si=JUKy3maR6KDlpfLp" target="_blank" rel="noopener noreferrer" class="card-play-overlay" aria-label="مشاهدة فيديو قيمة الوقت">
+            <a href="https://youtu.be/nncVRXEQxE8?si=JUKy3maR6KDlpfLp" data-video-id="nncVRXEQxE8" data-title-ar="أهمية الوقت وإدارته" data-title-en="The True Value of Time & How to Manage It" data-desc-ar="درس مرئي يوضح لماذا يمثل الوقت أثمن ما تملك وكيف تستثمره بحكمة." data-desc-en="A featured video lesson on why time is your most precious asset and how to invest it wisely." data-cat-ar="إدارة الوقت" data-cat-en="Time Management" class="card-play-overlay" aria-label="مشاهدة فيديو قيمة الوقت">
               <div class="play-icon-circle">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
               </div>
             </a>
           </div>
-          <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 0.75rem;">
-            <span style="color: var(--primary-emerald); font-size: 0.88rem; font-weight: 600;">فيديو مميز في إدارة الوقت</span>
-            <a href="https://youtu.be/nncVRXEQxE8?si=JUKy3maR6KDlpfLp" target="_blank" rel="noopener noreferrer" style="color: var(--text-secondary); font-size: 0.88rem; display: inline-flex; align-items: center; gap: 0.35rem;">
-              <span>مشاهدة على يوتيوب</span>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 0.75rem; flex-wrap: wrap; gap: 0.5rem;">
+            <span style="color: var(--primary-emerald); font-size: 0.88rem; font-weight: 600;" data-i18n="tips_featured_label">درس مرئي مميز في إدارة الوقت</span>
+            <a href="https://youtu.be/nncVRXEQxE8?si=JUKy3maR6KDlpfLp" data-video-id="nncVRXEQxE8" data-title-ar="أهمية الوقت وإدارته" data-title-en="The True Value of Time & How to Manage It" data-cat-ar="إدارة الوقت" data-cat-en="Time Management" style="color: var(--primary-emerald); font-size: 0.88rem; font-weight: 600; display: inline-flex; align-items: center; gap: 0.35rem;">
+              <span data-i18n="tips_watch_inline">تشغيل الدرس داخل المنصة</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
             </a>
           </div>
         </div>
 
-        <!-- Article 1: مرحله السعي والشغف والاجتهاد -->
+        <!-- Article 1 -->
         <article class="article-block">
           <div class="article-header">
-            <span class="article-number-badge">المحور الأول</span>
-            <h2 class="article-title">مرحلة السعي... والشغف والاجتهاد</h2>
+            <span class="article-number-badge" data-en="Part 1">المحور الأول</span>
+            <h2 class="article-title" data-en="The Stage of Striving, Passion & Hard Work">أولاً: مرحلة السعي... والشغف والاجتهاد</h2>
           </div>
           <div class="article-body">
-            <p>
-              في رحلة الحياة، كلنا نسعى لنحقق أحلامنا ونصل لأهدافنا، لكن قليل من يدرك أن المفتاح الحقيقي ليس المال ولا العلاقات... <strong>المفتاح هو الوقت</strong>.
+            <p data-en="In the journey of life, we all strive to achieve our dreams and reach our goals, yet few realize that the real key is neither money nor connections—the real key is time.">
+              في رحلة الحياة، كلنا نسعى لنحقق أحلامنا ونوصل لأهدافنا، لكن قليل من يدرك أن المفتاح الحقيقي ليس المال ولا العلاقات... المفتاح هو الوقت.
             </p>
-            <p>
+            <p data-en="Time never pauses, never returns, and never repeats. Every wasted second is a part of your life gone forever. Do not lose yourself by wasting your time.">
               الوقت لا يتوقف، ولا يرجع، ولا يتكرر. كل ثانية تضيع هي جزء من عمرك يذهب إلى الأبد. لا تضيع نفسك بضياعك للوقت.
             </p>
-            <div style="background: var(--bg-elevated); padding: 1.25rem 1.5rem; border-radius: var(--radius-md); border-inline-start: 4px solid var(--primary-emerald); margin-block: 1.25rem;">
-              <h3 style="font-family: var(--font-display); font-size: 1.2rem; color: var(--text-primary); margin-bottom: 0.5rem;">ليه الوقت مهم؟</h3>
-              <p style="margin-bottom: 0.5rem;">
-                <strong>النجاح يبدأ بإدارة وقتك:</strong> الناجحون ليسوا بالضرورة أذكى الناس، بل هم أناس عرفوا كيف يستغلون أوقاتهم بطريقة صحيحة ويستثمرونها في المفيد.
+            <div class="article-callout">
+              <h3 style="font-family: var(--font-display); font-size: 1.2rem; color: var(--text-primary); margin-bottom: 0.5rem;" data-en="Why Does Time Matter So Much?">ليه الوقت مهم؟</h3>
+              <p style="margin-bottom: 0.5rem;" data-en="Success begins with managing your time: those who succeed are not necessarily the smartest people—they are simply people who learned how to invest their hours purposefully.">
+                النجاح يبدأ بإدارة وقتك: الناجحون ليسوا بالضرورة أذكى الناس، بل هم أناس عرفوا كيف يستغلون أوقاتهم بطريقة صحيحة ويستثمرونها في المفيد.
               </p>
-              <p style="margin-bottom: 0; color: var(--primary-emerald); font-weight: 600;">
+              <p style="margin-bottom: 0; color: var(--primary-emerald); font-weight: 600;" data-en="The difference between you and those ahead of you is not the number of hours in a day, but how those hours are used.">
                 الفرق بينك وبين من سبقك ليس في عدد الساعات، بل في كيفية استخدام الساعات.
               </p>
             </div>
           </div>
         </article>
 
-        <!-- Article 2: الشهوات هل هي عدو ولا نعمة -->
+        <!-- Article 2 -->
         <article class="article-block">
           <div class="article-header">
-            <span class="article-number-badge">المحور الثاني</span>
-            <h2 class="article-title">الشهوات: هل هي عدو أم نعمة؟</h2>
+            <span class="article-number-badge" data-en="Part 2">المحور الثاني</span>
+            <h2 class="article-title" data-en="Desires: Are They an Enemy or a Blessing?">ثانياً: الشهوات هل هي عدو أم نعمة؟</h2>
           </div>
           <div class="article-body">
-            <p>
+            <p data-en="Desires are not inherently evil; Allah placed them within us so we can build a thriving, balanced life on earth:">
               الشهوات ليست شراً بذاتها؛ ربنا سبحانه وتعالى خلقها بداخلنا لنعمر بها الأرض ونعيش حياة متوازنة وسوية:
             </p>
             <ul style="margin-block: 1rem; display: flex; flex-direction: column; gap: 0.75rem;">
               <li style="display: flex; align-items: flex-start; gap: 0.65rem;">
                 <span style="color: var(--primary-emerald); font-size: 1.2rem;">✔</span>
-                <div><strong>الشهوة نعمة:</strong> عندما تُوجَّه في الحلال مثل الزواج، والأكل المتوازن، والعمل الصالح، والاجتهاد النافع.</div>
+                <div data-en="Desire is a blessing when channeled into lawful avenues such as marriage, healthy nourishment, meaningful work, and striving.">الشهوة نعمة: عندما تُوجَّه في الحلال مثل الزواج، والأكل المتوازن، والعمل الصالح، والاجتهاد النافع.</div>
               </li>
               <li style="display: flex; align-items: flex-start; gap: 0.65rem;">
                 <span style="color: #ef4444; font-size: 1.2rem;">✖</span>
-                <div><strong>الشهوة نقمة:</strong> عندما نستخدمها بصورة خاطئة مثل الإباحية، والإدمان، والتفريط الذي يدمر النفس.</div>
+                <div data-en="Desire becomes destructive when misused through pornography, addiction, and harmful excess.">الشهوة نقمة: عندما نستخدمها بصورة خاطئة مثل الإباحية، والإدمان، والتفريط الذي يدمر النفس.</div>
               </li>
             </ul>
-            <p style="font-weight: 600; color: var(--text-primary);">
+            <p style="font-weight: 600; color: var(--text-primary);" data-en="True wisdom is not suppressing desire blindly, but directing it into healthy, lawful channels that elevate your spirit and life.">
               الذكي الحقيقي ليس من يكبت شهوته حتى ينفجر، بل من يوجهها التوجيه الصحيح الذي يرتقي بروحه وحياته.
             </p>
           </div>
         </article>
 
-        <!-- Article 3: الاباحية طريق وهمي للسعادة -->
+        <!-- Article 3 -->
         <article class="article-block">
           <div class="article-header">
-            <span class="article-number-badge">المحور الثالث</span>
-            <h2 class="article-title">الإباحية: طريق وهمي للسعادة</h2>
+            <span class="article-number-badge" data-en="Part 3">المحور الثالث</span>
+            <h2 class="article-title" data-en="Pornography: An Illusory Path to Happiness">ثالثاً: الإباحية طريق وهمي للسعادة</h2>
           </div>
           <div class="article-body">
-            <p>
+            <p data-en="Pornography deceives you with a fleeting illusion of pleasure, while quietly stealing everything that truly matters:">
               الإباحية تخدعك بوهم المتعة اللحظية، ولكنها في الحقيقة تسرق منك كل شيء ذي قيمة:
             </p>
             <div class="article-alert">
               <ul>
-                <li><span>⛔</span> <span>تضعف القلب وتثقل الروح بالذنب والخزي.</span></li>
-                <li><span>⛔</span> <span>تجعلك تفقد الاستمتاع الحقيقي بجمال الحياة الطبيعية.</span></li>
-                <li><span>⛔</span> <span>تؤثر سلباً على خلايا التركيز والذكاء والذاكرة.</span></li>
-                <li><span>⛔</span> <span>تدمر ثقتك بنفسك وتشعرك بالعجز والدونية.</span></li>
-                <li><span>⛔</span> <span>تشوه مفاهيمك عن العلاقات الطبيعية والزواج الحقيقي.</span></li>
+                <li><span>⛔</span> <span data-en="Weakens the heart and weighs down the soul with guilt.">تضعف القلب وتثقل الروح بالذنب والخزي.</span></li>
+                <li><span>⛔</span> <span data-en="Robs you of genuine joy and appreciation for real life.">تجعلك تفقد الاستمتاع الحقيقي بجمال الحياة الطبيعية.</span></li>
+                <li><span>⛔</span> <span data-en="Negatively impacts focus, cognitive clarity, and memory.">تؤثر سلباً على خلايا التركيز والذكاء والذاكرة.</span></li>
+                <li><span>⛔</span> <span data-en="Erodes self-confidence and breeds feelings of helplessness.">تدمر ثقتك بنفسك وتشعرك بالعجز والدونية.</span></li>
+                <li><span>⛔</span> <span data-en="Distorts healthy expectations of natural relationships and marriage.">تشوه مفاهيمك عن العلاقات الطبيعية والزواج الحقيقي.</span></li>
               </ul>
             </div>
-            <div style="background: rgba(16, 185, 129, 0.08); border-inline-start: 4px solid var(--primary-emerald); padding: 1rem 1.25rem; border-radius: var(--radius-sm); margin-top: 1.25rem;">
-              <p style="margin-bottom: 0; font-weight: 600; color: var(--text-primary);">
-                💬 <strong>الحل ليس في الهروب،</strong> بل في أن تعمّر حياتك بالحلال، وتملأ فراغ وقتك بالنافع والمفيد، وتستعين بالله ولا تعجز.
+            <div class="article-solution">
+              <p style="margin-bottom: 0; font-weight: 600; color: var(--text-primary);" data-en="💬 The solution is not mere escape—it is building a purposeful life in what is lawful, filling your free time with meaningful pursuits, and relying sincerely on Allah.">
+                💬 الحل ليس في الهروب، بل في أن تعمّر حياتك بالحلال، وتملأ فراغ وقتك بالنافع والمفيد، وتستعين بالله ولا تعجز.
               </p>
             </div>
           </div>
         </article>
       </div>
 
-      <!-- Sidebar Column: Ordered Guides (مراجع بالترتيب) -->
+      <!-- Sidebar Column: Ordered Guides (All Play Inside Platform) -->
       <aside class="sidebar-box">
         <h3 class="sidebar-title">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
-          <span>مراجع هتفيدك لو سمعتهم بالترتيب</span>
+          <span data-i18n="tips_sidebar_title">مراجع هتفيدك لو سمعتهم بالترتيب</span>
         </h3>
         <ul class="sidebar-list">
-          <!-- 1. السوشيال -->
           <li>
-            <a href="https://youtu.be/teJSuEuw-Wo?si=CIVUg4-mphDGNhwL" target="_blank" rel="noopener noreferrer" class="sidebar-item">
-              <div class="sidebar-item-thumb">
-                <img src="images/السوشيال.jpg" alt="التحرر من إدمان الإنترنت" loading="lazy" />
-              </div>
-              <div class="sidebar-item-info">
-                <h4 class="sidebar-item-title">1. كيف تفسد السوشيال ميديا حياتك؟ التحرر من إدمان الإنترنت</h4>
-              </div>
+            <a href="https://youtu.be/teJSuEuw-Wo?si=CIVUg4-mphDGNhwL" class="sidebar-item">
+              <div class="sidebar-item-thumb"><img src="images/السوشيال.jpg" alt="التحرر من إدمان الإنترنت" loading="lazy" /></div>
+              <div class="sidebar-item-info"><h4 class="sidebar-item-title" data-en="1. How Social Media Ruins Your Life & Breaking Internet Addiction">1. كيف تفسد السوشيال ميديا حياتك؟ التحرر من إدمان الإنترنت</h4></div>
             </a>
           </li>
-
-          <!-- 2. غض البصر -->
           <li>
-            <a href="https://youtu.be/MrGJrklIHPA?si=HXLEk_4r6-00SYVr" target="_blank" rel="noopener noreferrer" class="sidebar-item">
-              <div class="sidebar-item-thumb">
-                <img src="images/غض.jpg" alt="عبادة العصر غض البصر" loading="lazy" />
-              </div>
-              <div class="sidebar-item-info">
-                <h4 class="sidebar-item-title">2. عبادة العصر | غض البصر</h4>
-              </div>
+            <a href="https://youtu.be/MrGJrklIHPA?si=HXLEk_4r6-00SYVr" class="sidebar-item">
+              <div class="sidebar-item-thumb"><img src="images/غض.jpg" alt="عبادة العصر غض البصر" loading="lazy" /></div>
+              <div class="sidebar-item-info"><h4 class="sidebar-item-title" data-en="2. Worship of the Modern Era | Lowering the Gaze">2. عبادة العصر | غض البصر</h4></div>
             </a>
           </li>
-
-          <!-- 3. العشرين -->
           <li>
-            <a href="https://youtu.be/2WCx04wX1S0?si=jkTuPOHPJbdzUJIq" target="_blank" rel="noopener noreferrer" class="sidebar-item">
-              <div class="sidebar-item-thumb">
-                <img src="images/العشرين.jpg" alt="ضائع بعمر العشرين" loading="lazy" />
-              </div>
-              <div class="sidebar-item-info">
-                <h4 class="sidebar-item-title">3. ضائع بعمر العشرين: كيف تنجو من أخطر مرحلة؟ | أحمد أبو زيد</h4>
-              </div>
+            <a href="https://youtu.be/2WCx04wX1S0?si=jkTuPOHPJbdzUJIq" class="sidebar-item">
+              <div class="sidebar-item-thumb"><img src="images/العشرين.jpg" alt="ضائع بعمر العشرين" loading="lazy" /></div>
+              <div class="sidebar-item-info"><h4 class="sidebar-item-title" data-en="3. Lost in Your Twenties: Surviving Your Most Crucial Decade | Ahmed Abouzaid">3. ضائع بعمر العشرين: كيف تنجو من أخطر مرحلة؟ | أحمد أبو زيد</h4></div>
             </a>
           </li>
-
-          <!-- 4. ذنوب الخلوات -->
           <li>
-            <a href="https://youtu.be/_bTrXQtYDcM?si=7BqO6hYDDGuG5nrS" target="_blank" rel="noopener noreferrer" class="sidebar-item">
-              <div class="sidebar-item-thumb">
-                <img src="images/ذوب الخلوات.jpg" alt="ذنوب الخلوات د.عثمان الخميس" loading="lazy" />
-              </div>
-              <div class="sidebar-item-info">
-                <h4 class="sidebar-item-title">4. كيف أتخلص من ذنوب الخلوات؟ د. عثمان الخميس</h4>
-              </div>
+            <a href="https://youtu.be/_bTrXQtYDcM?si=7BqO6hYDDGuG5nrS" class="sidebar-item">
+              <div class="sidebar-item-thumb"><img src="images/ذوب الخلوات.jpg" alt="ذنوب الخلوات د.عثمان الخميس" loading="lazy" /></div>
+              <div class="sidebar-item-info"><h4 class="sidebar-item-title" data-en="4. Overcoming Private Sins | Sheikh Dr. Othman Al-Khamis">4. كيف أتخلص من ذنوب الخلوات؟ د. عثمان الخميس</h4></div>
             </a>
           </li>
-
-          <!-- 5. استعباد التلفون -->
           <li>
-            <a href="https://youtu.be/EDbTO7ab4r4?si=lrfmvSuqIh8MfkBW" target="_blank" rel="noopener noreferrer" class="sidebar-item">
-              <div class="sidebar-item-thumb">
-                <img src="images/استعباد التلفون.jpg" alt="استعباد الهاتف" loading="lazy" />
-              </div>
-              <div class="sidebar-item-info">
-                <h4 class="sidebar-item-title">5. كيف تتحرر من استعباد التليفون لك؟</h4>
-              </div>
+            <a href="https://youtu.be/EDbTO7ab4r4?si=lrfmvSuqIh8MfkBW" class="sidebar-item">
+              <div class="sidebar-item-thumb"><img src="images/استعباد التلفون.jpg" alt="استعباد الهاتف" loading="lazy" /></div>
+              <div class="sidebar-item-info"><h4 class="sidebar-item-title" data-en="5. How to Free Yourself from Smartphone Addiction">5. كيف تتحرر من استعباد التليفون لك؟</h4></div>
             </a>
           </li>
-
-          <!-- 6. مش عارف أنتظم في الصلاة -->
           <li>
-            <a href="https://youtu.be/HlU82zvITEo?si=0Ah344WTabUvqJ7U" target="_blank" rel="noopener noreferrer" class="sidebar-item">
-              <div class="sidebar-item-thumb">
-                <img src="images/مش عارف.jpg" alt="مش عارف أنتظم في الصلاة" loading="lazy" />
-              </div>
-              <div class="sidebar-item-info">
-                <h4 class="sidebar-item-title">6. مش عارف أنتظم في الصلاة؟ دليلك للمحافظة عليها</h4>
-              </div>
+            <a href="https://youtu.be/HlU82zvITEo?si=0Ah344WTabUvqJ7U" class="sidebar-item">
+              <div class="sidebar-item-thumb"><img src="images/مش عارف.jpg" alt="مش عارف أنتظم في الصلاة" loading="lazy" /></div>
+              <div class="sidebar-item-info"><h4 class="sidebar-item-title" data-en="6. Struggling to Stay Consistent in Prayer? Practical Guide">6. مش عارف أنتظم في الصلاة؟ دليلك للمحافظة عليها</h4></div>
             </a>
           </li>
-
-          <!-- 7. حسن الظن بالله -->
           <li>
-            <a href="https://youtu.be/xZWEoWN8u54?si=JTmB3SrWnGo_WMfI" target="_blank" rel="noopener noreferrer" class="sidebar-item">
-              <div class="sidebar-item-thumb">
-                <img src="images/حسن الظن.jpg" alt="حسن الظن بالله" loading="lazy" />
-              </div>
-              <div class="sidebar-item-info">
-                <h4 class="sidebar-item-title">7. حسن الظن بالله عبادة وسعادة | الشيخ علاء جابر وياسر الحزيمي</h4>
-              </div>
+            <a href="https://youtu.be/xZWEoWN8u54?si=JTmB3SrWnGo_WMfI" class="sidebar-item">
+              <div class="sidebar-item-thumb"><img src="images/حسن الظن.jpg" alt="حسن الظن بالله" loading="lazy" /></div>
+              <div class="sidebar-item-info"><h4 class="sidebar-item-title" data-en="7. Thinking Well of Allah: Worship & Happiness | Alaa Jaber & Yasser Al-Hazimi">7. حسن الظن بالله عبادة وسعادة | الشيخ علاء جابر وياسر الحزيمي</h4></div>
             </a>
           </li>
-
-          <!-- 8. الابتلاء -->
           <li>
-            <a href="https://youtu.be/xUe7nC0cunY?si=3kaHRL0E-krWCpeg" target="_blank" rel="noopener noreferrer" class="sidebar-item">
-              <div class="sidebar-item-thumb">
-                <img src="images/14.jpg" alt="الابتلاء" loading="lazy" />
-              </div>
-              <div class="sidebar-item-info">
-                <h4 class="sidebar-item-title">8. الابتلاء: يبتلى المرء على قدر دينه وكيف تفهم حكمة البلاء</h4>
-              </div>
+            <a href="https://youtu.be/xUe7nC0cunY?si=3kaHRL0E-krWCpeg" class="sidebar-item">
+              <div class="sidebar-item-thumb"><img src="images/14.jpg" alt="الابتلاء" loading="lazy" /></div>
+              <div class="sidebar-item-info"><h4 class="sidebar-item-title" data-en="8. Trials & Hardship: Understanding the Wisdom Behind Life's Tests">8. الابتلاء: يبتلى المرء على قدر دينه وكيف تفهم حكمة البلاء</h4></div>
             </a>
           </li>
-
-          <!-- 9. معجزات قيام الليل -->
           <li>
-            <a href="https://youtu.be/j28oQ3zsGGI?si=34XZbGWSzVKPHy1P" target="_blank" rel="noopener noreferrer" class="sidebar-item">
-              <div class="sidebar-item-thumb">
-                <img src="images/معجزات.jpg" alt="معجزات قيام الليل" loading="lazy" />
-              </div>
-              <div class="sidebar-item-info">
-                <h4 class="sidebar-item-title">9. معجزات قيام الليل وكيف يغير حياتك | أنس آكشن</h4>
-              </div>
+            <a href="https://youtu.be/j28oQ3zsGGI?si=34XZbGWSzVKPHy1P" class="sidebar-item">
+              <div class="sidebar-item-thumb"><img src="images/معجزات.jpg" alt="معجزات قيام الليل" loading="lazy" /></div>
+              <div class="sidebar-item-info"><h4 class="sidebar-item-title" data-en="9. Miracles of Night Prayer (Qiyam Al-Layl) | Anas Action">9. معجزات قيام الليل وكيف يغير حياتك | أنس آكشن</h4></div>
             </a>
           </li>
         </ul>
@@ -314,156 +294,94 @@
   <!-- Comprehensive Footer -->
   <footer class="site-footer">
     <div class="container">
+      <div class="footer-identity">
+        <a href="index.html" class="brand-logo">
+          <span class="logo-dot"></span>
+          <span data-i18n="brand_name">بودكاستك</span>
+        </a>
+        <p data-i18n="platform_tagline">منصة للتعلم والوعي والفهم وتطوير النفس</p>
+      </div>
+
       <div class="footer-grid">
-        <!-- Col 1: Channels -->
         <div class="footer-col">
           <h3 class="footer-col-title">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
-            <span>مراجع قنوات البودكاست</span>
+            <span data-i18n="footer_channels_title">مراجع قنوات البودكاست</span>
           </h3>
           <ul class="footer-list">
-            <li class="footer-list-item">
-              <a href="https://youtu.be/A6_y0HuwSQw?si=c9RjCMR47G7sjmfD" target="_blank" rel="noopener noreferrer">
-                <strong>صفحة أحمد عامر</strong>
-                <span class="item-sub">على يوتيوب</span>
-              </a>
-            </li>
-            <li class="footer-list-item">
-              <a href="https://youtu.be/3u5uYyGKYU8?si=y0BcbqXVAtIv1-IV" target="_blank" rel="noopener noreferrer">
-                <strong>قناة إيه المشكلة</strong>
-                <span class="item-sub">على يوتيوب</span>
-              </a>
-            </li>
-            <li class="footer-list-item">
-              <a href="https://youtu.be/y3rb67qqDSg?si=AutiTtFjpobfxTFD" target="_blank" rel="noopener noreferrer">
-                <strong>قناة واعي (تطبيق واعي)</strong>
-                <span class="item-sub">على يوتيوب وآب ستور</span>
-              </a>
-            </li>
-            <li class="footer-list-item">
-              <a href="https://youtu.be/FM3jv3U9Nh8?si=zkbh5nXc_ESIVotb" target="_blank" rel="noopener noreferrer">
-                <strong>قناة دروس أونلاين</strong>
-                <span class="item-sub">على يوتيوب</span>
-              </a>
-            </li>
-            <li class="footer-list-item">
-              <a href="https://youtu.be/pwKHR8fe8GU?si=7Um6lXHKca2VH-Kf" target="_blank" rel="noopener noreferrer">
-                <strong>صفحة ياسر ممدوح</strong>
-                <span class="item-sub">على يوتيوب</span>
-              </a>
-            </li>
+            <li class="footer-list-item"><a href="https://youtu.be/A6_y0HuwSQw?si=c9RjCMR47G7sjmfD" target="_blank" rel="noopener noreferrer" data-external="true"><strong data-en="Ahmed Amer Channel">صفحة أحمد عامر</strong><span class="item-sub" data-i18n="sub_youtube">على يوتيوب</span></a></li>
+            <li class="footer-list-item"><a href="https://youtu.be/3u5uYyGKYU8?si=y0BcbqXVAtIv1-IV" target="_blank" rel="noopener noreferrer" data-external="true"><strong data-en="Eh El-Moshkela Channel">قناة إيه المشكلة</strong><span class="item-sub" data-i18n="sub_youtube">على يوتيوب</span></a></li>
+            <li class="footer-list-item"><a href="https://youtu.be/y3rb67qqDSg?si=AutiTtFjpobfxTFD" target="_blank" rel="noopener noreferrer" data-external="true"><strong data-en="Wa3y Channel & App">قناة واعي (تطبيق واعي)</strong><span class="item-sub" data-i18n="sub_youtube_app">على يوتيوب وآب ستور</span></a></li>
+            <li class="footer-list-item"><a href="https://youtu.be/FM3jv3U9Nh8?si=zkbh5nXc_ESIVotb" target="_blank" rel="noopener noreferrer" data-external="true"><strong data-en="Droos Online Channel">قناة دروس أونلاين</strong><span class="item-sub" data-i18n="sub_youtube">على يوتيوب</span></a></li>
+            <li class="footer-list-item"><a href="https://youtu.be/pwKHR8fe8GU?si=7Um6lXHKca2VH-Kf" target="_blank" rel="noopener noreferrer" data-external="true"><strong data-en="Yasser Mamdouh Page">صفحة ياسر ممدوح</strong><span class="item-sub" data-i18n="sub_youtube">على يوتيوب</span></a></li>
           </ul>
         </div>
 
-        <!-- Col 2: Posts & Books -->
         <div class="footer-col">
           <h3 class="footer-col-title">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-            <span>مراجع وروابط مهمة</span>
+            <span data-i18n="footer_refs_title">مراجع وروابط مهمة</span>
           </h3>
           <ul class="footer-list">
-            <li class="footer-list-item">
-              <a href="https://ketabpedia.com/%D8%AA%D8%AD%D9%85%D9%8A%D9%84/%D9%83%D8%AA%D8%A7%D8%A8-%D9%81%D9%86-%D8%A7%D9%84%D9%84%D8%A7%D9%85%D8%A8%D8%A7%D9%84%D8%A7%D8%A9-pdf/" target="_blank" rel="noopener noreferrer">
-                <strong>كتب تطوير الذات</strong>
-                <span class="item-sub">وأهمهم كتاب فن اللامبالاة (PDF)</span>
-              </a>
-            </li>
-            <li class="footer-list-item">
-              <a href="https://www.google.com/search?q=%D9%83%D9%8A%D9%81%D9%8A%D9%87+%D8%AA%D9%86%D8%B8%D9%8A%D9%85+%D8%A7%D9%84%D9%88%D9%82%D8%AA&rlz=1C1GCEA_enEG1164EG1164&oq=%D9%83%D9%8A%D9%81%D9%8A%D9%87+%D8%AA%D9%86%D8%B8%D9%8A%D9%85+%D8%A7%D9%84%D9%88%D9%82%D8%AA&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCDYwNTZqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8" target="_blank" rel="noopener noreferrer">
-                <strong>كيفية تنظيم الوقت</strong>
-                <span class="item-sub">تلخيص بسيط لإدارة واستثمار الوقت</span>
-              </a>
-            </li>
-            <li class="footer-list-item">
-              <a href="https://youtu.be/MFLHYRtXjSE?si=lPaIMZzVrKUVMCCH" target="_blank" rel="noopener noreferrer">
-                <strong>طريق الالتزام</strong>
-                <span class="item-sub">دليل عملي على يوتيوب</span>
-              </a>
-            </li>
-            <li class="footer-list-item">
-              <a href="https://play.google.com/store/apps/details?id=com.m_s_helala.wa3y&hl=ar&pli=1" target="_blank" rel="noopener noreferrer">
-                <strong>كتب وتطبيق واعي</strong>
-                <span class="item-sub">للتعافي من إدمان الإباحية على Google Play</span>
-              </a>
-            </li>
-            <li class="footer-list-item">
-              <a href="https://youtu.be/teJSuEuw-Wo?si=pb368U-GlJvZSOHe" target="_blank" rel="noopener noreferrer">
-                <strong>التحرر من إدمان السوشيال ميديا</strong>
-                <span class="item-sub">دليل شامل على يوتيوب</span>
-              </a>
-            </li>
+            <li class="footer-list-item"><a href="https://ketabpedia.com/%D8%AA%D8%AD%D9%85%D9%8A%D9%84/%D9%83%D8%AA%D8%A7%D8%A8-%D9%81%D9%86-%D8%A7%D9%84%D9%84%D8%A7%D9%85%D8%A8%D8%A7%D9%84%D8%A7%D8%A9-pdf/" target="_blank" rel="noopener noreferrer" data-external="true"><strong data-en="Self-Development Books">كتب تطوير الذات</strong><span class="item-sub" data-en="Featuring The Subtle Art of Not Giving a F*ck (PDF)">وأهمهم كتاب فن اللامبالاة (PDF)</span></a></li>
+            <li class="footer-list-item"><a href="https://www.google.com/search?q=%D9%83%D9%8A%D9%81%D9%8A%D9%87+%D8%AA%D9%86%D8%B8%D9%8A%D9%85+%D8%A7%D9%84%D9%88%D9%82%D8%AA&rlz=1C1GCEA_enEG1164EG1164&oq=%D9%83%D9%8A%D9%81%D9%8A%D9%87+%D8%AA%D9%86%D8%B8%D9%8A%D9%85+%D8%A7%D9%84%D9%88%D9%82%D8%AA&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCDYwNTZqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8" target="_blank" rel="noopener noreferrer" data-external="true"><strong data-en="How to Manage Your Time">كيفية تنظيم الوقت</strong><span class="item-sub" data-en="Practical guide to time management">تلخيص بسيط لإدارة واستثمار الوقت</span></a></li>
+            <li class="footer-list-item"><a href="https://youtu.be/MFLHYRtXjSE?si=lPaIMZzVrKUVMCCH" data-video-id="MFLHYRtXjSE" data-title-ar="طريق الالتزام" data-title-en="The Path to Commitment"><strong data-en="The Path to Commitment">طريق الالتزام</strong><span class="item-sub" data-en="Practical educational lesson">دليل عملي داخل المنصة</span></a></li>
+            <li class="footer-list-item"><a href="https://play.google.com/store/apps/details?id=com.m_s_helala.wa3y&hl=ar&pli=1" target="_blank" rel="noopener noreferrer" data-external="true"><strong data-en="Wa3y Recovery App & Books">كتب وتطبيق واعي</strong><span class="item-sub" data-en="Recovery tools on Google Play">للتعافي من إدمان الإباحية على Google Play</span></a></li>
+            <li class="footer-list-item"><a href="https://youtu.be/teJSuEuw-Wo?si=pb368U-GlJvZSOHe" data-video-id="teJSuEuw-Wo" data-title-ar="التحرر من إدمان السوشيال ميديا" data-title-en="Breaking Free from Social Media Addiction"><strong data-en="Overcoming Social Media Addiction">التحرر من إدمان السوشيال ميديا</strong><span class="item-sub" data-en="Comprehensive educational guide">دليل شامل داخل المنصة</span></a></li>
           </ul>
         </div>
 
-        <!-- Col 3: Video Wall -->
         <div class="footer-col">
           <h3 class="footer-col-title">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-            <span>معرض الفيديوهات المختارة</span>
+            <span data-i18n="footer_gallery_title">معرض الدروس المختارة</span>
           </h3>
           <div class="footer-video-grid">
-            <a href="https://youtu.be/wUpNz6MRbL4?si=BgpsOJa1coFDNn1M" target="_blank" rel="noopener noreferrer" class="footer-video-thumb" aria-label="فيديو جهاد 1">
-              <img src="images/جهاد (1).jpg" alt="فيديو جهاد 1" loading="lazy" />
-            </a>
-            <a href="https://youtu.be/FM3jv3U9Nh8?si=K5aeSdueHQ9oyd2r" target="_blank" rel="noopener noreferrer" class="footer-video-thumb" aria-label="فيديو جهاد 2">
-              <img src="images/جهاد (2).jpg" alt="فيديو جهاد 2" loading="lazy" />
-            </a>
-            <a href="https://youtu.be/Qok7NXqopf0?si=bxCLztCOFyS9Vl8_" target="_blank" rel="noopener noreferrer" class="footer-video-thumb" aria-label="أمير منير">
-              <img src="images/امير منير.jpg" alt="أمير منير" loading="lazy" />
-            </a>
-            <a href="https://youtu.be/uWnlgkYWRpY?si=MfsA16K-LF7Dxzlc" target="_blank" rel="noopener noreferrer" class="footer-video-thumb" aria-label="تعفن الدماغ">
-              <img src="images/تعفن.png" alt="تعفن الدماغ" loading="lazy" />
-            </a>
-            <a href="https://youtu.be/w4R8qcSRAKc?si=Px3L5_M7U2mCC76d" target="_blank" rel="noopener noreferrer" class="footer-video-thumb" aria-label="قمم">
-              <img src="images/قمم (2).jpg" alt="قمم" loading="lazy" />
-            </a>
-            <a href="https://youtu.be/pwKHR8fe8GU?si=Fvgu9DRj0fmNJM9A" target="_blank" rel="noopener noreferrer" class="footer-video-thumb" aria-label="افرض">
-              <img src="images/افرض (2).jpg" alt="افرض" loading="lazy" />
-            </a>
-            <a href="https://youtu.be/Fb-b95F92WA?si=uvM3Q0Kfe2BdcKg1" target="_blank" rel="noopener noreferrer" class="footer-video-thumb" aria-label="حلقة 18">
-              <img src="images/18.jpg" alt="حلقة 18" loading="lazy" />
-            </a>
-            <a href="https://youtu.be/ySLr9IF1tk8?si=uCnnmsKt2fIAEXIC" target="_blank" rel="noopener noreferrer" class="footer-video-thumb" aria-label="حلقة 19">
-              <img src="images/19.jpg" alt="حلقة 19" loading="lazy" />
-            </a>
-            <a href="https://youtu.be/-B_JLU3SQbs?si=Bq-VXk53yF-4i0b5" target="_blank" rel="noopener noreferrer" class="footer-video-thumb" aria-label="حلقة بودكاست 3">
-              <img src="images/3 modify.jpg" alt="حلقة بودكاست 3" loading="lazy" />
-            </a>
-            <a href="https://youtu.be/ySLr9IF1tk8?si=uCnnmsKt2fIAEXIC" target="_blank" rel="noopener noreferrer" class="footer-video-thumb" aria-label="حلقة بودكاست مختارة">
-              <img src="images/1.jpg" alt="حلقة بودكاست مختارة" loading="lazy" />
-            </a>
+            <a href="https://youtu.be/wUpNz6MRbL4?si=BgpsOJa1coFDNn1M" class="footer-video-thumb" data-video-id="wUpNz6MRbL4" data-title-ar="جهاد النفس (1)" data-title-en="Self-Struggle (1)" aria-label="فيديو جهاد 1"><img src="images/جهاد (1).jpg" alt="فيديو جهاد 1" loading="lazy" /></a>
+            <a href="https://youtu.be/FM3jv3U9Nh8?si=K5aeSdueHQ9oyd2r" class="footer-video-thumb" data-video-id="FM3jv3U9Nh8" data-title-ar="جهاد النفس (2)" data-title-en="Self-Struggle (2)" aria-label="فيديو جهاد 2"><img src="images/جهاد (2).jpg" alt="فيديو جهاد 2" loading="lazy" /></a>
+            <a href="https://youtu.be/Qok7NXqopf0?si=bxCLztCOFyS9Vl8_" class="footer-video-thumb" data-video-id="Qok7NXqopf0" data-title-ar="درس مع أمير منير" data-title-en="Lesson with Amir Mounir" aria-label="أمير منير"><img src="images/امير منير.jpg" alt="أمير منير" loading="lazy" /></a>
+            <a href="https://youtu.be/uWnlgkYWRpY?si=MfsA16K-LF7Dxzlc" class="footer-video-thumb" data-video-id="uWnlgkYWRpY" data-title-ar="تعفن الدماغ" data-title-en="Brain Rot & Digital Focus" aria-label="تعفن الدماغ"><img src="images/تعفن.png" alt="تعفن الدماغ" loading="lazy" /></a>
+            <a href="https://youtu.be/w4R8qcSRAKc?si=Px3L5_M7U2mCC76d" class="footer-video-thumb" data-video-id="w4R8qcSRAKc" data-title-ar="قمم" data-title-en="Peaks of Ambition" aria-label="قمم"><img src="images/قمم (2).jpg" alt="قمم" loading="lazy" /></a>
+            <a href="https://youtu.be/pwKHR8fe8GU?si=Fvgu9DRj0fmNJM9A" class="footer-video-thumb" data-video-id="pwKHR8fe8GU" data-title-ar="افرض" data-title-en="What If — Reflection" aria-label="افرض"><img src="images/افرض (2).jpg" alt="افرض" loading="lazy" /></a>
+            <a href="https://youtu.be/Fb-b95F92WA?si=uvM3Q0Kfe2BdcKg1" class="footer-video-thumb" data-video-id="Fb-b95F92WA" data-title-ar="درس مختار 18" data-title-en="Featured Lesson 18" aria-label="حلقة 18"><img src="images/18.jpg" alt="حلقة 18" loading="lazy" /></a>
+            <a href="https://youtu.be/ySLr9IF1tk8?si=uCnnmsKt2fIAEXIC" class="footer-video-thumb" data-video-id="ySLr9IF1tk8" data-title-ar="درس مختار 19" data-title-en="Featured Lesson 19" aria-label="حلقة 19"><img src="images/19.jpg" alt="حلقة 19" loading="lazy" /></a>
+            <a href="https://youtu.be/-B_JLU3SQbs?si=Bq-VXk53yF-4i0b5" class="footer-video-thumb" data-video-id="-B_JLU3SQbs" data-title-ar="حلقة بودكاست 3" data-title-en="Podcast Episode 3" aria-label="حلقة بودكاست 3"><img src="images/3 modify.jpg" alt="حلقة بودكاست 3" loading="lazy" /></a>
+            <a href="https://youtu.be/ySLr9IF1tk8?si=uCnnmsKt2fIAEXIC" class="footer-video-thumb" data-video-id="ySLr9IF1tk8" data-title-ar="حلقة بودكاست مختارة" data-title-en="Selected Podcast Episode" aria-label="حلقة بودكاست مختارة"><img src="images/1.jpg" alt="حلقة بودكاست مختارة" loading="lazy" /></a>
           </div>
         </div>
       </div>
 
-      <!-- Social & Contact -->
       <div class="footer-social-wrap">
-        <h4 class="footer-social-title">أتمنى تكونوا طلعتوا بأكبر استفادة ممكنة</h4>
-        <p class="footer-social-desc">وفي النهاية لو حابب تتواصل معايا أو عندك تعليق، دي حساباتي ومواقع التواصل الخاصة بيا:</p>
+        <h4 class="footer-social-title" data-i18n="footer_social_title">أتمنى تكونوا طلعتوا بأكبر استفادة ممكنة</h4>
+        <p class="footer-social-desc" data-i18n="footer_social_desc">وفي النهاية لو حابب تتواصل معايا أو عندك تعليق أو اقتراح لدروس جديدة، يسعدني تواصلك:</p>
         <div class="social-links">
-          <a href="https://wa.me/201151387688?text=مرحبا،%20أنا%20عاوز%20أتواصل%20مع%20معاذ%20مصطفي" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="تواصل عبر واتساب">
+          <a href="https://wa.me/201011052340?text=مرحبا،%20أنا%20عاوز%20أتواصل%20مع%20معاذ%20مصطفي" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="تواصل عبر واتساب">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            <span>واتساب (WhatsApp)</span>
+            <span data-i18n="social_whatsapp">واتساب (WhatsApp)</span>
           </a>
           <a href="https://www.facebook.com/share/1Ctv5kz1CH/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="حساب فيسبوك">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-            <span>فيسبوك (Facebook)</span>
+            <span data-i18n="social_facebook">فيسبوك (Facebook)</span>
           </a>
           <a href="https://www.instagram.com/moaz_eldepawy?igsh=OWx3bG9iNHo2emll" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="حساب إنستغرام">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-            <span>إنستغرام (Instagram)</span>
+            <span data-i18n="social_instagram">إنستغرام (Instagram)</span>
+          </a>
+          <a href="comments.html" class="social-btn" aria-label="صفحة التواصل والتعليقات">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            <span data-i18n="nav_comments">التواصل والتعليقات</span>
           </a>
         </div>
       </div>
 
-      <!-- Copyright -->
       <div class="footer-bottom">
-        <p>&copy; موقع بودكاستك | إعداد وتنسيق: <strong>معاذ مصطفى الديباوي</strong></p>
+        <p data-i18n-html="footer_copyright">&copy; منصة بودكاستك للتعلم والوعي وتطوير النفس | إعداد وتنسيق: <strong>معاذ مصطفى الديباوي</strong></p>
       </div>
     </div>
   </footer>
 
-  <!-- App Script -->
+  <!-- Scripts -->
+  <script src="assets/js/i18n.js"></script>
   <script src="assets/js/app.js"></script>
 </body>
 </html>

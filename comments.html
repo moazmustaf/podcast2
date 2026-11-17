@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="page_title_comments">التواصل والتعليقات | بودكاستك</title>
+  <meta name="description" content="شاركنا رأيك أو اقتراحك لدروس جديدة في منصة بودكاستك للتعلم والوعي وتطوير النفس." />
+  <meta name="theme-color" content="#0B0F19" />
+
+  <!-- Prevent theme/direction flash -->
+  <script>
+    (function(){
+      var t = localStorage.getItem('podcastak_theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', t);
+      var l = localStorage.getItem('podcastak_lang') || 'ar';
+      document.documentElement.lang = l;
+      document.documentElement.dir = l === 'en' ? 'ltr' : 'rtl';
+    })();
+  </script>
+
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body data-page="comments">
+  <a href="#main-content" class="skip-link" data-i18n="skip_link">تخطي إلى المحتوى الرئيسي</a>
+
+  <!-- Header & Navigation -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="brand-logo" aria-label="بودكاستك">
+        <span class="logo-dot" aria-hidden="true"></span>
+        <span data-i18n="brand_name">بودكاستك</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="التنقل الرئيسي">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-item" data-i18n="nav_home">الرئيسية</a></li>
+          <li><a href="index.html#self-dev" class="nav-item" data-i18n="nav_self_dev">تطوير الذات</a></li>
+          <li><a href="index.html#moaz" class="nav-item" data-i18n="nav_islamic">دروس دينية</a></li>
+          <li><a href="left-sidebar.html" class="nav-item" data-i18n="nav_tips">نصائح ومقالات</a></li>
+          <li><a href="right-sidebar.html" class="nav-item" data-i18n="nav_podcast">بودكاست</a></li>
+          <li><a href="no-sidebar.html" class="nav-item" data-i18n="nav_books">كتب</a></li>
+          <li><a href="comments.html" class="nav-item active" data-i18n="nav_comments">التواصل والتعليقات</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-controls">
+        <button type="button" class="control-btn lang-toggle" aria-label="تغيير اللغة / Switch language">
+          <span class="lang-flag">🇬🇧</span>
+          <span class="lang-label-text">EN</span>
+        </button>
+        <button type="button" class="control-btn theme-toggle" aria-label="تبديل المظهر / Toggle theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button type="button" class="mobile-nav-toggle" aria-label="فتح قائمة التنقل" aria-expanded="false">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" role="dialog" aria-modal="true" aria-label="قائمة الهاتف">
+    <div class="mobile-drawer-header">
+      <div class="brand-logo">
+        <span class="logo-dot"></span>
+        <span data-i18n="brand_name">بودكاستك</span>
+      </div>
+      <button type="button" class="mobile-drawer-close" aria-label="إغلاق القائمة">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <ul class="mobile-drawer-links">
+      <li><a href="index.html" class="nav-item" data-i18n="nav_home">الرئيسية</a></li>
+      <li><a href="index.html#self-dev" class="nav-item" data-i18n="nav_self_dev">تطوير الذات</a></li>
+      <li><a href="index.html#moaz" class="nav-item" data-i18n="nav_islamic">دروس دينية</a></li>
+      <li><a href="left-sidebar.html" class="nav-item" data-i18n="nav_tips">نصائح ومقالات</a></li>
+      <li><a href="right-sidebar.html" class="nav-item" data-i18n="nav_podcast">بودكاست</a></li>
+      <li><a href="no-sidebar.html" class="nav-item" data-i18n="nav_books">كتب</a></li>
+      <li><a href="comments.html" class="nav-item active" data-i18n="nav_comments">التواصل والتعليقات</a></li>
+    </ul>
+    <div class="mobile-drawer-controls">
+      <button type="button" class="control-btn lang-toggle" style="flex: 1;">
+        <span class="lang-flag">🇬🇧</span>
+        <span class="lang-label-text">English</span>
+      </button>
+      <button type="button" class="control-btn theme-toggle" aria-label="تبديل المظهر">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main id="main-content" class="container">
+    <section class="hero" style="padding-block: 3rem 2.5rem;">
+      <div class="hero-pill">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        <span data-i18n="comments_pill">رأيك يهمنا ويساعدنا على التطوير</span>
+      </div>
+      <h1 class="hero-title" data-i18n="comments_hero_title">التواصل والتعليقات</h1>
+      <p class="hero-subtitle" data-i18n="comments_hero_sub">
+        هل لديك تعليق، سؤال، أو اقتراح لدرس جديد تود إضافته إلى منصة بودكاستك؟ أرسل رسالتك مباشرة وسأقرؤها بنفسي بكل سرور.
+      </p>
+    </section>
+
+    <!-- Contact Form & Direct Info Grid -->
+    <div class="contact-layout">
+      <!-- Form Card -->
+      <section class="contact-card" aria-labelledby="form-heading">
+        <h2 id="form-heading" class="section-title" style="margin-bottom: 1.5rem; font-size: 1.45rem;">
+          <span>✉️</span>
+          <span data-i18n="form_heading">أرسل رسالتك أو تعليقك</span>
+        </h2>
+
+        <div id="form-status" class="form-status" role="alert" aria-live="polite"></div>
+
+        <!-- FormSubmit integration targeting moazaldebawy@gmail.com -->
+        <form
+          id="contact-form"
+          action="https://formsubmit.co/moazaldebawy@gmail.com"
+          method="POST"
+          novalidate
+        >
+          <!-- FormSubmit Configuration & Spam Protection -->
+          <input type="hidden" name="_subject" value="رسالة جديدة من منصة بودكاستك (Podcastak)" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_captcha" value="false" />
+          <!-- Honeypot field for spam bots -->
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+          <div class="form-group">
+            <label for="contact-name" class="form-label">
+              <span data-i18n="form_name_label">الاسم</span>
+              <span class="required-mark" aria-hidden="true">*</span>
+            </label>
+            <input
+              type="text"
+              id="contact-name"
+              name="name"
+              class="form-control"
+              required
+              minlength="2"
+              autocomplete="name"
+              placeholder="اكتب اسمك هنا..."
+              data-i18n-placeholder="form_name_placeholder"
+            />
+            <span class="field-error" id="error-name" data-i18n="form_error_name">يرجى إدخال اسمك (حرفان على الأقل).</span>
+          </div>
+
+          <div class="form-group">
+            <label for="contact-email" class="form-label">
+              <span data-i18n="form_email_label">البريد الإلكتروني</span>
+              <span class="optional-tag" data-i18n="form_optional">(اختياري)</span>
+            </label>
+            <input
+              type="email"
+              id="contact-email"
+              name="email"
+              class="form-control"
+              autocomplete="email"
+              placeholder="example@email.com"
+              data-i18n-placeholder="form_email_placeholder"
+            />
+            <span class="field-error" id="error-email" data-i18n="form_error_email">يرجى إدخال بريد إلكتروني صحيح أو ترك الحقل فارغاً.</span>
+          </div>
+
+          <div class="form-group">
+            <label for="contact-message" class="form-label">
+              <span data-i18n="form_message_label">التعليق أو الرسالة</span>
+              <span class="required-mark" aria-hidden="true">*</span>
+            </label>
+            <textarea
+              id="contact-message"
+              name="message"
+              class="form-control"
+              required
+              minlength="5"
+              placeholder="اكتب رسالتك، تعليقك، أو اقتراحك لدروس جديدة هنا..."
+              data-i18n-placeholder="form_message_placeholder"
+            ></textarea>
+            <span class="field-error" id="error-message" data-i18n="form_error_message">يرجى كتابة رسالتك (5 أحرف على الأقل).</span>
+          </div>
+
+          <button type="submit" id="contact-submit" class="btn btn-primary" style="width: 100%; padding-block: 0.9rem;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            <span data-i18n="form_submit">إرسال الرسالة</span>
+          </button>
+        </form>
+      </section>
+
+      <!-- Direct Contact Sidebar -->
+      <aside class="contact-card">
+        <h2 class="section-title" style="margin-bottom: 0.75rem; font-size: 1.35rem;">
+          <span>🤝</span>
+          <span data-i18n="direct_contact_title">قنوات التواصل المباشر</span>
+        </h2>
+        <p style="color: var(--text-secondary); font-size: 0.94rem; line-height: 1.75;" data-i18n="direct_contact_desc">
+          يمكنك أيضاً التواصل معي مباشرة عبر واتساب أو حسابات التواصل الاجتماعي لمشاركة اقتراحاتك أو الاستفسار عن أي درس.
+        </p>
+
+        <div class="contact-info-list">
+          <a href="https://wa.me/201011052340?text=مرحبا،%20أنا%20عاوز%20أتواصل%20مع%20معاذ%20مصطفي" target="_blank" rel="noopener noreferrer" class="contact-info-item">
+            <div class="contact-info-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div>
+              <strong style="display: block; color: var(--text-primary);" data-i18n="social_whatsapp">واتساب (WhatsApp)</strong>
+              <span style="font-size: 0.85rem; color: var(--text-secondary);" dir="ltr">+20 101 105 2340</span>
+            </div>
+          </a>
+
+          <a href="mailto:moazaldebawy@gmail.com" class="contact-info-item">
+            <div class="contact-info-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <strong style="display: block; color: var(--text-primary);" data-i18n="direct_email_label">البريد الإلكتروني</strong>
+              <span style="font-size: 0.85rem; color: var(--text-secondary);" dir="ltr">moazaldebawy@gmail.com</span>
+            </div>
+          </a>
+
+          <a href="https://www.facebook.com/share/1Ctv5kz1CH/" target="_blank" rel="noopener noreferrer" class="contact-info-item">
+            <div class="contact-info-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </div>
+            <div>
+              <strong style="display: block; color: var(--text-primary);" data-i18n="social_facebook">فيسبوك (Facebook)</strong>
+              <span style="font-size: 0.85rem; color: var(--text-secondary);" data-i18n="direct_fb_sub">تواصل عبر صفحتنا على فيسبوك</span>
+            </div>
+          </a>
+
+          <a href="https://www.instagram.com/moaz_eldepawy?igsh=OWx3bG9iNHo2emll" target="_blank" rel="noopener noreferrer" class="contact-info-item">
+            <div class="contact-info-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </div>
+            <div>
+              <strong style="display: block; color: var(--text-primary);" data-i18n="social_instagram">إنستغرام (Instagram)</strong>
+              <span style="font-size: 0.85rem; color: var(--text-secondary);" dir="ltr">@moaz_eldepawy</span>
+            </div>
+          </a>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- Comprehensive Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-identity">
+        <a href="index.html" class="brand-logo">
+          <span class="logo-dot"></span>
+          <span data-i18n="brand_name">بودكاستك</span>
+        </a>
+        <p data-i18n="platform_tagline">منصة للتعلم والوعي والفهم وتطوير النفس</p>
+      </div>
+
+      <div class="footer-grid">
+        <!-- Col 1: Channels -->
+        <div class="footer-col">
+          <h3 class="footer-col-title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+            <span data-i18n="footer_channels_title">مراجع قنوات البودكاست</span>
+          </h3>
+          <ul class="footer-list">
+            <li class="footer-list-item">
+              <a href="https://youtu.be/A6_y0HuwSQw?si=c9RjCMR47G7sjmfD" target="_blank" rel="noopener noreferrer" data-external="true">
+                <strong data-en="Ahmed Amer Channel">صفحة أحمد عامر</strong>
+                <span class="item-sub" data-i18n="sub_youtube">على يوتيوب</span>
+              </a>
+            </li>
+            <li class="footer-list-item">
+              <a href="https://youtu.be/3u5uYyGKYU8?si=y0BcbqXVAtIv1-IV" target="_blank" rel="noopener noreferrer" data-external="true">
+                <strong data-en="Eh El-Moshkela Channel">قناة إيه المشكلة</strong>
+                <span class="item-sub" data-i18n="sub_youtube">على يوتيوب</span>
+              </a>
+            </li>
+            <li class="footer-list-item">
+              <a href="https://youtu.be/y3rb67qqDSg?si=AutiTtFjpobfxTFD" target="_blank" rel="noopener noreferrer" data-external="true">
+                <strong data-en="Wa3y Channel & App">قناة واعي (تطبيق واعي)</strong>
+                <span class="item-sub" data-i18n="sub_youtube_app">على يوتيوب وآب ستور</span>
+              </a>
+            </li>
+            <li class="footer-list-item">
+              <a href="https://youtu.be/FM3jv3U9Nh8?si=zkbh5nXc_ESIVotb" target="_blank" rel="noopener noreferrer" data-external="true">
+                <strong data-en="Droos Online Channel">قناة دروس أونلاين</strong>
+                <span class="item-sub" data-i18n="sub_youtube">على يوتيوب</span>
+              </a>
+            </li>
+            <li class="footer-list-item">
+              <a href="https://youtu.be/pwKHR8fe8GU?si=7Um6lXHKca2VH-Kf" target="_blank" rel="noopener noreferrer" data-external="true">
+                <strong data-en="Yasser Mamdouh Page">صفحة ياسر ممدوح</strong>
+                <span class="item-sub" data-i18n="sub_youtube">على يوتيوب</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Col 2: Posts & Books -->
+        <div class="footer-col">
+          <h3 class="footer-col-title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+            <span data-i18n="footer_refs_title">مراجع وروابط مهمة</span>
+          </h3>
+          <ul class="footer-list">
+            <li class="footer-list-item">
+              <a href="https://ketabpedia.com/%D8%AA%D8%AD%D9%85%D9%8A%D9%84/%D9%83%D8%AA%D8%A7%D8%A8-%D9%81%D9%86-%D8%A7%D9%84%D9%84%D8%A7%D9%85%D8%A8%D8%A7%D9%84%D8%A7%D8%A9-pdf/" target="_blank" rel="noopener noreferrer" data-external="true">
+                <strong data-en="Self-Development Books">كتب تطوير الذات</strong>
+                <span class="item-sub" data-en="Featuring The Subtle Art of Not Giving a F*ck (PDF)">وأهمهم كتاب فن اللامبالاة (PDF)</span>
+              </a>
+            </li>
+            <li class="footer-list-item">
+              <a href="https://www.google.com/search?q=%D9%83%D9%8A%D9%81%D9%8A%D9%87+%D8%AA%D9%86%D8%B8%D9%8A%D9%85+%D8%A7%D9%84%D9%88%D9%82%D8%AA&rlz=1C1GCEA_enEG1164EG1164&oq=%D9%83%D9%8A%D9%81%D9%8A%D9%87+%D8%AA%D9%86%D8%B8%D9%8A%D9%85+%D8%A7%D9%84%D9%88%D9%82%D8%AA&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCDYwNTZqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8" target="_blank" rel="noopener noreferrer" data-external="true">
+                <strong data-en="How to Manage Your Time">كيفية تنظيم الوقت</strong>
+                <span class="item-sub" data-en="Practical guide to time management">تلخيص بسيط لإدارة واستثمار الوقت</span>
+              </a>
+            </li>
+            <li class="footer-list-item">
+              <a href="https://youtu.be/MFLHYRtXjSE?si=lPaIMZzVrKUVMCCH" target="_blank" rel="noopener noreferrer" data-video-id="MFLHYRtXjSE" data-title-ar="طريق الالتزام" data-title-en="The Path to Commitment" data-desc-ar="دليل عملي لبدء طريق الالتزام والثبات." data-desc-en="A practical guide to building steady spiritual and personal commitment.">
+                <strong data-en="The Path to Commitment">طريق الالتزام</strong>
+                <span class="item-sub" data-en="Practical educational lesson">دليل عملي على يوتيوب</span>
+              </a>
+            </li>
+            <li class="footer-list-item">
+              <a href="https://play.google.com/store/apps/details?id=com.m_s_helala.wa3y&hl=ar&pli=1" target="_blank" rel="noopener noreferrer" data-external="true">
+                <strong data-en="Wa3y Recovery App & Books">كتب وتطبيق واعي</strong>
+                <span class="item-sub" data-en="Recovery tools on Google Play">للتعافي من إدمان الإباحية على Google Play</span>
+              </a>
+            </li>
+            <li class="footer-list-item">
+              <a href="https://youtu.be/teJSuEuw-Wo?si=pb368U-GlJvZSOHe" target="_blank" rel="noopener noreferrer" data-video-id="teJSuEuw-Wo" data-title-ar="التحرر من إدمان السوشيال ميديا" data-title-en="Breaking Free from Social Media Addiction" data-desc-ar="دليل شامل للتحرر من استنزاف السوشيال ميديا واستعادة تركيزك." data-desc-en="A comprehensive lesson on overcoming social media addiction and reclaiming focus.">
+                <strong data-en="Overcoming Social Media Addiction">التحرر من إدمان السوشيال ميديا</strong>
+                <span class="item-sub" data-en="Comprehensive educational guide">دليل شامل على يوتيوب</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Video Wall -->
+        <div class="footer-col">
+          <h3 class="footer-col-title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            <span data-i18n="footer_gallery_title">معرض الدروس المختارة</span>
+          </h3>
+          <div class="footer-video-grid">
+            <a href="https://youtu.be/wUpNz6MRbL4?si=BgpsOJa1coFDNn1M" class="footer-video-thumb" data-video-id="wUpNz6MRbL4" data-title-ar="جهاد النفس (1)" data-title-en="Self-Struggle (1)" aria-label="فيديو جهاد 1">
+              <img src="images/جهاد (1).jpg" alt="فيديو جهاد 1" loading="lazy" />
+            </a>
+            <a href="https://youtu.be/FM3jv3U9Nh8?si=K5aeSdueHQ9oyd2r" class="footer-video-thumb" data-video-id="FM3jv3U9Nh8" data-title-ar="جهاد النفس (2)" data-title-en="Self-Struggle (2)" aria-label="فيديو جهاد 2">
+              <img src="images/جهاد (2).jpg" alt="فيديو جهاد 2" loading="lazy" />
+            </a>
+            <a href="https://youtu.be/Qok7NXqopf0?si=bxCLztCOFyS9Vl8_" class="footer-video-thumb" data-video-id="Qok7NXqopf0" data-title-ar="درس مع أمير منير" data-title-en="Lesson with Amir Mounir" aria-label="أمير منير">
+              <img src="images/امير منير.jpg" alt="أمير منير" loading="lazy" />
+            </a>
+            <a href="https://youtu.be/uWnlgkYWRpY?si=MfsA16K-LF7Dxzlc" class="footer-video-thumb" data-video-id="uWnlgkYWRpY" data-title-ar="تعفن الدماغ" data-title-en="Brain Rot & Digital Focus" aria-label="تعفن الدماغ">
+              <img src="images/تعفن.png" alt="تعفن الدماغ" loading="lazy" />
+            </a>
+            <a href="https://youtu.be/w4R8qcSRAKc?si=Px3L5_M7U2mCC76d" class="footer-video-thumb" data-video-id="w4R8qcSRAKc" data-title-ar="قمم" data-title-en="Peaks of Ambition" aria-label="قمم">
+              <img src="images/قمم (2).jpg" alt="قمم" loading="lazy" />
+            </a>
+            <a href="https://youtu.be/pwKHR8fe8GU?si=Fvgu9DRj0fmNJM9A" class="footer-video-thumb" data-video-id="pwKHR8fe8GU" data-title-ar="افرض" data-title-en="What If — Reflection" aria-label="افرض">
+              <img src="images/افرض (2).jpg" alt="افرض" loading="lazy" />
+            </a>
+            <a href="https://youtu.be/Fb-b95F92WA?si=uvM3Q0Kfe2BdcKg1" class="footer-video-thumb" data-video-id="Fb-b95F92WA" data-title-ar="درس مختار 18" data-title-en="Featured Lesson 18" aria-label="حلقة 18">
+              <img src="images/18.jpg" alt="حلقة 18" loading="lazy" />
+            </a>
+            <a href="https://youtu.be/ySLr9IF1tk8?si=uCnnmsKt2fIAEXIC" class="footer-video-thumb" data-video-id="ySLr9IF1tk8" data-title-ar="درس مختار 19" data-title-en="Featured Lesson 19" aria-label="حلقة 19">
+              <img src="images/19.jpg" alt="حلقة 19" loading="lazy" />
+            </a>
+            <a href="https://youtu.be/-B_JLU3SQbs?si=Bq-VXk53yF-4i0b5" class="footer-video-thumb" data-video-id="-B_JLU3SQbs" data-title-ar="حلقة بودكاست 3" data-title-en="Podcast Episode 3" aria-label="حلقة بودكاست 3">
+              <img src="images/3 modify.jpg" alt="حلقة بودكاست 3" loading="lazy" />
+            </a>
+            <a href="https://youtu.be/ySLr9IF1tk8?si=uCnnmsKt2fIAEXIC" class="footer-video-thumb" data-video-id="ySLr9IF1tk8" data-title-ar="حلقة بودكاست مختارة" data-title-en="Selected Podcast Episode" aria-label="حلقة بودكاست مختارة">
+              <img src="images/1.jpg" alt="حلقة بودكاست مختارة" loading="lazy" />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Social & Contact -->
+      <div class="footer-social-wrap">
+        <h4 class="footer-social-title" data-i18n="footer_social_title">أتمنى تكونوا طلعتوا بأكبر استفادة ممكنة</h4>
+        <p class="footer-social-desc" data-i18n="footer_social_desc">وفي النهاية لو حابب تتواصل معايا أو عندك تعليق، دي حساباتي ومواقع التواصل الخاصة بيا:</p>
+        <div class="social-links">
+          <a href="https://wa.me/201011052340?text=مرحبا،%20أنا%20عاوز%20أتواصل%20مع%20معاذ%20مصطفي" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="تواصل عبر واتساب">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span data-i18n="social_whatsapp">واتساب (WhatsApp)</span>
+          </a>
+          <a href="https://www.facebook.com/share/1Ctv5kz1CH/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="حساب فيسبوك">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            <span data-i18n="social_facebook">فيسبوك (Facebook)</span>
+          </a>
+          <a href="https://www.instagram.com/moaz_eldepawy?igsh=OWx3bG9iNHo2emll" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="حساب إنستغرام">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            <span data-i18n="social_instagram">إنستغرام (Instagram)</span>
+          </a>
+          <a href="comments.html" class="social-btn" aria-label="صفحة التواصل والتعليقات">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            <span data-i18n="nav_comments">التواصل والتعليقات</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p data-i18n-html="footer_copyright">&copy; منصة بودكاستك للتعلم والوعي وتطوير النفس | إعداد وتنسيق: <strong>معاذ مصطفى الديباوي</strong></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
