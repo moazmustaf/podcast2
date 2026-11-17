@@ -1,301 +1,371 @@
-<!DOCTYPE HTML>
-<!--
-	Helios by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>No Sidebar - Helios by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="no-sidebar is-preload">
-    <i class="fa-solid fa-bars"></i>
-		<div id="page-wrapper">
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>أهم الكتب والمراجع المقترحة | بودكاستك</title>
+  <meta name="description" content="ترشيحات لأهم كتب تطوير الذات، الإيمان، التغذية الصحية، والرياضة مع روابط تحميل مباشرة." />
+  <meta name="theme-color" content="#0B0F19" />
 
-			<!-- Header -->
-				<div id="header">
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-					<!-- Inner -->
-						<div class="inner">
-							<header>
-								<h1><a href="index.html" id="logo">Helios</a></h1>
-							</header>
-						</div>
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <!-- Accessibility Skip Link -->
+  <a href="#main-content" class="skip-link">تخطي إلى المحتوى الرئيسي</a>
 
-					<!-- Nav -->
-						<nav id="nav">
-							<ul>
-								<li><a href="index.html">الرئيسية</a></li>
-								
-								<li><a href="left-sidebar.html">نصائح</a></li>
-								<li><a href="right-sidebar.html">بودكاست</a></li>
-								<li><a href="no-sidebar.html">كتب</a></li>
-							</ul>
-						</nav>
+  <!-- Header & Navigation -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="brand-logo" aria-label="الصفحة الرئيسية لبودكاستك">
+        <span class="logo-dot" aria-hidden="true"></span>
+        <span>بودكاستك</span>
+      </a>
 
-				</div>
+      <!-- Desktop Nav -->
+      <nav aria-label="التنقل الرئيسي">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-item">الرئيسية</a></li>
+          <li><a href="left-sidebar.html" class="nav-item">نصائح ومقالات</a></li>
+          <li><a href="right-sidebar.html" class="nav-item">بودكاست إيه المشكلة</a></li>
+          <li><a href="no-sidebar.html" class="nav-item active">كتب مختارة</a></li>
+        </ul>
+      </nav>
 
-			<!-- Main -->
-				<div class="wrapper style1">
+      <!-- Mobile Hamburger Button -->
+      <button class="mobile-nav-toggle" aria-label="فتح قائمة التنقل" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </header>
 
-					<div class="container">
-						<article id="main" class="special">
-							<header>
-								<h2><a href="#">أهم الكتب</a></h2>
-								<p>
-									هعرض لحضراتكم أهم الكتب وتأليف مين وأهميتة
-								</p>
-							</header>
-							<a href="#" class="image featured"><img src="" alt="" /></a>
-              <h2 style="direction: rtl;">  التقرب إلي الله  للمؤلف عبد الله سراج الدين</h2>
-							<p style="direction: rtl;">
-							الكتاب ده هيساعدك تفهم إزاي تتقرب من ربنا بخطوات بسيطة وتخلي ده أسلوب حياة. كمان هيديك راحة نفسية وحب حقيقي لله يخليك ثابت في الدنيا ومطمّن.
-              <a style="font-size: larger ;color: #439c1f;" href="https://www.noor-book.com/%D9%83%D8%AA%D8%A7%D8%A8-%D8%A7%D9%84%D8%AA%D9%82%D8%B1%D8%A8-%D8%A7%D9%84%D9%8A-%D8%A7%D9%84%D9%84%D9%87-%D8%B9%D8%A8%D8%AF-%D8%A7%D9%84%D9%84%D9%87-%D8%B3%D8%B1%D8%A7%D8%AC-%D8%A7%D9%84%D8%AF%D9%8A%D9%86-pdf?utm_source=chatgpt.com">اضفط هنا لينك تحميل الكتاب</a>
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" role="dialog" aria-modal="true" aria-label="قائمة الهاتف">
+    <div class="mobile-drawer-header">
+      <div class="brand-logo">
+        <span class="logo-dot"></span>
+        <span>بودكاستك</span>
+      </div>
+      <button class="mobile-drawer-close" aria-label="إغلاق القائمة">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <ul class="mobile-drawer-links">
+      <li><a href="index.html" class="nav-item">الرئيسية</a></li>
+      <li><a href="left-sidebar.html" class="nav-item">نصائح ومقالات</a></li>
+      <li><a href="right-sidebar.html" class="nav-item">بودكاست إيه المشكلة</a></li>
+      <li><a href="no-sidebar.html" class="nav-item active">كتب مختارة</a></li>
+    </ul>
+  </div>
 
-							</p>
-              <hr style="color: aqua;">
-							<a href="#" class="image featured"><img src="" alt="" /></a>
-              <h2 style="direction: rtl;">  أهميه العمل والشغف مؤلف الكتاب: رنا رجيع النجار </h2>
-							<p style="direction: rtl;">
-الكتاب بيوضحلك إنك لازم تدور على الحاجة اللي بتحبها بصدق وتخليها هي شغلك علشان تقدر تكمل فيها بحماس. وكمان بتعلمك إن الفشل مش نهاية الطريق، ده جزء من الرحلة ولازم تتعلم منه وتكمل لحد ما توصل لهدفك.   
-           <a style="font-size: larger ;color: #439c1f;" href="https://www.noor-book.com/%D9%83%D8%AA%D8%A7%D8%A8-%D9%85%D9%86-%D8%A7%D9%84%D8%B4%D8%BA%D9%81-%D9%84%D9%84%D9%82%D9%85%D9%87-pdf">اضفط هنا لينك تحميل الكتاب</a>
-	</p>
-							</p>
-<hr style="color: aqua;">
-							<a href="#" class="image featured"><img src="" alt="" /></a>
-              <h2 style="direction: rtl;">  الثقه وتطوير النفس إبراهيم الفقي </h2>
-							<p style="direction: rtl;">
-أهم دروس الكتاب إنك لازم تؤمن بنفسك وتديها قيمة مهما كانت ظروفك، وتفهم إن نظرتك لنفسك هي اللي بتحدد مكانك في الدنيا. كمان بيعلمك إن التغيير الحقيقي بيبدأ من جواك وإنك تقدر تبقى شخص قوي وواثق بخطوات بسيطة لو استمريت عليها.         
- <a style="font-size: larger ;color: #439c1f;" href="https://foulabook.com/ar/book/%D9%82%D9%88%D8%A9-%D8%A7%D9%84%D8%AB%D9%82%D8%A9-%D8%A8%D8%A7%D9%84%D9%86%D9%81%D8%B3-pdf">اضفط هنا لينك تحميل الكتاب</a>
+  <!-- Main Content -->
+  <main id="main-content" class="container">
+    <!-- Hero Banner -->
+    <section class="hero" style="padding-block: 3.5rem 2.5rem;">
+      <div class="hero-pill">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        <span>مكتبة القراءة المقترحة</span>
+      </div>
+      <h1 class="hero-title">أهم الكتب والمراجع</h1>
+      <p class="hero-subtitle">
+        هعرض لحضراتكم أهم الكتب، وتأليف مين، وأهميتها في بناء شخصيتك وصحتك الجسدية والنفسية، مع روابط تحميل موثوقة ومجانية بصيغة PDF.
+      </p>
+    </section>
 
-							</p>
-<hr style="color: aqua;">							<a href="#" class="image featured"><img src="" alt="" /></a>
-              <h2 style="direction: rtl;">   أهميه الاكل الصحي لشريفة أبو الفتوح</h2>
-							<p style="direction: rtl;">
-أهم دروس الكتاب بتاع شريفة أبو الفتوح إن الأكل الصحي مش رجيم مؤقت، ده أسلوب حياة بيفرق في صحتك وطاقة جسمك كل يوم. كمان بتوضح إن التوازن في الأكل هو السر، يعني تاكل كل حاجة بس بكميات مظبوطة وتبعد عن العادات اللي بتدمر جسمك زي الأكل الجاهز والسكريات الكتير.
- <a style="font-size: larger ;color: #439c1f;" href="https://www.noor-book.com/%D9%83%D8%AA%D8%A7%D8%A8-%D8%A7%D9%84%D8%AA%D8%BA%D8%B0%D9%8A%D8%A9-%D8%A7%D9%84%D8%B5%D8%AD%D9%8A%D8%A9-%D9%88%D8%A7%D9%84%D8%AC%D8%B3%D9%85-%D8%A7%D9%84%D8%B3%D9%84%D9%8A%D9%85-pdf">اضفط هنا لينك تحميل الكتاب</a>
+    <!-- Books Grid -->
+    <section aria-labelledby="books-heading" style="margin-bottom: 4rem;">
+      <div class="section-header">
+        <h2 class="section-title" id="books-heading">
+          <span>📚</span>
+          <span>كتب تصنع الفارق في تفكيرك وحياتك</span>
+          <span class="section-badge">5 كتب رئيسية</span>
+        </h2>
+      </div>
 
-							</p>
-<hr style="color: aqua;">							<a href="#" class="image featured"><img src="" alt="" /></a>
-              <h2 style="direction: rtl;">أهميه الرياضه لفاروق عبد الوهاب</h2>
-							<p style="direction: rtl;">
-أهم دروس الكتاب إن الرياضة مش بس علشان الجسم يبقى شكله حلو، لكن كمان علشان صحتك النفسية والتركيز والمزاج. وكمان بيأكد إن الرياضة بتقوي القلب والمناعة، وبتخلي حياتك أنشط وأهدى وبتساعدك تتغلب على التوتر والكسل.
- <a style="font-size: larger ;color: #439c1f;" href="https://www.noor-book.com/%D9%83%D8%AA%D8%A7%D8%A8-%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6%D8%A9-%D8%B5%D8%AD%D8%A9-%D9%88%D9%84%D9%8A%D8%A7%D9%82%D8%A9-%D8%A8%D8%AF%D9%86%D9%8A%D8%A9-pdf">اضفط هنا لينك تحميل الكتاب</a>
-
-							</p>
-							<section>
-						
-							</section>
-							<section>
-								<header>
-								
-							</section>
-						</article>
-						<hr />
-				
-
-			<!-- Footer -->
-			 <div id="footer">
-        <div class="container">
-          <div class="row">
-            <!-- Tweets -->
-            <section class="col-4 col-12-mobile">
-              <header>
-                <H1 style="font-size: xx-large;">مراجع صفحات البودكاست</H1>
-                </h2>
-              </header>
-              <ul class="divided">
-                <li>
-                 
-                </li>
-                <li>
-                <h3 style=><a href="https://youtu.be/A6_y0HuwSQw?si=c9RjCMR47G7sjmfD"> <center>صفحه أحمد عامر</center></a></h3>
-				 <span class="timestamp">علي اليوتويب</span>
-                </li>
-                <li>
-                <h3 style=><a href="https://youtu.be/3u5uYyGKYU8?si=y0BcbqXVAtIv1-IV"> <center> قناه ايه المشكله </center></a></h3>
-				 <span class="timestamp">علي اليوتويب</span>
-                </li>
-                <li>
-                <h3 style="font-size: large;"><a href="https://youtu.be/y3rb67qqDSg?si=AutiTtFjpobfxTFD"> <center>قناه واعي ودي ليها <br>ابليكيشن بتساعدك ف ادراك الشهوات</center></a></h3>
-				 <span class="timestamp">علي اليوتيوب واب ستور </span>
-                </li>
-                <li>
-                <h3 style=><a href="https://youtu.be/FM3jv3U9Nh8?si=zkbh5nXc_ESIVotb"> <center> قناه دروس اون لاين </center></a></h3>
-				 <span class="timestamp">علي اليوتويب</span>
-                </li>
-                <li>
-                <h3 style=><a href="https://youtu.be/pwKHR8fe8GU?si=7Um6lXHKca2VH-Kf"> <center> صفحه ياسر ممدوح</center></a></h3>
-				 <span class="timestamp">علي اليوتويب</span>
-                </li>                
-              
-                
-              </ul>
-            </section>
-
-            <!-- Posts -->
-            <section class="col-4 col-12-mobile">
-              <header>
-                <h2 class="icon solid fa-file circled">
-                  <span class="label">Posts</span>
-                </h2>
-              </header>
-              <ul class="divided">
-                <li>
-                  <article class="post stub">
-                    <header>
-					
-                      <h3><a href="https://ketabpedia.com/%D8%AA%D8%AD%D9%85%D9%8A%D9%84/%D9%83%D8%AA%D8%A7%D8%A8-%D9%81%D9%86-%D8%A7%D9%84%D9%84%D8%A7%D9%85%D8%A8%D8%A7%D9%84%D8%A7%D8%A9-pdf/">كتب تطوير الذات</a></h3>
-                    </header>
-                    <span class="timestamp">واهمهم كتاب فن اللامبالاه</span>
-                  </article>
-                </li>
-                <li>
-                  <article class="post stub">
-                    <header>
-                      <h3><a href="https://www.google.com/search?q=%D9%83%D9%8A%D9%81%D9%8A%D9%87+%D8%AA%D9%86%D8%B8%D9%8A%D9%85+%D8%A7%D9%84%D9%88%D9%82%D8%AA&rlz=1C1GCEA_enEG1164EG1164&oq=%D9%83%D9%8A%D9%81%D9%8A%D9%87+%D8%AA%D9%86%D8%B8%D9%8A%D9%85+%D8%A7%D9%84%D9%88%D9%82%D8%AA&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCDYwNTZqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8">كيفيه تنظيم الوقت</a></h3>
-                    </header>
-                    <span class="timestamp">تلخيص بسيط لتنظيم الوقت</span>
-                  </article>
-                </li>
-                <li>
-                  <article class="post stub">
-                    <header>
-                      <h3><a href="https://youtu.be/MFLHYRtXjSE?si=lPaIMZzVrKUVMCCH">طريق الالتزام</a></h3>
-                    </header>
-                    <span class="timestamp">دا ع اليوتيوب</span>
-                  </article>
-                </li>
-                <li>
-                  <article class="post stub">
-                    <header>
-                      <h3><a href="https://play.google.com/store/apps/details?id=com.m_s_helala.wa3y&hl=ar&pli=1">كتب لادمان الاباحيه</a></h3>
-                    </header>
-                    <span class="timestamp"> سايبلكم الينك </span>
-                  </article>
-                </li>
-                <li>
-                  <article class="post stub">
-                    <header>
-                      <h3><a href="https://youtu.be/teJSuEuw-Wo?si=pb368U-GlJvZSOHe">كيفيه التخلص من ادمان السوشيال ميديا</a></h3>
-                    </header>
-                    <span class="timestamp"> سايبلكم الينك </span>
-                  </article>
-                </li>
-              </ul>
-            </section>
-
-            <!-- Photos -->
-            <section class="col-4 col-12-mobile">
-              <header>
-                <h2 class="icon solid fa-camera circled">
-                  <span class="label">Photos</span>
-                </h2>
-              </header>
-              <div class="row gtr-25">
-                <div class="col-6">
-                  <a href="https://youtu.be/wUpNz6MRbL4?si=BgpsOJa1coFDNn1M" class="image fit"
-                    ><img src="images/جهاد (1).jpg" alt=""
-                  /></a>
-                </div>
-                <div class="col-6">
-                  <a href="https://youtu.be/FM3jv3U9Nh8?si=K5aeSdueHQ9oyd2r" class="image fit"
-                    ><img src="images/جهاد (2).jpg" alt=""
-                  /></a>
-                </div>
-                <div class="col-6">
-                  <a href="https://youtu.be/Qok7NXqopf0?si=bxCLztCOFyS9Vl8_" class="image fit"
-                    ><img src="images/امير منير.jpg" alt=""
-                  /></a>
-                </div>
-                <div class="col-6">
-                  <a href="https://youtu.be/uWnlgkYWRpY?si=MfsA16K-LF7Dxzlc" class="image fit"
-                    ><img src="images/تعفن.png" alt=""
-                  /></a>
-                </div>
-                <div class="col-6">
-                  <a href="https://youtu.be/w4R8qcSRAKc?si=Px3L5_M7U2mCC76d" class="image fit"
-                    ><img src="images/قمم (2).jpg" alt=""
-                  /></a>
-                </div>
-                <div class="col-6">
-                  <a href="https://youtu.be/pwKHR8fe8GU?si=Fvgu9DRj0fmNJM9A" class="image fit"
-                    ><img src="images/افرض (2).jpg" alt=""
-                  /></a>
-                </div>
-                <div class="col-6">
-                  <a href="https://youtu.be/Fb-b95F92WA?si=uvM3Q0Kfe2BdcKg1" class="image fit"
-                    ><img src="images/18.jpg" alt=""
-                  /></a>
-                </div>
-                <div class="col-6">
-                  <a href="https://youtu.be/ySLr9IF1tk8?si=uCnnmsKt2fIAEXIC" class="image fit"
-                    ><img src="images/19.jpg" alt=""
-                  /></a>
-                </div>
-              </div>
-            </section>
-          </div>
-          <hr />
-          <div class="row">
-            <div class="col-12">
-              <!-- Contact -->
-              <section class="contact">
-                <header>
-                  <h3>أتمني تكونوا طلعتوا بأكبر استفاده ممكنه</h3>
-                </header>
-                <p>
-وفي النهاية لو عاوز توضلي او عندك تعليق هسيبلك مواقع التواصل الخاص بيا .....شكرا     
-           </p>
-                <ul class="icons">
-                
-                  <li>
-                    <a href="https://www.facebook.com/share/1Ctv5kz1CH/" class="icon brands fa-facebook-f"
-                      ><span class="label">Facebook</span></a
-                    >
-                  </li>
-                  <li>
-                    <a href="https://www.instagram.com/moaz_eldepawy?igsh=OWx3bG9iNHo2emll" class="icon brands fa-instagram"
-                      ><span class="label">Instagram</span></a
-                    >
-                  </li>
-               
-                 
-                  <li>
-                    <a href="https://wa.me/201151387688?text=مرحبا،%20أنا%20عاوز%20أتواصل%20مع%20معاذ%20مصطفي
-" class="icon brands fa-whatsapp"
-                      ><span class="label">whatsapp</span></a
-                    >
-                  </li>
-                </ul>
-              </section>
-
-              <!-- Copyright -->
-              <div class="copyright">
-                <ul class="menu">
-                  <li>&copy; name is site:بودكاستك</li>
-                  <li>Design: <a href="">by/Moaz eldepawy</a></li>
-                </ul>
-              </div>
+      <div class="card-grid" style="grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));">
+        <!-- Book 1: التقرب إلي الله -->
+        <article class="book-card">
+          <div style="display: flex; align-items: center; justify-content: space-between;">
+            <div class="book-badge-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
             </div>
+            <span style="font-size: 0.8rem; font-weight: 600; color: var(--accent-amber); background: var(--accent-amber-glow); padding: 0.2rem 0.65rem; border-radius: var(--radius-full);">إيمانيات وتزكية</span>
+          </div>
+          <div>
+            <h3 class="book-title">التقرب إلي الله</h3>
+            <p style="font-size: 0.9rem; color: var(--primary-emerald); font-weight: 600; margin-top: 0.25rem;">المؤلف: عبد الله سراج الدين</p>
+          </div>
+          <p class="book-desc">
+            الكتاب ده هيساعدك تفهم إزاي تتقرب من ربنا بخطوات بسيطة وتخلي ده أسلوب حياة دائم. كمان هيديك راحة نفسية وحب حقيقي لله يخليك ثابتاً في الدنيا ومطمئن القلب مهما تقلبَت الظروف.
+          </p>
+          <div class="book-action">
+            <a href="https://www.noor-book.com/%D9%83%D8%AA%D8%A7%D8%A8-%D8%A7%D9%84%D8%AA%D9%82%D8%B1%D8%A8-%D8%A7%D9%84%D9%8A-%D8%A7%D9%84%D9%84%D9%87-%D8%B9%D8%A8%D8%AF-%D8%A7%D9%84%D9%84%D9%87-%D8%B3%D8%B1%D8%A7%D8%AC-%D8%A7%D9%84%D8%AF%D9%8A%D9%86-pdf?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width: 100%;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              <span>اضغط هنا لتحميل الكتاب (مكتبة نور)</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Book 2: أهميه العمل والشغف -->
+        <article class="book-card">
+          <div style="display: flex; align-items: center; justify-content: space-between;">
+            <div class="book-badge-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <span style="font-size: 0.8rem; font-weight: 600; color: var(--accent-amber); background: var(--accent-amber-glow); padding: 0.2rem 0.65rem; border-radius: var(--radius-full);">شغف وعمل</span>
+          </div>
+          <div>
+            <h3 class="book-title">أهمية العمل والشغف (من الشغف للقمة)</h3>
+            <p style="font-size: 0.9rem; color: var(--primary-emerald); font-weight: 600; margin-top: 0.25rem;">المؤلف: رنا رجيع النجار</p>
+          </div>
+          <p class="book-desc">
+            الكتاب بيوضحلك إنك لازم تدور على الحاجة اللي بتحبها بصدق وتخليها هي شغلك علشان تقدر تكمل فيها بحماس مستمر. وكمان بيعلمك إن الفشل مش نهاية الطريق، ده جزء طبيعي من الرحلة ولازم تتعلم منه وتكمل لحد ما توصل لهدفك.
+          </p>
+          <div class="book-action">
+            <a href="https://www.noor-book.com/%D9%83%D8%AA%D8%A7%D8%A8-%D9%85%D9%86-%D8%A7%D9%84%D8%B4%D8%BA%D9%81-%D9%84%D9%84%D9%82%D9%85%D9%87-pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width: 100%;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              <span>اضغط هنا لتحميل الكتاب (مكتبة نور)</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Book 3: الثقه وتطوير النفس -->
+        <article class="book-card">
+          <div style="display: flex; align-items: center; justify-content: space-between;">
+            <div class="book-badge-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+            </div>
+            <span style="font-size: 0.8rem; font-weight: 600; color: var(--accent-amber); background: var(--accent-amber-glow); padding: 0.2rem 0.65rem; border-radius: var(--radius-full);">تطوير الذات</span>
+          </div>
+          <div>
+            <h3 class="book-title">قوة الثقة بالنفس وتطوير الذات</h3>
+            <p style="font-size: 0.9rem; color: var(--primary-emerald); font-weight: 600; margin-top: 0.25rem;">المؤلف: د. إبراهيم الفقي</p>
+          </div>
+          <p class="book-desc">
+            أهم دروس الكتاب إنك لازم تؤمن بنفسك وتديها قيمتها مهما كانت ظروفك، وتفهم إن نظرتك لنفسك هي اللي بتحدد مكانتك في الدنيا. كمان بيعلمك إن التغيير الحقيقي بيبدأ من داخلك وإنك تقدر تبقى شخصاً قوياً وواثقاً بخطوات بسيطة لو استمررت عليها.
+          </p>
+          <div class="book-action">
+            <a href="https://foulabook.com/ar/book/%D9%82%D9%88%D8%A9-%D8%A7%D9%84%D8%AB%D9%82%D8%A9-%D8%A8%D8%A7%D9%84%D9%86%D9%81%D8%B3-pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width: 100%;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              <span>اضغط هنا لتحميل الكتاب (فولة بوك)</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Book 4: أهميه الاكل الصحي -->
+        <article class="book-card">
+          <div style="display: flex; align-items: center; justify-content: space-between;">
+            <div class="book-badge-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 0 0-7.07 17.07l1.41-1.41A8 8 0 1 1 12 20v2a10 10 0 0 0 0-20z"/></svg>
+            </div>
+            <span style="font-size: 0.8rem; font-weight: 600; color: var(--accent-amber); background: var(--accent-amber-glow); padding: 0.2rem 0.65rem; border-radius: var(--radius-full);">صحة وتغذية</span>
+          </div>
+          <div>
+            <h3 class="book-title">التغذية الصحية والجسم السليم</h3>
+            <p style="font-size: 0.9rem; color: var(--primary-emerald); font-weight: 600; margin-top: 0.25rem;">المؤلف: د. شريفة أبو الفتوح</p>
+          </div>
+          <p class="book-desc">
+            أهم دروس الكتاب إن الأكل الصحي مش رجيم مؤقت أو حرمان، ده أسلوب حياة كامل بيفرق في طاقتك ونشاطك الجسدي والذهني كل يوم. كمان بتوضح إن التوازن هو السر: تاكل المفيد باعتدال وتبتعد عن العادات المدمرة زي الأكل الجاهز والسكريات المفرطة.
+          </p>
+          <div class="book-action">
+            <a href="https://www.noor-book.com/%D9%83%D8%AA%D8%A7%D8%A8-%D8%A7%D9%84%D8%AA%D8%BA%D8%B0%D9%8A%D8%A9-%D8%A7%D9%84%D8%B5%D8%AD%D9%8A%D8%A9-%D9%88%D8%A7%D9%84%D8%AC%D8%B3%D9%85-%D8%A7%D9%84%D8%B3%D9%84%D9%8A%D9%85-pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width: 100%;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              <span>اضغط هنا لتحميل الكتاب (مكتبة نور)</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Book 5: أهميه الرياضه -->
+        <article class="book-card">
+          <div style="display: flex; align-items: center; justify-content: space-between;">
+            <div class="book-badge-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            </div>
+            <span style="font-size: 0.8rem; font-weight: 600; color: var(--accent-amber); background: var(--accent-amber-glow); padding: 0.2rem 0.65rem; border-radius: var(--radius-full);">لياقة وبناء</span>
+          </div>
+          <div>
+            <h3 class="book-title">الرياضة صحة ولياقة بدنية</h3>
+            <p style="font-size: 0.9rem; color: var(--primary-emerald); font-weight: 600; margin-top: 0.25rem;">المؤلف: د. فاروق عبد الوهاب</p>
+          </div>
+          <p class="book-desc">
+            أهم دروس الكتاب إن الرياضة ليست مجرد مظهر أو شكل خارجي، بل هي أساس صحتك النفسية والتركيز الذهني والمزاج المتزن. ويؤكد أن النشاط البدني يقوي عضلة القلب والمناعة، ويجعل يومك أكثر حيوية ويبعد عنك التوتر والكسل والخمول.
+          </p>
+          <div class="book-action">
+            <a href="https://www.noor-book.com/%D9%83%D8%AA%D8%A7%D8%A8-%D8%A7%D9%84%D8%AA%D8%BA%D8%B0%D9%8A%D8%A9-%D8%A7%D9%84%D8%B5%D8%AD%D9%8A%D8%A9-%D9%88%D8%A7%D9%84%D8%AC%D8%B3%D9%85-%D8%A7%D9%84%D8%B3%D9%84%D9%8A%D9%85-pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width: 100%;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              <span>اضغط هنا لتحميل الكتاب (مكتبة نور)</span>
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- Comprehensive Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: Channels -->
+        <div class="footer-col">
+          <h3 class="footer-col-title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+            <span>مراجع قنوات البودكاست</span>
+          </h3>
+          <ul class="footer-list">
+            <li class="footer-list-item">
+              <a href="https://youtu.be/A6_y0HuwSQw?si=c9RjCMR47G7sjmfD" target="_blank" rel="noopener noreferrer">
+                <strong>صفحة أحمد عامر</strong>
+                <span class="item-sub">على يوتيوب</span>
+              </a>
+            </li>
+            <li class="footer-list-item">
+              <a href="https://youtu.be/3u5uYyGKYU8?si=y0BcbqXVAtIv1-IV" target="_blank" rel="noopener noreferrer">
+                <strong>قناة إيه المشكلة</strong>
+                <span class="item-sub">على يوتيوب</span>
+              </a>
+            </li>
+            <li class="footer-list-item">
+              <a href="https://youtu.be/y3rb67qqDSg?si=AutiTtFjpobfxTFD" target="_blank" rel="noopener noreferrer">
+                <strong>قناة واعي (تطبيق واعي)</strong>
+                <span class="item-sub">على يوتيوب وآب ستور</span>
+              </a>
+            </li>
+            <li class="footer-list-item">
+              <a href="https://youtu.be/FM3jv3U9Nh8?si=zkbh5nXc_ESIVotb" target="_blank" rel="noopener noreferrer">
+                <strong>قناة دروس أونلاين</strong>
+                <span class="item-sub">على يوتيوب</span>
+              </a>
+            </li>
+            <li class="footer-list-item">
+              <a href="https://youtu.be/pwKHR8fe8GU?si=7Um6lXHKca2VH-Kf" target="_blank" rel="noopener noreferrer">
+                <strong>صفحة ياسر ممدوح</strong>
+                <span class="item-sub">على يوتيوب</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Col 2: Posts & Books -->
+        <div class="footer-col">
+          <h3 class="footer-col-title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+            <span>مراجع وروابط مهمة</span>
+          </h3>
+          <ul class="footer-list">
+            <li class="footer-list-item">
+              <a href="https://ketabpedia.com/%D8%AA%D8%AD%D9%85%D9%8A%D9%84/%D9%83%D8%AA%D8%A7%D8%A8-%D9%81%D9%86-%D8%A7%D9%84%D9%84%D8%A7%D9%85%D8%A8%D8%A7%D9%84%D8%A7%D8%A9-pdf/" target="_blank" rel="noopener noreferrer">
+                <strong>كتب تطوير الذات</strong>
+                <span class="item-sub">وأهمهم كتاب فن اللامبالاة (PDF)</span>
+              </a>
+            </li>
+            <li class="footer-list-item">
+              <a href="https://www.google.com/search?q=%D9%83%D9%8A%D9%81%D9%8A%D9%87+%D8%AA%D9%86%D8%B8%D9%8A%D9%85+%D8%A7%D9%84%D9%88%D9%82%D8%AA&rlz=1C1GCEA_enEG1164EG1164&oq=%D9%83%D9%8A%D9%81%D9%8A%D9%87+%D8%AA%D9%86%D8%B8%D9%8A%D9%85+%D8%A7%D9%84%D9%88%D9%82%D8%AA&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCDYwNTZqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8" target="_blank" rel="noopener noreferrer">
+                <strong>كيفية تنظيم الوقت</strong>
+                <span class="item-sub">تلخيص بسيط لإدارة واستثمار الوقت</span>
+              </a>
+            </li>
+            <li class="footer-list-item">
+              <a href="https://youtu.be/MFLHYRtXjSE?si=lPaIMZzVrKUVMCCH" target="_blank" rel="noopener noreferrer">
+                <strong>طريق الالتزام</strong>
+                <span class="item-sub">دليل عملي على يوتيوب</span>
+              </a>
+            </li>
+            <li class="footer-list-item">
+              <a href="https://play.google.com/store/apps/details?id=com.m_s_helala.wa3y&hl=ar&pli=1" target="_blank" rel="noopener noreferrer">
+                <strong>كتب وتطبيق واعي</strong>
+                <span class="item-sub">للتعافي من إدمان الإباحية على Google Play</span>
+              </a>
+            </li>
+            <li class="footer-list-item">
+              <a href="https://youtu.be/teJSuEuw-Wo?si=pb368U-GlJvZSOHe" target="_blank" rel="noopener noreferrer">
+                <strong>التحرر من إدمان السوشيال ميديا</strong>
+                <span class="item-sub">دليل شامل على يوتيوب</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Video Wall -->
+        <div class="footer-col">
+          <h3 class="footer-col-title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            <span>معرض الفيديوهات المختارة</span>
+          </h3>
+          <div class="footer-video-grid">
+            <a href="https://youtu.be/wUpNz6MRbL4?si=BgpsOJa1coFDNn1M" target="_blank" rel="noopener noreferrer" class="footer-video-thumb" aria-label="فيديو جهاد 1">
+              <img src="images/جهاد (1).jpg" alt="فيديو جهاد 1" loading="lazy" />
+            </a>
+            <a href="https://youtu.be/FM3jv3U9Nh8?si=K5aeSdueHQ9oyd2r" target="_blank" rel="noopener noreferrer" class="footer-video-thumb" aria-label="فيديو جهاد 2">
+              <img src="images/جهاد (2).jpg" alt="فيديو جهاد 2" loading="lazy" />
+            </a>
+            <a href="https://youtu.be/Qok7NXqopf0?si=bxCLztCOFyS9Vl8_" target="_blank" rel="noopener noreferrer" class="footer-video-thumb" aria-label="أمير منير">
+              <img src="images/امير منير.jpg" alt="أمير منير" loading="lazy" />
+            </a>
+            <a href="https://youtu.be/uWnlgkYWRpY?si=MfsA16K-LF7Dxzlc" target="_blank" rel="noopener noreferrer" class="footer-video-thumb" aria-label="تعفن الدماغ">
+              <img src="images/تعفن.png" alt="تعفن الدماغ" loading="lazy" />
+            </a>
+            <a href="https://youtu.be/w4R8qcSRAKc?si=Px3L5_M7U2mCC76d" target="_blank" rel="noopener noreferrer" class="footer-video-thumb" aria-label="قمم">
+              <img src="images/قمم (2).jpg" alt="قمم" loading="lazy" />
+            </a>
+            <a href="https://youtu.be/pwKHR8fe8GU?si=Fvgu9DRj0fmNJM9A" target="_blank" rel="noopener noreferrer" class="footer-video-thumb" aria-label="افرض">
+              <img src="images/افرض (2).jpg" alt="افرض" loading="lazy" />
+            </a>
+            <a href="https://youtu.be/Fb-b95F92WA?si=uvM3Q0Kfe2BdcKg1" target="_blank" rel="noopener noreferrer" class="footer-video-thumb" aria-label="حلقة 18">
+              <img src="images/18.jpg" alt="حلقة 18" loading="lazy" />
+            </a>
+            <a href="https://youtu.be/ySLr9IF1tk8?si=uCnnmsKt2fIAEXIC" target="_blank" rel="noopener noreferrer" class="footer-video-thumb" aria-label="حلقة 19">
+              <img src="images/19.jpg" alt="حلقة 19" loading="lazy" />
+            </a>
+            <a href="https://youtu.be/-B_JLU3SQbs?si=Bq-VXk53yF-4i0b5" target="_blank" rel="noopener noreferrer" class="footer-video-thumb" aria-label="حلقة بودكاست 3">
+              <img src="images/3 modify.jpg" alt="حلقة بودكاست 3" loading="lazy" />
+            </a>
+            <a href="https://youtu.be/ySLr9IF1tk8?si=uCnnmsKt2fIAEXIC" target="_blank" rel="noopener noreferrer" class="footer-video-thumb" aria-label="حلقة بودكاست مختارة">
+              <img src="images/1.jpg" alt="حلقة بودكاست مختارة" loading="lazy" />
+            </a>
           </div>
         </div>
       </div>
+
+      <!-- Social & Contact -->
+      <div class="footer-social-wrap">
+        <h4 class="footer-social-title">أتمنى تكونوا طلعتوا بأكبر استفادة ممكنة</h4>
+        <p class="footer-social-desc">وفي النهاية لو حابب تتواصل معايا أو عندك تعليق، دي حساباتي ومواقع التواصل الخاصة بيا:</p>
+        <div class="social-links">
+          <a href="https://wa.me/201151387688?text=مرحبا،%20أنا%20عاوز%20أتواصل%20مع%20معاذ%20مصطفي" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="تواصل عبر واتساب">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span>واتساب (WhatsApp)</span>
+          </a>
+          <a href="https://www.facebook.com/share/1Ctv5kz1CH/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="حساب فيسبوك">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            <span>فيسبوك (Facebook)</span>
+          </a>
+          <a href="https://www.instagram.com/moaz_eldepawy?igsh=OWx3bG9iNHo2emll" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="حساب إنستغرام">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            <span>إنستغرام (Instagram)</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="footer-bottom">
+        <p>&copy; موقع بودكاستك | إعداد وتنسيق: <strong>معاذ مصطفى الديباوي</strong></p>
+      </div>
     </div>
+  </footer>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+  <!-- App Script -->
+  <script src="assets/js/app.js"></script>
+</body>
 </html>
