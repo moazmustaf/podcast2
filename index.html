@@ -46,10 +46,10 @@
       <nav class="desktop-nav" aria-label="التنقل الرئيسي">
         <ul class="nav-links">
           <li><a href="index.html" class="nav-item active" data-i18n="nav_home">الرئيسية</a></li>
-          <li><a href="#self-dev" class="nav-item" data-i18n="nav_self_dev">تطوير الذات</a></li>
-          <li><a href="#moaz" class="nav-item" data-i18n="nav_islamic">دروس دينية</a></li>
-          <li><a href="left-sidebar.html" class="nav-item" data-i18n="nav_tips">نصائح ومقالات</a></li>
+          <li><a href="skills.html" class="nav-item" data-i18n="nav_skills">مهارات</a></li>
+          <li><a href="fav.html" class="nav-item" data-i18n="nav_favorites">⭐ المفضلة</a></li>
           <li><a href="right-sidebar.html" class="nav-item" data-i18n="nav_podcast">بودكاست</a></li>
+          <li><a href="left-sidebar.html" class="nav-item" data-i18n="nav_tips">نصائح ومقالات</a></li>
           <li><a href="no-sidebar.html" class="nav-item" data-i18n="nav_books">كتب</a></li>
           <li><a href="comments.html" class="nav-item" data-i18n="nav_comments">التواصل والتعليقات</a></li>
         </ul>
@@ -92,10 +92,10 @@
     </div>
     <ul class="mobile-drawer-links">
       <li><a href="index.html" class="nav-item active" data-i18n="nav_home">الرئيسية</a></li>
-      <li><a href="#self-dev" class="nav-item" data-i18n="nav_self_dev">تطوير الذات</a></li>
-      <li><a href="#moaz" class="nav-item" data-i18n="nav_islamic">دروس دينية</a></li>
-      <li><a href="left-sidebar.html" class="nav-item" data-i18n="nav_tips">نصائح ومقالات</a></li>
+      <li><a href="skills.html" class="nav-item" data-i18n="nav_skills">مهارات</a></li>
+      <li><a href="fav.html" class="nav-item" data-i18n="nav_favorites">⭐ المفضلة</a></li>
       <li><a href="right-sidebar.html" class="nav-item" data-i18n="nav_podcast">بودكاست</a></li>
+      <li><a href="left-sidebar.html" class="nav-item" data-i18n="nav_tips">نصائح ومقالات</a></li>
       <li><a href="no-sidebar.html" class="nav-item" data-i18n="nav_books">كتب</a></li>
       <li><a href="comments.html" class="nav-item" data-i18n="nav_comments">التواصل والتعليقات</a></li>
     </ul>
@@ -129,27 +129,30 @@
         السلام عليكم، أنا معاذ. أنشأت هذه المنصة التعليمية لتكون دليلاً مرتباً ومنظماً يجمع أهم الدروس المعرفية، والبودكاست التربوي، والفهم الديني الواعي، وتطوير العقل والنفس. تصفح الأقسام، ابحث عن الموضوع الذي يشغلك، وشاهد الدروس مباشرة داخل المنصة بكل سهولة.
       </p>
       <div class="hero-actions">
-        <a href="#self-dev" class="btn btn-primary">
+        <a href="skills.html" class="btn btn-primary">
+          <span data-i18n="nav_skills">مهارات العصر</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+          </svg>
+        </a>
+        <a href="#self-dev" class="btn btn-secondary">
           <span data-i18n="home_cta_start">استكشف الدروس</span>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <polyline points="6 9 12 15 18 9"></polyline>
           </svg>
         </a>
-        <a href="right-sidebar.html" class="btn btn-secondary">
+        <a href="right-sidebar.html" class="btn btn-outline">
           <span data-i18n="home_cta_podcast">سلسلة إيه المشكلة؟</span>
-        </a>
-        <a href="comments.html" class="btn btn-outline">
-          <span data-i18n="home_cta_comments">شاركنا رأيك</span>
         </a>
       </div>
 
       <div class="hero-stats">
         <div class="stat-item">
-          <span class="stat-value">+55</span>
+          <span class="stat-value">+70</span>
           <span class="stat-label" data-i18n="stat_lessons_label">درساً وحلقة مختارة</span>
         </div>
         <div class="stat-item">
-          <span class="stat-value">6</span>
+          <span class="stat-value">7</span>
           <span class="stat-label" data-i18n="stat_categories_label">تصنيفات تعليمية</span>
         </div>
         <div class="stat-item">
@@ -190,15 +193,182 @@
     </div>
 
     <!-- =====================================================================
+         FEATURED SECTION: Modern Skills & Freelancing (مهارات العصر)
+         ===================================================================== -->
+    <section id="featured-skills" class="content-section" aria-labelledby="skills-heading">
+      <div class="section-explore-bar">
+        <h2 class="section-title" id="skills-heading" style="margin-bottom: 0;">
+          <span>💡</span>
+          <span data-en="Featured Modern Skills">أقوى مهارات العصر وسوق العمل</span>
+          <span class="section-badge" data-en="Featured">دروس مختارة</span>
+        </h2>
+        <a href="skills.html" class="section-explore-btn">
+          <span data-i18n="explore_skills">تصفح كل مهارات العصر</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </a>
+      </div>
+
+      <div class="card-grid">
+        <!-- 1. Elzero Programming -->
+        <article class="card" data-category="skills life-skills" data-video-id="TJVfyB7QR8I">
+          <div class="card-media">
+            <img src="https://i.ytimg.com/vi/TJVfyB7QR8I/hqdefault.jpg" alt="من أجمل طرق تعلم البرمجة" loading="lazy" data-category="programming" onerror="this.onerror=null;this.src=window.getFallbackThumbnail('programming');" />
+            <span class="card-tag" data-ar="برمجة وتطوير ويب" data-en="Coding & Web">برمجة وتطوير ويب</span>
+            <span class="card-new-badge" data-added-at="2026-11-20">✨ جديد</span>
+            <button type="button" class="card-fav-btn" data-fav-id="TJVfyB7QR8I" data-video-id="TJVfyB7QR8I" aria-label="إضافة إلى المفضلة" title="إضافة إلى المفضلة" aria-pressed="false">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </button>
+            <a href="https://youtu.be/TJVfyB7QR8I" class="card-play-overlay" aria-label="مشاهدة من أجمل طرق تعلم البرمجة" data-video-id="TJVfyB7QR8I" data-title-ar="من أجمل وأسهل طرق تعلم البرمجة من الصفر" data-title-en="One of the Best Ways to Learn Programming from Scratch" data-desc-ar="أسامة الزيرو بيشرح بأسلوب مبسط جداً إزاي تبدأ في عالم البرمجة من غير تعقيد وتختار مجالك الصح." data-desc-en="Osama Elzero explains clearly how to start learning coding without complications and choose your path." data-cat-ar="برمجة وتطوير ويب" data-cat-en="Coding & Web">
+              <div class="play-icon-circle">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </div>
+            </a>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">
+              <a href="https://youtu.be/TJVfyB7QR8I" data-video-id="TJVfyB7QR8I" data-title-ar="من أجمل وأسهل طرق تعلم البرمجة من الصفر" data-title-en="One of the Best Ways to Learn Programming from Scratch" data-desc-ar="أسامة الزيرو بيشرح بأسلوب مبسط جداً إزاي تبدأ في عالم البرمجة من غير تعقيد وتختار مجالك الصح." data-desc-en="Osama Elzero explains clearly how to start learning coding without complications and choose your path." data-cat-ar="برمجة وتطوير ويب" data-cat-en="Coding & Web" data-ar="من أجمل وأسهل طرق تعلم البرمجة من الصفر" data-en="One of the Best Ways to Learn Programming from Scratch">
+                من أجمل وأسهل طرق تعلم البرمجة من الصفر
+              </a>
+            </h3>
+            <p class="card-desc" data-ar="أسامة الزيرو بيشرح بأسلوب مبسط جداً إزاي تبدأ في عالم البرمجة من غير تعقيد وتختار مجالك الصح." data-en="Osama Elzero explains clearly how to start learning coding without complications and choose your path.">
+              أسامة الزيرو بيشرح بأسلوب مبسط جداً إزاي تبدأ في عالم البرمجة من غير تعقيد وتختار مجالك الصح.
+            </p>
+            <div class="card-footer">
+              <a href="https://youtu.be/TJVfyB7QR8I" class="card-cta" data-video-id="TJVfyB7QR8I" data-title-ar="من أجمل وأسهل طرق تعلم البرمجة من الصفر" data-title-en="One of the Best Ways to Learn Programming from Scratch" data-desc-ar="أسامة الزيرو بيشرح بأسلوب مبسط جداً إزاي تبدأ في عالم البرمجة من غير تعقيد وتختار مجالك الصح." data-desc-en="Osama Elzero explains clearly how to start learning coding without complications and choose your path." data-cat-ar="برمجة وتطوير ويب" data-cat-en="Coding & Web">
+                <span data-i18n="watch_lesson">شاهد الدرس الآن</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </a>
+              <div class="card-actions-right">
+                <button type="button" class="share-btn" data-url="https://youtu.be/TJVfyB7QR8I" aria-label="نسخ رابط الدرس"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg></button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 2. Remote Work Yehia Tech & Ahmed Nagdy -->
+        <article class="card" data-category="skills life-skills" data-video-id="hVPYTKcOGgU">
+          <div class="card-media">
+            <img src="https://i.ytimg.com/vi/hVPYTKcOGgU/hqdefault.jpg" alt="ازاي تشتغل عن بعد" loading="lazy" data-category="programming" onerror="this.onerror=null;this.src=window.getFallbackThumbnail('programming');" />
+            <span class="card-tag" data-ar="برمجة وعمل عن بعد" data-en="Coding & Remote Work">برمجة وعمل عن بعد</span>
+            <span class="card-new-badge" data-added-at="2026-11-20">✨ جديد</span>
+            <button type="button" class="card-fav-btn" data-fav-id="hVPYTKcOGgU" data-video-id="hVPYTKcOGgU" aria-label="إضافة إلى المفضلة" title="إضافة إلى المفضلة" aria-pressed="false">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </button>
+            <a href="https://youtu.be/hVPYTKcOGgU" class="card-play-overlay" aria-label="مشاهدة شغل الريموت" data-video-id="hVPYTKcOGgU" data-title-ar="شغل الريموت (Remote Work): ازاي تشتغل عن بعد وتدخل سوق العمل؟" data-title-en="Remote Work: How to Work Remotely & Break into the Market" data-desc-ar="يحيى تك مع أحمد نجدي في نقاش عملي دسم عن خطوات العمل الحر والريموت، وكيف تجهز نفسك للشركات العالمية." data-desc-en="Yehia Tech and Ahmed Nagdy discuss practical steps to land remote tech jobs and work globally." data-cat-ar="برمجة وعمل عن بعد" data-cat-en="Coding & Remote Work">
+              <div class="play-icon-circle">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </div>
+            </a>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">
+              <a href="https://youtu.be/hVPYTKcOGgU" data-video-id="hVPYTKcOGgU" data-title-ar="شغل الريموت (Remote Work): ازاي تشتغل عن بعد وتدخل سوق العمل؟" data-title-en="Remote Work: How to Work Remotely & Break into the Market" data-desc-ar="يحيى تك مع أحمد نجدي في نقاش عملي دسم عن خطوات العمل الحر والريموت، وكيف تجهز نفسك للشركات العالمية." data-desc-en="Yehia Tech and Ahmed Nagdy discuss practical steps to land remote tech jobs and work globally." data-cat-ar="برمجة وعمل عن بعد" data-cat-en="Coding & Remote Work" data-ar="شغل الريموت (Remote Work): ازاي تشتغل عن بعد وتدخل سوق العمل؟" data-en="Remote Work: How to Work Remotely & Break into the Market">
+                شغل الريموت (Remote Work): ازاي تشتغل عن بعد وتدخل سوق العمل؟
+              </a>
+            </h3>
+            <p class="card-desc" data-ar="يحيى تك مع أحمد نجدي في نقاش عملي دسم عن خطوات العمل الحر والريموت، وكيف تجهز نفسك للشركات العالمية." data-en="Yehia Tech and Ahmed Nagdy discuss practical steps to land remote tech jobs and work globally.">
+              يحيى تك مع أحمد نجدي في نقاش عملي دسم عن خطوات العمل الحر والريموت، وكيف تجهز نفسك للشركات العالمية.
+            </p>
+            <div class="card-footer">
+              <a href="https://youtu.be/hVPYTKcOGgU" class="card-cta" data-video-id="hVPYTKcOGgU" data-title-ar="شغل الريموت (Remote Work): ازاي تشتغل عن بعد وتدخل سوق العمل؟" data-title-en="Remote Work: How to Work Remotely & Break into the Market" data-desc-ar="يحيى تك مع أحمد نجدي في نقاش عملي دسم عن خطوات العمل الحر والريموت، وكيف تجهز نفسك للشركات العالمية." data-desc-en="Yehia Tech and Ahmed Nagdy discuss practical steps to land remote tech jobs and work globally." data-cat-ar="برمجة وعمل عن بعد" data-cat-en="Coding & Remote Work">
+                <span data-i18n="watch_lesson">شاهد الدرس الآن</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </a>
+              <div class="card-actions-right">
+                <button type="button" class="share-btn" data-url="https://youtu.be/hVPYTKcOGgU" aria-label="نسخ رابط الدرس"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg></button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 3. Mostafa Makram & Baraa Mohamed AI -->
+        <article class="card" data-category="skills awareness" data-video-id="xerhJdVjfK8">
+          <div class="card-media">
+            <img src="https://i.ytimg.com/vi/xerhJdVjfK8/hqdefault.jpg" alt="بودكاست الذكاء الاصطناعي" loading="lazy" data-category="ai-tools" onerror="this.onerror=null;this.src=window.getFallbackThumbnail('ai-tools');" />
+            <span class="card-tag purple" data-ar="ذكاء اصطناعي وميديا" data-en="AI & Media">ذكاء اصطناعي وميديا</span>
+            <span class="card-new-badge" data-added-at="2026-11-20">✨ جديد</span>
+            <button type="button" class="card-fav-btn" data-fav-id="xerhJdVjfK8" data-video-id="xerhJdVjfK8" aria-label="إضافة إلى المفضلة" title="إضافة إلى المفضلة" aria-pressed="false">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </button>
+            <a href="https://youtu.be/xerhJdVjfK8" class="card-play-overlay" aria-label="مشاهدة بودكاست الذكاء الاصطناعي" data-video-id="xerhJdVjfK8" data-title-ar="بودكاست مع خبير الذكاء الاصطناعي وصناعة المحتوى براء محمد" data-title-en="AI in Content Creation & Modern Work with Baraa Mohamed" data-desc-ar="مصطفى مكرم مع براء محمد في حوار شيق عن أدوات الذكاء الاصطناعي، المونتاج الذكي، وثورة صناعة المحتوى." data-desc-en="Mostafa Makram and Baraa Mohamed explore AI creative tools, video editing, and modern media." data-cat-ar="ذكاء اصطناعي وميديا" data-cat-en="AI & Media">
+              <div class="play-icon-circle">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </div>
+            </a>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">
+              <a href="https://youtu.be/xerhJdVjfK8" data-video-id="xerhJdVjfK8" data-title-ar="بودكاست مع خبير الذكاء الاصطناعي وصناعة المحتوى براء محمد" data-title-en="AI in Content Creation & Modern Work with Baraa Mohamed" data-desc-ar="مصطفى مكرم مع براء محمد في حوار شيق عن أدوات الذكاء الاصطناعي، المونتاج الذكي، وثورة صناعة المحتوى." data-desc-en="Mostafa Makram and Baraa Mohamed explore AI creative tools, video editing, and modern media." data-cat-ar="ذكاء اصطناعي وميديا" data-cat-en="AI & Media" data-ar="بودكاست مع خبير الذكاء الاصطناعي وصناعة المحتوى براء محمد" data-en="AI in Content Creation & Modern Work with Baraa Mohamed">
+                بودكاست مع خبير الذكاء الاصطناعي وصناعة المحتوى براء محمد
+              </a>
+            </h3>
+            <p class="card-desc" data-ar="مصطفى مكرم مع براء محمد في حوار شيق عن أدوات الذكاء الاصطناعي، المونتاج الذكي، وثورة صناعة المحتوى." data-en="Mostafa Makram and Baraa Mohamed explore AI creative tools, video editing, and modern media.">
+              مصطفى مكرم مع براء محمد في حوار شيق عن أدوات الذكاء الاصطناعي، المونتاج الذكي، وثورة صناعة المحتوى.
+            </p>
+            <div class="card-footer">
+              <a href="https://youtu.be/xerhJdVjfK8" class="card-cta" data-video-id="xerhJdVjfK8" data-title-ar="بودكاست مع خبير الذكاء الاصطناعي وصناعة المحتوى براء محمد" data-title-en="AI in Content Creation & Modern Work with Baraa Mohamed" data-desc-ar="مصطفى مكرم مع براء محمد في حوار شيق عن أدوات الذكاء الاصطناعي، المونتاج الذكي، وثورة صناعة المحتوى." data-desc-en="Mostafa Makram and Baraa Mohamed explore AI creative tools, video editing, and modern media." data-cat-ar="ذكاء اصطناعي وميديا" data-cat-en="AI & Media">
+                <span data-i18n="watch_lesson">شاهد الدرس الآن</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </a>
+              <div class="card-actions-right">
+                <button type="button" class="share-btn" data-url="https://youtu.be/xerhJdVjfK8" aria-label="نسخ رابط الدرس"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg></button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 4. Yehia Tech Showcase Skills -->
+        <article class="card" data-category="skills life-skills" data-video-id="a6NlVqjQBbc">
+          <div class="card-media">
+            <img src="https://i.ytimg.com/vi/a6NlVqjQBbc/hqdefault.jpg" alt="إنت شاطر بس محدش شايفك" loading="lazy" data-category="freelance" onerror="this.onerror=null;this.src=window.getFallbackThumbnail('freelance');" />
+            <span class="card-tag amber" data-ar="عمل حر وتسويق" data-en="Freelance & Career">عمل حر وتسويق</span>
+            <span class="card-new-badge" data-added-at="2026-11-20">✨ جديد</span>
+            <button type="button" class="card-fav-btn" data-fav-id="a6NlVqjQBbc" data-video-id="a6NlVqjQBbc" aria-label="إضافة إلى المفضلة" title="إضافة إلى المفضلة" aria-pressed="false">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </button>
+            <a href="https://youtu.be/a6NlVqjQBbc" class="card-play-overlay" aria-label="مشاهدة إنت شاطر فعلا بس محدش شايفك" data-video-id="a6NlVqjQBbc" data-title-ar="إنت شاطر فعلاً.. بس محدش شايفك! (فن التسويق لمهاراتك)" data-title-en="You Are Truly Skilled, But Invisible: Showcasing Your Work" data-desc-ar="كتير مننا عنده مهارات قوية بس مش عارف يوصل للعملاء أو الشركات.. يحيى تك بيوضح لك إزاي تبني معرض أعمالك وتظهر قيمتك." data-desc-en="Yehia Tech reveals practical tactics to build your portfolio and attract clients and companies." data-cat-ar="عمل حر وتسويق" data-cat-en="Freelance & Career">
+              <div class="play-icon-circle">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </div>
+            </a>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">
+              <a href="https://youtu.be/a6NlVqjQBbc" data-video-id="a6NlVqjQBbc" data-title-ar="إنت شاطر فعلاً.. بس محدش شايفك! (فن التسويق لمهاراتك)" data-title-en="You Are Truly Skilled, But Invisible: Showcasing Your Work" data-desc-ar="كتير مننا عنده مهارات قوية بس مش عارف يوصل للعملاء أو الشركات.. يحيى تك بيوضح لك إزاي تبني معرض أعمالك وتظهر قيمتك." data-desc-en="Yehia Tech reveals practical tactics to build your portfolio and attract clients and companies." data-cat-ar="عمل حر وتسويق" data-cat-en="Freelance & Career" data-ar="إنت شاطر فعلاً.. بس محدش شايفك! (فن إبراز مهاراتك)" data-en="You Are Truly Skilled, But Invisible: Showcasing Your Work">
+                إنت شاطر فعلاً.. بس محدش شايفك! (فن إبراز مهاراتك)
+              </a>
+            </h3>
+            <p class="card-desc" data-ar="كتير مننا عنده مهارات قوية بس مش عارف يوصل للعملاء أو الشركات.. يحيى تك بيوضح لك إزاي تبني معرض أعمالك وتظهر قيمتك." data-en="Yehia Tech reveals practical tactics to build your portfolio and attract clients and companies.">
+              كتير مننا عنده مهارات قوية بس مش عارف يوصل للعملاء أو الشركات.. يحيى تك بيوضح لك إزاي تبني معرض أعمالك وتظهر قيمتك.
+            </p>
+            <div class="card-footer">
+              <a href="https://youtu.be/a6NlVqjQBbc" class="card-cta" data-video-id="a6NlVqjQBbc" data-title-ar="إنت شاطر فعلاً.. بس محدش شايفك! (فن التسويق لمهاراتك)" data-title-en="You Are Truly Skilled, But Invisible: Showcasing Your Work" data-desc-ar="كتير مننا عنده مهارات قوية بس مش عارف يوصل للعملاء أو الشركات.. يحيى تك بيوضح لك إزاي تبني معرض أعمالك وتظهر قيمتك." data-desc-en="Yehia Tech reveals practical tactics to build your portfolio and attract clients and companies." data-cat-ar="عمل حر وتسويق" data-cat-en="Freelance & Career">
+                <span data-i18n="watch_lesson">شاهد الدرس الآن</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </a>
+              <div class="card-actions-right">
+                <button type="button" class="share-btn" data-url="https://youtu.be/a6NlVqjQBbc" aria-label="نسخ رابط الدرس"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg></button>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- =====================================================================
          SECTION 1: Self-Development, Mental Health & Personal Growth
          ===================================================================== -->
     <section id="self-dev" class="content-section" aria-labelledby="self-dev-heading">
-      <div class="section-header">
-        <h2 class="section-title" id="self-dev-heading">
+      <div class="section-explore-bar">
+        <h2 class="section-title" id="self-dev-heading" style="margin-bottom: 0;">
           <span>🌱</span>
           <span data-i18n="sec_self_dev_title">تطوير الذات والصحة النفسية</span>
           <span class="section-badge" data-i18n="sec_self_dev_badge">13 درساً مختاراً</span>
         </h2>
+        <a href="left-sidebar.html" class="section-explore-btn">
+          <span data-i18n="explore_tips">تصفح كل النصائح والمقالات</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </a>
       </div>
 
       <div class="card-grid">
@@ -598,12 +768,16 @@
          SECTION 2: Islamic Studies, Faith & Worship
          ===================================================================== -->
     <section id="moaz" class="content-section" aria-labelledby="faith-heading">
-      <div class="section-header">
-        <h2 class="section-title" id="faith-heading">
+      <div class="section-explore-bar">
+        <h2 class="section-title" id="faith-heading" style="margin-bottom: 0;">
           <span>🕌</span>
           <span data-i18n="sec_faith_title">الدراسات الإسلامية والعقيدة والعبادات</span>
-          <span class="section-badge" data-i18n="sec_faith_badge">11 درساً تأسيسياً</span>
+          <span class="section-badge" data-i18n="sec_faith_badge">15 درساً تأسيسياً</span>
         </h2>
+        <a href="left-sidebar.html#islamic-section" class="section-explore-btn">
+          <span data-i18n="explore_faith">تصفح كل الدروس الإيمانية</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </a>
       </div>
 
       <div class="card-grid">
@@ -918,6 +1092,142 @@
             </div>
           </div>
         </article>
+
+        <!-- NEW SPIRITUAL LESSON 1: 5-WnZLby-Wk -->
+        <article class="card" data-category="faith">
+          <div class="card-media">
+            <img src="https://i.ytimg.com/vi/5-WnZLby-Wk/hqdefault.jpg" alt="غلاف حلقة ايش المشكلة في التوبة الغافري" loading="lazy" decoding="async" onerror="this.onerror=null;this.src=window.getFallbackThumbnail('faith');" />
+            <span class="card-tag amber" data-en="Islamic Studies & Faith">عقيدة وتوبة</span>
+            <span class="card-new-badge" data-added-at="2026-11-20" data-i18n="badge_new">جديد</span>
+            <button type="button" class="card-fav-btn" data-video-id="5-WnZLby-Wk" aria-label="إضافة للمفضلة">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            </button>
+            <a href="https://youtu.be/5-WnZLby-Wk" class="card-play-overlay" data-video-id="5-WnZLby-Wk" data-title-ar="ايش المشكلة في التوبة؟ (برنامج دين وطين)" data-title-en="What Holds You Back from Repentance? (Deen & Teen)" aria-label="مشاهدة حلقة ايش المشكلة في التوبة؟">
+              <div class="play-icon-circle">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </div>
+            </a>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">
+              <a href="https://youtu.be/5-WnZLby-Wk" data-video-id="5-WnZLby-Wk" data-title-ar="ايش المشكلة في التوبة؟ (برنامج دين وطين)" data-title-en="What Holds You Back from Repentance? (Deen & Teen)" data-desc-ar="الغافري بيطرح تساؤل مهم جداً لكل شاب: ليه بنأجل التوبة؟ وإزاي تفك عقدة الذنب وترجع لربنا براحة وبساطة." data-desc-en="Al-Ghafri addresses why young people procrastinate repentance and how to return peacefully to Allah." data-cat-ar="عقيدة وتوبة" data-cat-en="Islamic Studies & Faith" data-ar="ايش المشكلة في التوبة؟ (برنامج دين وطين)" data-en="What Holds You Back from Repentance? (Deen & Teen)">ايش المشكلة في التوبة؟ (برنامج دين وطين)</a>
+            </h3>
+            <p class="card-desc" data-ar="الغافري بيطرح تساؤل مهم جداً لكل شاب: ليه بنأجل التوبة؟ وإزاي تفك عقدة الذنب وترجع لربنا براحة وبساطة." data-en="Al-Ghafri addresses why young people procrastinate repentance and how to return peacefully to Allah.">الغافري بيطرح تساؤل مهم جداً لكل شاب: ليه بنأجل التوبة؟ وإزاي تفك عقدة الذنب وترجع لربنا براحة وبساطة.</p>
+            <div class="card-footer">
+              <a href="https://youtu.be/5-WnZLby-Wk" class="card-cta" data-video-id="5-WnZLby-Wk" data-title-ar="ايش المشكلة في التوبة؟ (برنامج دين وطين)" data-title-en="What Holds You Back from Repentance? (Deen & Teen)" data-desc-ar="الغافري بيطرح تساؤل مهم جداً لكل شاب: ليه بنأجل التوبة؟ وإزاي تفك عقدة الذنب وترجع لربنا براحة وبساطة." data-desc-en="Al-Ghafri addresses why young people procrastinate repentance and how to return peacefully to Allah." data-cat-ar="عقيدة وتوبة" data-cat-en="Islamic Studies & Faith">
+                <span data-i18n="watch_lesson">شاهد الدرس الآن</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </a>
+              <div class="card-actions-right">
+                <button type="button" class="share-btn" data-url="https://youtu.be/5-WnZLby-Wk" aria-label="نسخ رابط الدرس">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- NEW SPIRITUAL LESSON 2: CSIry2i0nTI -->
+        <article class="card" data-category="faith awareness">
+          <div class="card-media">
+            <img src="https://i.ytimg.com/vi/CSIry2i0nTI/hqdefault.jpg" alt="غلاف حلقة كيف أتخلص من الإباحية والعادة السرية" loading="lazy" decoding="async" onerror="this.onerror=null;this.src=window.getFallbackThumbnail('faith');" />
+            <span class="card-tag amber" data-en="Faith & Purity">عفة وتعافي</span>
+            <span class="card-new-badge" data-added-at="2026-11-20" data-i18n="badge_new">جديد</span>
+            <button type="button" class="card-fav-btn" data-video-id="CSIry2i0nTI" aria-label="إضافة للمفضلة">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            </button>
+            <a href="https://youtu.be/CSIry2i0nTI" class="card-play-overlay" data-video-id="CSIry2i0nTI" data-title-ar="كيف أتخلص من الإباحية والعادة السرية وطوفان الشهوات؟" data-title-en="Overcoming Digital Addiction & Guarding the Heart" aria-label="مشاهدة حلقة كيف أتخلص من الإباحية">
+              <div class="play-icon-circle">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </div>
+            </a>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">
+              <a href="https://youtu.be/CSIry2i0nTI" data-video-id="CSIry2i0nTI" data-title-ar="كيف أتخلص من الإباحية والعادة السرية وطوفان الشهوات؟" data-title-en="Overcoming Digital Addiction & Guarding the Heart" data-desc-ar="لقاء علمي وطبي ونفسي مع د. هيثم طلعت، د. علي قاسم، ود. أحمد جلال يقدم حلولاً عملية للتعافي واستعادة العفة." data-desc-en="Psychological, medical, and faith-based recovery roadmap from digital addiction and destructive impulses." data-cat-ar="عفة وتعافي" data-cat-en="Faith & Purity" data-ar="كيف أتخلص من الإباحية والعادة السرية وطوفان الشهوات؟" data-en="Overcoming Digital Addiction & Guarding the Heart">كيف أتخلص من الإباحية والعادة السرية وطوفان الشهوات؟</a>
+            </h3>
+            <p class="card-desc" data-ar="لقاء علمي وطبي ونفسي مع د. هيثم طلعت، د. علي قاسم، ود. أحمد جلال يقدم حلولاً عملية للتعافي واستعادة العفة." data-en="Psychological, medical, and faith-based recovery roadmap from digital addiction and destructive impulses.">لقاء علمي وطبي ونفسي مع د. هيثم طلعت، د. علي قاسم، ود. أحمد جلال يقدم حلولاً عملية للتعافي واستعادة العفة.</p>
+            <div class="card-footer">
+              <a href="https://youtu.be/CSIry2i0nTI" class="card-cta" data-video-id="CSIry2i0nTI" data-title-ar="كيف أتخلص من الإباحية والعادة السرية وطوفان الشهوات؟" data-title-en="Overcoming Digital Addiction & Guarding the Heart" data-desc-ar="لقاء علمي وطبي ونفسي مع د. هيثم طلعت، د. علي قاسم، ود. أحمد جلال يقدم حلولاً عملية للتعافي واستعادة العفة." data-desc-en="Psychological, medical, and faith-based recovery roadmap from digital addiction and destructive impulses." data-cat-ar="عفة وتعافي" data-cat-en="Faith & Purity">
+                <span data-i18n="watch_lesson">شاهد الدرس الآن</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </a>
+              <div class="card-actions-right">
+                <button type="button" class="share-btn" data-url="https://youtu.be/CSIry2i0nTI" aria-label="نسخ رابط الدرس">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- NEW SPIRITUAL LESSON 3: TtJzO83joFk -->
+        <article class="card" data-category="faith self-dev">
+          <div class="card-media">
+            <img src="https://i.ytimg.com/vi/TtJzO83joFk/hqdefault.jpg" alt="غلاف حلقة السبب الحقيقي وراء الراحة النفسية مصطفى حسني" loading="lazy" decoding="async" onerror="this.onerror=null;this.src=window.getFallbackThumbnail('faith');" />
+            <span class="card-tag amber" data-en="Spiritual Comfort">راحة نفسية وإيمان</span>
+            <span class="card-new-badge" data-added-at="2026-11-20" data-i18n="badge_new">جديد</span>
+            <button type="button" class="card-fav-btn" data-video-id="TtJzO83joFk" aria-label="إضافة للمفضلة">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            </button>
+            <a href="https://youtu.be/TtJzO83joFk" class="card-play-overlay" data-video-id="TtJzO83joFk" data-title-ar="السبب الحقيقي وراء الراحة النفسية وسلام القلب" data-title-en="The Real Secret to Inner Peace and Mental Relief" aria-label="مشاهدة حلقة السبب الحقيقي وراء الراحة النفسية">
+              <div class="play-icon-circle">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </div>
+            </a>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">
+              <a href="https://youtu.be/TtJzO83joFk" data-video-id="TtJzO83joFk" data-title-ar="السبب الحقيقي وراء الراحة النفسية وسلام القلب" data-title-en="The Real Secret to Inner Peace and Mental Relief" data-desc-ar="حلقة مريحة للأعصاب مع مصطفى حسني تكشف مفتاح الرضا، وترك المقارنات، والتسليم لقضاء الله بحب." data-desc-en="Unlock the foundation of psychological comfort, letting go of comparisons and embracing contentment." data-cat-ar="راحة نفسية وإيمان" data-cat-en="Spiritual Comfort" data-ar="السبب الحقيقي وراء الراحة النفسية وسلام القلب" data-en="The Real Secret to Inner Peace and Mental Relief">السبب الحقيقي وراء الراحة النفسية وسلام القلب</a>
+            </h3>
+            <p class="card-desc" data-ar="حلقة مريحة للأعصاب مع مصطفى حسني تكشف مفتاح الرضا، وترك المقارنات، والتسليم لقضاء الله بحب." data-en="Unlock the foundation of psychological comfort, letting go of comparisons and embracing contentment.">حلقة مريحة للأعصاب مع مصطفى حسني تكشف مفتاح الرضا، وترك المقارنات، والتسليم لقضاء الله بحب.</p>
+            <div class="card-footer">
+              <a href="https://youtu.be/TtJzO83joFk" class="card-cta" data-video-id="TtJzO83joFk" data-title-ar="السبب الحقيقي وراء الراحة النفسية وسلام القلب" data-title-en="The Real Secret to Inner Peace and Mental Relief" data-desc-ar="حلقة مريحة للأعصاب مع مصطفى حسني تكشف مفتاح الرضا، وترك المقارنات، والتسليم لقضاء الله بحب." data-desc-en="Unlock the foundation of psychological comfort, letting go of comparisons and embracing contentment." data-cat-ar="راحة نفسية وإيمان" data-cat-en="Spiritual Comfort">
+                <span data-i18n="watch_lesson">شاهد الدرس الآن</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </a>
+              <div class="card-actions-right">
+                <button type="button" class="share-btn" data-url="https://youtu.be/TtJzO83joFk" aria-label="نسخ رابط الدرس">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- NEW SPIRITUAL LESSON 4: RZEeGyUR6es -->
+        <article class="card" data-category="faith">
+          <div class="card-media">
+            <img src="https://i.ytimg.com/vi/RZEeGyUR6es/hqdefault.jpg" alt="غلاف حلقة السيرة النبوية كاملة نور مصطفى حسني" loading="lazy" decoding="async" onerror="this.onerror=null;this.src=window.getFallbackThumbnail('faith');" />
+            <span class="card-tag amber" data-en="Prophetic Seerah">سيرة نبوية</span>
+            <span class="card-new-badge" data-added-at="2026-11-20" data-i18n="badge_new">جديد</span>
+            <button type="button" class="card-fav-btn" data-video-id="RZEeGyUR6es" aria-label="إضافة للمفضلة">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            </button>
+            <a href="https://youtu.be/RZEeGyUR6es" class="card-play-overlay" data-video-id="RZEeGyUR6es" data-title-ar="السيرة النبوية كاملة: نور يضيء القلوب والأخلاق" data-title-en="Complete Prophetic Biography (Seerah) — Light in Your Life" aria-label="مشاهدة حلقة السيرة النبوية كاملة">
+              <div class="play-icon-circle">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </div>
+            </a>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">
+              <a href="https://youtu.be/RZEeGyUR6es" data-video-id="RZEeGyUR6es" data-title-ar="السيرة النبوية كاملة: نور يضيء القلوب والأخلاق" data-title-en="Complete Prophetic Biography (Seerah) — Light in Your Life" data-desc-ar="رحلة عاطفية وفكرية مع مصطفى حسني في سيرة النبي ﷺ، دروس في القيادة، والرحمة، والثبات في الشدائد." data-desc-en="Mustafa Hosny takes you through the inspiring life and morals of the Prophet Muhammad ﷺ with warmth and wisdom." data-cat-ar="سيرة نبوية" data-cat-en="Prophetic Seerah" data-ar="السيرة النبوية كاملة: نور يضيء القلوب والأخلاق" data-en="Complete Prophetic Biography (Seerah) — Light in Your Life">السيرة النبوية كاملة: نور يضيء القلوب والأخلاق</a>
+            </h3>
+            <p class="card-desc" data-ar="رحلة عاطفية وفكرية مع مصطفى حسني في سيرة النبي ﷺ، دروس في القيادة، والرحمة، والثبات في الشدائد." data-en="Mustafa Hosny takes you through the inspiring life and morals of the Prophet Muhammad ﷺ with warmth and wisdom.">رحلة عاطفية وفكرية مع مصطفى حسني في سيرة النبي ﷺ، دروس في القيادة، والرحمة، والثبات في الشدائد.</p>
+            <div class="card-footer">
+              <a href="https://youtu.be/RZEeGyUR6es" class="card-cta" data-video-id="RZEeGyUR6es" data-title-ar="السيرة النبوية كاملة: نور يضيء القلوب والأخلاق" data-title-en="Complete Prophetic Biography (Seerah) — Light in Your Life" data-desc-ar="رحلة عاطفية وفكرية مع مصطفى حسني في سيرة النبي ﷺ، دروس في القيادة، والرحمة، والثبات في الشدائد." data-desc-en="Mustafa Hosny takes you through the inspiring life and morals of the Prophet Muhammad ﷺ with warmth and wisdom." data-cat-ar="سيرة نبوية" data-cat-en="Prophetic Seerah">
+                <span data-i18n="watch_lesson">شاهد الدرس الآن</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </a>
+              <div class="card-actions-right">
+                <button type="button" class="share-btn" data-url="https://youtu.be/RZEeGyUR6es" aria-label="نسخ رابط الدرس">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>
       </div>
     </section>
 
@@ -925,12 +1235,16 @@
          SECTION 3: General Awareness, Study & Modern Life Skills
          ===================================================================== -->
     <section id="awareness" class="content-section" aria-labelledby="awareness-heading">
-      <div class="section-header">
-        <h2 class="section-title" id="awareness-heading">
+      <div class="section-explore-bar">
+        <h2 class="section-title" id="awareness-heading" style="margin-bottom: 0;">
           <span>💡</span>
           <span data-i18n="sec_awareness_title">الوعي العام، الدراسة ومهارات الحياة</span>
           <span class="section-badge" data-i18n="sec_awareness_badge">دروس معرفية جديدة</span>
         </h2>
+        <a href="no-sidebar.html" class="section-explore-btn">
+          <span data-i18n="explore_books">تصفح مكتبة الكتب المعرفية</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </a>
       </div>
 
       <div class="card-grid">
@@ -1177,6 +1491,8 @@
           <h3 class="footer-heading" data-i18n="footer_col_links">روابط سريعة</h3>
           <ul class="footer-nav-list">
             <li><a href="index.html" data-i18n="nav_home">الرئيسية</a></li>
+            <li><a href="skills.html" data-i18n="nav_skills">المهارات الرقمية</a></li>
+            <li><a href="fav.html" data-i18n="nav_favorites">⭐ المفضلة</a></li>
             <li><a href="#self-dev" data-i18n="nav_self_dev">تطوير الذات</a></li>
             <li><a href="#moaz" data-i18n="nav_islamic">دروس دينية</a></li>
             <li><a href="left-sidebar.html" data-i18n="nav_tips">نصائح ومقالات</a></li>
@@ -1190,7 +1506,7 @@
         <div>
           <h3 class="footer-heading" data-i18n="footer_col_contact">تواصل معنا</h3>
           <div class="footer-contact-list">
-            <a href="https://wa.me/201011052340?text=مرحبا،%20أنا%20عاوز%20أتواصل%20مع%20معاذ%20مصطفي" target="_blank" rel="noopener noreferrer" data-external="true" class="footer-contact-link">
+            <a href="https://wa.me/201011052340" target="_blank" rel="noopener noreferrer" data-external="true" class="footer-contact-link">
               <span class="footer-contact-icon" aria-hidden="true">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
               </span>
@@ -1215,7 +1531,7 @@
         <div>
           <h3 class="footer-heading" data-i18n="footer_col_social">تابعنا</h3>
           <div class="footer-social-list">
-            <a href="https://wa.me/201011052340?text=مرحبا،%20أنا%20عاوز%20أتواصل%20مع%20معاذ%20مصطفي" target="_blank" rel="noopener noreferrer" data-external="true" class="footer-social-link" aria-label="WhatsApp">
+            <a href="https://wa.me/201011052340" target="_blank" rel="noopener noreferrer" data-external="true" class="footer-social-link" aria-label="WhatsApp">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
               <span data-i18n="social_whatsapp">واتساب (WhatsApp)</span>
             </a>
@@ -1240,6 +1556,7 @@
   </footer>
 
   <!-- Scripts -->
+  <script src="assets/js/videos.js"></script>
   <script src="assets/js/i18n.js"></script>
   <script src="assets/js/app.js"></script>
 </body>

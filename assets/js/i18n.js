@@ -18,9 +18,13 @@ window.PODCASTAK_I18N = {
     page_title_podcast: 'سلسلة بودكاست إيه المشكلة؟ | بودكاستك',
     page_title_books: 'أهم الكتب والمراجع المقترحة | بودكاستك',
     page_title_comments: 'التواصل والتعليقات | بودكاستك',
+    page_title_skills: 'مهارات العصر وسوق العمل | بودكاستك',
+    page_title_fav: '⭐ المفضلة | بودكاستك',
 
     // Navigation
     nav_home: 'الرئيسية',
+    nav_skills: 'مهارات',
+    nav_favorites: '⭐ المفضلة',
     nav_self_dev: 'تطوير الذات',
     nav_islamic: 'دروس دينية',
     nav_tips: 'نصائح ومقالات',
@@ -30,9 +34,9 @@ window.PODCASTAK_I18N = {
 
     // Home Hero
     home_pill: 'منصة تعليمية وتوعوية • بإعداد معاذ مصطفى الديباوي',
-    home_hero_title_html: 'أهلاً بكم في <span class="highlight">بودكاستك</span>',
-    home_hero_identity: 'منصة للتعلم والوعي والفهم وتطوير النفس',
-    home_hero_sub: 'السلام عليكم، أنا معاذ. أنشأت هذه المنصة التعليمية لتكون دليلاً مرتباً ومنظماً يجمع أهم الدروس المعرفية، والبودكاست التربوي، والفهم الديني الواعي، وتطوير العقل والنفس. تصفح الأقسام، ابحث عن الموضوع الذي يشغلك، وشاهد الدروس مباشرة داخل المنصة بكل سهولة.',
+    home_hero_title_html: 'منور في <span class="highlight">بودكاستك</span>',
+    home_hero_identity: 'مكانك لتطوير نفسك، تعلم مهارات جديدة، وفهم ديني هادي',
+    home_hero_sub: 'منور في بودكاستك! أنا معاذ الديباوي، وعملت المكان ده عشان يكون دليلك المرتب اللي تلاقي فيه أقوى الدروس لتطوير نفسك، مهارات جديدة لسوق العمل، بودكاست يغير تفكيرك، وفهم ديني هادي يقربك من ربنا. تصفح براحتك، احفظ اللي يعجبك في المفضلة ⭐، وشوف الفيديوهات مباشرة هنا من غير إعلانات تشتتك.',
     home_cta_start: 'استكشف الدروس',
     home_cta_podcast: 'سلسلة إيه المشكلة؟',
     home_cta_comments: 'شاركنا رأيك',
@@ -44,6 +48,11 @@ window.PODCASTAK_I18N = {
     search_placeholder_home: 'ابحث عن درس، موضوع، أو حلقة بودكاست بالعنوان أو الوصف...',
     search_placeholder_podcast: 'ابحث بين حلقات إيه المشكلة (الكذب، الصلاة، الغنى، الدراسة، الرزق...)...',
     filter_all: 'جميع الدروس',
+    filter_programming: 'برمجة وتطوير ويب',
+    filter_video_editing: 'مونتاج وميديا',
+    filter_ai: 'ذكاء اصطناعي',
+    filter_freelance: 'عمل حر وتطوير مهني',
+    filter_productivity: 'إنتاجية وعادات',
     filter_self_dev: 'تطوير الذات',
     filter_mental: 'الصحة النفسية',
     filter_life_skills: 'مهارات الحياة والنمو',
@@ -54,6 +63,29 @@ window.PODCASTAK_I18N = {
     results_reset: 'إعادة ضبط البحث',
     empty_title: 'لم يتم العثور على نتائج مطابقة',
     empty_desc: 'جرب البحث بكلمات مختلفة أو إزالة عوامل التصفية لاستعراض جميع الدروس.',
+
+    // Skills Page
+    skills_pill: 'مهارات المستقبل وسوق العمل',
+    skills_hero_title: 'اتعلم مهارات العصر وافتح لنفسك فرص جديدة',
+    skills_hero_sub: 'برمجة، مونتاج، ذكاء اصطناعي، وتصميم.. جمعنالك أهم الشروحات والتجارب العملية من أفضل المتخصصين عشان تبدأ وتطور دخلك ومستقبلك.',
+    skills_search_placeholder: 'ابحث في المهارات (برمجة، مونتاج، ذكاء اصطناعي، عمل حر...)...',
+
+    // Favorites Page
+    fav_pill: 'قائمتك الشخصية المحفوظة',
+    fav_hero_title: '⭐ الفيديوهات والدروس المفضلة',
+    fav_hero_sub: 'كل الدروس والحلقات اللي حفظتها بنجمة علشان ترجعلها وتسمعها في أي وقت بتركيز وهدوء.',
+    fav_empty_title: 'لسه مفيش فيديوهات في مفضلتك',
+    fav_empty_desc: 'تصفح أقسام الموقع، ولما يعجبك أي درس دوس على علامة النجمة ⭐ وهتلاقيه محفوظ هنا دايماً علشان ترجعله في أي وقت.',
+    fav_empty_btn: 'استكشف الدروس والمهارات',
+    fav_search_placeholder: 'ابحث داخل قائمتك المفضلة...',
+
+    // Explore Category Buttons
+    explore_skills: 'تصفح كل مهارات العصر',
+    explore_podcasts: 'تصفح كل حلقات البودكاست',
+    explore_books: 'تصفح كل الكتب والمراجع',
+    explore_tips: 'تصفح كل النصائح والمقالات',
+    explore_self_dev: 'تصفح كل دروس تطوير الذات',
+    explore_faith: 'تصفح كل الدروس الإيمانية',
 
     // Home Sections
     sec_self_dev_title: 'تطوير الذات والصحة النفسية',
@@ -180,9 +212,13 @@ window.PODCASTAK_I18N = {
     page_title_podcast: 'Eh El-Moshkela Podcast Series | Podcastak',
     page_title_books: 'Recommended Books & References | Podcastak',
     page_title_comments: 'Contact & Comments | Podcastak',
+    page_title_skills: 'Modern Skills & Careers | Podcastak',
+    page_title_fav: '⭐ Favorites | Podcastak',
 
     // Navigation
     nav_home: 'Home',
+    nav_skills: 'Skills',
+    nav_favorites: '⭐ Favorites',
     nav_self_dev: 'Self Development',
     nav_islamic: 'Islamic Lessons',
     nav_tips: 'Tips & Articles',
@@ -193,8 +229,8 @@ window.PODCASTAK_I18N = {
     // Home Hero
     home_pill: 'Educational & Growth Platform • Curated by Moaz Eldepawy',
     home_hero_title_html: 'Welcome to <span class="highlight">Podcastak</span>',
-    home_hero_identity: 'A platform for learning, awareness, understanding, and personal growth.',
-    home_hero_sub: 'Peace be upon you, I am Moaz. I built this educational platform as a structured learning guide bringing together thoughtful lessons on personal development, mental clarity, Islamic understanding, and life skills. Browse categories, search topics, and watch lessons directly inside the platform.',
+    home_hero_identity: 'Your space for personal growth, modern skills, and peaceful faith',
+    home_hero_sub: 'Welcome to Podcastak! I am Moaz Eldepawy, and I created this platform to be your structured guide for personal development, in-demand modern skills, mind-expanding podcasts, and peaceful Islamic understanding. Browse freely, star your favorites ⭐, and watch right here without distracting ads.',
     home_cta_start: 'Explore Lessons',
     home_cta_podcast: 'Eh El-Moshkela Series',
     home_cta_comments: 'Leave a Comment',
@@ -206,6 +242,11 @@ window.PODCASTAK_I18N = {
     search_placeholder_home: 'Search lessons by title, topic, or description...',
     search_placeholder_podcast: 'Search Eh El-Moshkela episodes (Prayer, Wealth, Studying, Habits...)...',
     filter_all: 'All Lessons',
+    filter_programming: 'Coding & Web',
+    filter_video_editing: 'Video & Media',
+    filter_ai: 'AI Tools',
+    filter_freelance: 'Freelancing & Career',
+    filter_productivity: 'Productivity & Habits',
     filter_self_dev: 'Self Development',
     filter_mental: 'Mental Health & Psychology',
     filter_life_skills: 'Personal Growth & Life Skills',
@@ -216,6 +257,29 @@ window.PODCASTAK_I18N = {
     results_reset: 'Reset filters',
     empty_title: 'No matching lessons found',
     empty_desc: 'Try searching with different keywords or clear your active category filter.',
+
+    // Skills Page
+    skills_pill: 'Future Skills & Career Growth',
+    skills_hero_title: 'Learn Modern Skills & Unlock Real Opportunities',
+    skills_hero_sub: 'Coding, video editing, AI tools, and design—curated practical guides from leading experts to elevate your career and income.',
+    skills_search_placeholder: 'Search skills (coding, editing, AI, freelancing...)...',
+
+    // Favorites Page
+    fav_pill: 'Your Saved Personal Playlist',
+    fav_hero_title: '⭐ Favorite Videos & Lessons',
+    fav_hero_sub: 'All the lessons and podcast episodes you have starred, saved right here so you can watch anytime with full focus.',
+    fav_empty_title: 'No favorites saved yet',
+    fav_empty_desc: 'Browse through the website and click the star icon ⭐ on any video card to save it here for later.',
+    fav_empty_btn: 'Explore Lessons & Skills',
+    fav_search_placeholder: 'Search inside your favorites...',
+
+    // Explore Category Buttons
+    explore_skills: 'Browse All Modern Skills',
+    explore_podcasts: 'Browse All Podcasts',
+    explore_books: 'Browse All Books',
+    explore_tips: 'Browse All Articles',
+    explore_self_dev: 'Browse All Self-Dev Lessons',
+    explore_faith: 'Browse All Faith Lessons',
 
     // Home Sections
     sec_self_dev_title: 'Self Development & Mental Health',

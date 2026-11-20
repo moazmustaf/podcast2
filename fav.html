@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="page_title_fav">⭐ المفضلة | بودكاستك</title>
+  <meta name="description" content="قائمتك الشخصية من الفيديوهات والدروس المفضلة على منصة بودكاستك التعليمية." />
+  <meta name="theme-color" content="#0B0F19" />
+
+  <!-- Preconnect Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body data-page="fav">
+  <a href="#main-content" class="skip-link" data-i18n="skip_link">تخطي إلى المحتوى الرئيسي</a>
+
+  <!-- Header & Navigation -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="brand-logo" aria-label="بودكاستك">
+        <span class="logo-dot" aria-hidden="true"></span>
+        <span data-i18n="brand_name">بودكاستك</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="التنقل الرئيسي">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-item" data-i18n="nav_home">الرئيسية</a></li>
+          <li><a href="skills.html" class="nav-item" data-i18n="nav_skills">مهارات</a></li>
+          <li><a href="fav.html" class="nav-item active" data-i18n="nav_favorites">⭐ المفضلة</a></li>
+          <li><a href="right-sidebar.html" class="nav-item" data-i18n="nav_podcast">بودكاست</a></li>
+          <li><a href="left-sidebar.html" class="nav-item" data-i18n="nav_tips">نصائح ومقالات</a></li>
+          <li><a href="no-sidebar.html" class="nav-item" data-i18n="nav_books">كتب</a></li>
+          <li><a href="comments.html" class="nav-item" data-i18n="nav_comments">التواصل والتعليقات</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-controls">
+        <button type="button" class="control-btn lang-toggle" aria-label="تغيير اللغة / Switch language">
+          <span class="lang-flag">🇬🇧</span>
+          <span class="lang-label-text">EN</span>
+        </button>
+        <button type="button" class="control-btn theme-toggle" aria-label="تبديل المظهر / Toggle theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button type="button" class="mobile-nav-toggle" aria-label="فتح قائمة التنقل" aria-expanded="false">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" role="dialog" aria-modal="true" aria-label="قائمة الهاتف">
+    <div class="mobile-drawer-header">
+      <div class="brand-logo">
+        <span class="logo-dot"></span>
+        <span data-i18n="brand_name">بودكاستك</span>
+      </div>
+      <button type="button" class="mobile-drawer-close" aria-label="إغلاق القائمة">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <ul class="mobile-drawer-links">
+      <li><a href="index.html" class="nav-item" data-i18n="nav_home">الرئيسية</a></li>
+      <li><a href="skills.html" class="nav-item" data-i18n="nav_skills">مهارات</a></li>
+      <li><a href="fav.html" class="nav-item active" data-i18n="nav_favorites">⭐ المفضلة</a></li>
+      <li><a href="right-sidebar.html" class="nav-item" data-i18n="nav_podcast">بودكاست</a></li>
+      <li><a href="left-sidebar.html" class="nav-item" data-i18n="nav_tips">نصائح ومقالات</a></li>
+      <li><a href="no-sidebar.html" class="nav-item" data-i18n="nav_books">كتب</a></li>
+      <li><a href="comments.html" class="nav-item" data-i18n="nav_comments">التواصل والتعليقات</a></li>
+    </ul>
+    <div class="mobile-drawer-controls">
+      <button type="button" class="control-btn lang-toggle" style="flex: 1;">
+        <span class="lang-flag">🇬🇧</span>
+        <span class="lang-label-text">English</span>
+      </button>
+      <button type="button" class="control-btn theme-toggle" aria-label="تبديل المظهر">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main id="main-content" class="container">
+    <section class="hero" style="padding-block: 3rem 2.2rem;">
+      <div class="hero-pill">
+        <span>⭐</span>
+        <span data-i18n="fav_pill">قائمتك الشخصية المحفوظة</span>
+      </div>
+      <h1 class="hero-title" data-i18n="fav_hero_title">⭐ الفيديوهات المفضلة</h1>
+      <p class="hero-subtitle" data-i18n="fav_hero_sub">
+        كل الدروس والحلقات اللي حفظتها بنجمة علشان ترجعلها وتسمعها في أي وقت بتركيز وهدوء.
+      </p>
+
+      <div class="search-live-feedback" style="justify-content: center; margin-top: 1.2rem;">
+        <span class="search-count-badge">
+          <span>الدروس المحفوظة:</span>
+          <strong id="fav-count-badge">0</strong>
+        </span>
+      </div>
+
+      <!-- Quick Search inside favorites -->
+      <div class="search-wrap" style="max-width: 600px; margin: 1.5rem auto 0;">
+        <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input
+          type="search"
+          id="fav-search-input"
+          class="search-input"
+          placeholder="ابحث داخل قائمتك المفضلة..."
+          data-i18n-placeholder="fav_search_placeholder"
+          aria-label="ابحث داخل المفضلة"
+        />
+      </div>
+    </section>
+
+    <!-- Empty State Container -->
+    <div id="fav-empty-state" class="empty-state-card" style="display: none;">
+      <div class="empty-state-icon">⭐</div>
+      <h2 class="empty-state-title" data-i18n="fav_empty_title">لسه مفيش فيديوهات في مفضلتك</h2>
+      <p class="empty-state-desc" data-i18n="fav_empty_desc">
+        تصفح أقسام الموقع، ولما يعجبك أي درس دوس على علامة النجمة ⭐ وهتلاقيه محفوظ هنا دايماً علشان ترجعله في أي وقت.
+      </p>
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <a href="skills.html" class="btn btn-primary" data-i18n="nav_skills">تصفح المهارات</a>
+        <a href="index.html" class="btn btn-secondary" data-i18n="home_cta_start">استكشف الدروس</a>
+      </div>
+    </div>
+
+    <!-- Favorites Cards Grid -->
+    <div class="card-grid" id="fav-cards-grid" style="margin-bottom: 4rem;">
+      <!-- Populated dynamically via app.js -->
+    </div>
+  </main>
+
+  <!-- Clean 4-Column Professional Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-main-grid">
+        <!-- Section 1: Website Identity -->
+        <div class="footer-brand-col">
+          <a href="index.html" class="brand-logo">
+            <span class="logo-dot" aria-hidden="true"></span>
+            <span data-i18n="brand_name">بودكاستك</span>
+          </a>
+          <p class="footer-tagline" data-i18n="footer_tagline">
+            منصة معرفية منظمة تجمع بين بناء المهارات، وتطوير الذات، والبودكاست التربوي، والفهم الديني الهادئ لتنير عقلك وقلبك.
+          </p>
+          <div class="footer-badge">
+            <span>✨</span>
+            <span data-i18n="footer_badge">محتوى تعليمي مجاني وموثوق 100%</span>
+          </div>
+        </div>
+
+        <!-- Section 2: Quick Links -->
+        <div>
+          <h3 class="footer-heading" data-i18n="footer_col_links">أقسام الموقع</h3>
+          <ul class="footer-nav-list">
+            <li><a href="index.html" data-i18n="nav_home">الرئيسية</a></li>
+            <li><a href="skills.html" data-i18n="nav_skills">مهارات العصر</a></li>
+            <li><a href="fav.html" data-i18n="nav_favorites">⭐ المفضلة</a></li>
+            <li><a href="right-sidebar.html" data-i18n="nav_podcast">بودكاست</a></li>
+            <li><a href="left-sidebar.html" data-i18n="nav_tips">نصائح ومقالات</a></li>
+            <li><a href="no-sidebar.html" data-i18n="nav_books">كتب ومراجع</a></li>
+            <li><a href="comments.html" data-i18n="nav_comments">التواصل والتعليقات</a></li>
+          </ul>
+        </div>
+
+        <!-- Section 3: Contact & Direct Info -->
+        <div>
+          <h3 class="footer-heading" data-i18n="footer_col_contact">تواصل معنا</h3>
+          <div class="footer-contact-list">
+            <a href="https://wa.me/201011052340" target="_blank" rel="noopener noreferrer" data-external="true" class="footer-contact-link">
+              <span class="footer-contact-icon" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </span>
+              <span dir="ltr">+20 101 105 2340</span>
+            </a>
+            <a href="mailto:moazaldebawy@gmail.com" data-external="true" class="footer-contact-link">
+              <span class="footer-contact-icon" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </span>
+              <span dir="ltr">moazaldebawy@gmail.com</span>
+            </a>
+            <a href="comments.html" class="footer-contact-link">
+              <span class="footer-contact-icon" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              </span>
+              <span data-i18n="footer_send_msg">أرسل تعليقاً أو اقتراحاً</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Section 4: Social Media -->
+        <div>
+          <h3 class="footer-heading" data-i18n="footer_col_social">تابعنا</h3>
+          <div class="footer-social-list">
+            <a href="https://wa.me/201011052340" target="_blank" rel="noopener noreferrer" data-external="true" class="footer-social-link" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span data-i18n="social_whatsapp">واتساب (WhatsApp)</span>
+            </a>
+            <a href="https://www.facebook.com/share/1Ctv5kz1CH/" target="_blank" rel="noopener noreferrer" data-external="true" class="footer-social-link" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+              <span data-i18n="social_facebook">فيسبوك (Facebook)</span>
+            </a>
+            <a href="https://www.instagram.com/moaz_eldepawy?igsh=OWx3bG9iNHo2emll" target="_blank" rel="noopener noreferrer" data-external="true" class="footer-social-link" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              <span data-i18n="social_instagram">إنستغرام (Instagram)</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copyright Bar -->
+      <div class="footer-bottom">
+        <p data-i18n-html="footer_copyright">&copy; منصة بودكاستك للتعلم والوعي وتطوير النفس | إعداد وتنسيق: <strong>معاذ مصطفى الديباوي</strong></p>
+        <p data-i18n="footer_rights">جميع الحقوق محفوظة • منصة معرفية مجانية</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/videos.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

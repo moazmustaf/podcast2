@@ -468,7 +468,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let activeCategory = 'all';
 
     const filterCards = () => {
-      const query = searchInput.value.trim().toLowerCase();
+      const rawQuery = searchInput.value.trim();
+      const query = window.normalizeArabic ? window.normalizeArabic(rawQuery) : rawQuery.toLowerCase();
       let visibleCount = 0;
 
       allCards.forEach((card) => {
@@ -478,10 +479,12 @@ document.addEventListener('DOMContentLoaded', () => {
           ...Array.from(card.querySelectorAll('[data-ar],[data-en]')).map(
             (el) => `${el.getAttribute('data-ar') || ''} ${el.getAttribute('data-en') || ''}`
           )
-        ].join(' ').toLowerCase();
+        ].join(' ');
+
+        const normCardText = window.normalizeArabic ? window.normalizeArabic(combinedText) : combinedText.toLowerCase();
 
         const categories = (card.getAttribute('data-category') || 'all').split(' ');
-        const matchesQuery = query === '' || combinedText.includes(query);
+        const matchesQuery = query === '' || normCardText.includes(query);
         const matchesCategory = activeCategory === 'all' || categories.includes(activeCategory);
 
         if (matchesQuery && matchesCategory) {
@@ -707,6 +710,151 @@ document.addEventListener('DOMContentLoaded', () => {
         submitBtn.disabled = false;
         if (submitLabel) submitLabel.textContent = t('form_submit');
       }
+    });
+  }
+
+  /* ------------------------------------------------------------------------
+     7.5 Favorites Page Dynamic Engine (fav.html)
+     ------------------------------------------------------------------------ */
+  const favGrid = document.getElementById('fav-cards-grid');
+  const favEmptyState = document.getElementById('fav-empty-state');
+  const favSearchInput = document.getElementById('fav-search-input');
+  const favCountBadge = document.getElementById('fav-count-badge');
+
+  function renderFavoritesPage() {
+    if (!favGrid) return;
+    const favIds = window.getFavorites ? window.getFavorites() : [];
+    const allVideos = window.PODCASTAK_VIDEOS || [];
+    const favVideos = allVideos.filter((v) => favIds.includes(v.videoId));
+
+    if (favCountBadge) {
+      favCountBadge.textContent = String(favVideos.length);
+    }
+
+    if (favVideos.length === 0) {
+      favGrid.innerHTML = '';
+      if (favEmptyState) favEmptyState.style.display = 'block';
+      return;
+    }
+
+    if (favEmptyState) favEmptyState.style.display = 'none';
+
+    favGrid.innerHTML = favVideos.map((video) => {
+      const originalUrl = `https://www.youtube.com/watch?v=${video.videoId}`;
+      const thumb = video.thumb || `https://i.ytimg.com/vi/${video.videoId}/hqdefault.jpg`;
+      const addedBadge = video.addedAt ? (window.formatNewBadge ? window.formatNewBadge(video.addedAt, currentLang) : null) : null;
+      const addedAttr = video.addedAt ? `data-added-at="${video.addedAt}"` : '';
+
+      return `
+        <article class="card" data-video-id="${video.videoId}" data-category="${video.category}">
+          <div class="card-media">
+            <img src="${thumb}" alt="${video.titleAr}" loading="lazy" data-category="${video.category}" onerror="this.onerror=null;this.src=window.getFallbackThumbnail('${video.category}');" />
+            <span class="card-tag" data-ar="${video.categoryLabelAr}" data-en="${video.categoryLabelEn}">${currentLang === 'en' ? video.categoryLabelEn : video.categoryLabelAr}</span>
+            ${addedBadge ? `<span class="card-new-badge" ${addedAttr}>${addedBadge}</span>` : ''}
+            <button type="button" class="card-fav-btn is-fav" data-fav-id="${video.videoId}" data-video-id="${video.videoId}" aria-label="${currentLang === 'en' ? 'Remove from favorites' : 'إزالة من المفضلة'}" title="${currentLang === 'en' ? 'Remove from favorites' : 'إزالة من المفضلة'}" aria-pressed="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </button>
+            <a href="${originalUrl}" class="card-play-overlay" aria-label="مشاهدة ${video.titleAr}" data-video-id="${video.videoId}" data-title-ar="${video.titleAr}" data-title-en="${video.titleEn}" data-desc-ar="${video.descAr}" data-desc-en="${video.descEn}" data-cat-ar="${video.categoryLabelAr}" data-cat-en="${video.categoryLabelEn}">
+              <div class="play-icon-circle">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </div>
+            </a>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">
+              <a href="${originalUrl}" data-video-id="${video.videoId}" data-title-ar="${video.titleAr}" data-title-en="${video.titleEn}" data-desc-ar="${video.descAr}" data-desc-en="${video.descEn}" data-cat-ar="${video.categoryLabelAr}" data-cat-en="${video.categoryLabelEn}" data-ar="${video.titleAr}" data-en="${video.titleEn}">
+                ${currentLang === 'en' ? video.titleEn : video.titleAr}
+              </a>
+            </h3>
+            <p class="card-desc" data-ar="${video.descAr}" data-en="${video.descEn}">${currentLang === 'en' ? video.descEn : video.descAr}</p>
+            <div class="card-footer">
+              <a href="${originalUrl}" class="card-cta" data-video-id="${video.videoId}" data-title-ar="${video.titleAr}" data-title-en="${video.titleEn}" data-desc-ar="${video.descAr}" data-desc-en="${video.descEn}" data-cat-ar="${video.categoryLabelAr}" data-cat-en="${video.categoryLabelEn}">
+                <span>${t('watch_lesson')}</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </a>
+              <div class="card-actions-right">
+                <button type="button" class="share-btn" data-url="${originalUrl}" aria-label="${t('share_aria')}">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>
+      `;
+    }).join('');
+
+    favGrid.querySelectorAll('.card-play-overlay, .card-title a, .card-cta').forEach((el) => {
+      el.addEventListener('click', (e) => {
+        e.preventDefault();
+        const card = el.closest('.card');
+        const vId = el.getAttribute('data-video-id') || (card && card.getAttribute('data-video-id'));
+        openVideoPlayer({
+          videoId: vId,
+          titleAr: el.getAttribute('data-title-ar') || '',
+          titleEn: el.getAttribute('data-title-en') || '',
+          descAr: el.getAttribute('data-desc-ar') || '',
+          descEn: el.getAttribute('data-desc-en') || '',
+          catAr: el.getAttribute('data-cat-ar') || '',
+          catEn: el.getAttribute('data-cat-en') || '',
+          url: el.getAttribute('href')
+        });
+      });
+    });
+
+    favGrid.querySelectorAll('.share-btn').forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        copyToClipboard(btn.getAttribute('data-url') || window.location.href);
+      });
+    });
+
+    favGrid.querySelectorAll('.card-fav-btn').forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const vId = btn.getAttribute('data-video-id');
+        window.toggleFavorite(vId);
+        const card = btn.closest('.card');
+        if (card) {
+          card.style.transition = 'opacity 0.25s ease, transform 0.25s ease';
+          card.style.opacity = '0';
+          card.style.transform = 'scale(0.95)';
+          setTimeout(() => {
+            card.remove();
+            const remaining = favGrid.querySelectorAll('.card').length;
+            if (favCountBadge) favCountBadge.textContent = String(remaining);
+            if (remaining === 0 && favEmptyState) {
+              favEmptyState.style.display = 'block';
+            }
+          }, 260);
+        }
+      });
+    });
+  }
+
+  if (favGrid) {
+    renderFavoritesPage();
+
+    if (favSearchInput) {
+      favSearchInput.addEventListener('input', () => {
+        const raw = favSearchInput.value.trim();
+        const q = window.normalizeArabic ? window.normalizeArabic(raw) : raw.toLowerCase();
+        const cards = favGrid.querySelectorAll('.card');
+        cards.forEach((c) => {
+          const text = [
+            c.textContent,
+            ...Array.from(c.querySelectorAll('[data-ar],[data-en]')).map((el) => `${el.getAttribute('data-ar') || ''} ${el.getAttribute('data-en') || ''}`)
+          ].join(' ');
+          const norm = window.normalizeArabic ? window.normalizeArabic(text) : text.toLowerCase();
+          c.style.display = q === '' || norm.includes(q) ? '' : 'none';
+        });
+      });
+    }
+
+    window.addEventListener('favoritesUpdated', () => {
+      const favIds = window.getFavorites ? window.getFavorites() : [];
+      if (favCountBadge) favCountBadge.textContent = String(favIds.length);
     });
   }
 

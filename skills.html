@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="page_title_skills">مهارات العصر وسوق العمل | بودكاستك</title>
+  <meta name="description" content="اتعلم مهارات العصر وسوق العمل: برمجة، مونتاج، ذكاء اصطناعي، وتصميم وعمل حر على منصة بودكاستك التعليمية." />
+  <meta name="theme-color" content="#0B0F19" />
+
+  <!-- Preconnect Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body data-page="skills">
+  <a href="#main-content" class="skip-link" data-i18n="skip_link">تخطي إلى المحتوى الرئيسي</a>
+
+  <!-- Header & Navigation -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="brand-logo" aria-label="بودكاستك">
+        <span class="logo-dot" aria-hidden="true"></span>
+        <span data-i18n="brand_name">بودكاستك</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="التنقل الرئيسي">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-item" data-i18n="nav_home">الرئيسية</a></li>
+          <li><a href="skills.html" class="nav-item active" data-i18n="nav_skills">مهارات</a></li>
+          <li><a href="fav.html" class="nav-item" data-i18n="nav_favorites">⭐ المفضلة</a></li>
+          <li><a href="right-sidebar.html" class="nav-item" data-i18n="nav_podcast">بودكاست</a></li>
+          <li><a href="left-sidebar.html" class="nav-item" data-i18n="nav_tips">نصائح ومقالات</a></li>
+          <li><a href="no-sidebar.html" class="nav-item" data-i18n="nav_books">كتب</a></li>
+          <li><a href="comments.html" class="nav-item" data-i18n="nav_comments">التواصل والتعليقات</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-controls">
+        <button type="button" class="control-btn lang-toggle" aria-label="تغيير اللغة / Switch language">
+          <span class="lang-flag">🇬🇧</span>
+          <span class="lang-label-text">EN</span>
+        </button>
+        <button type="button" class="control-btn theme-toggle" aria-label="تبديل المظهر / Toggle theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button type="button" class="mobile-nav-toggle" aria-label="فتح قائمة التنقل" aria-expanded="false">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" role="dialog" aria-modal="true" aria-label="قائمة الهاتف">
+    <div class="mobile-drawer-header">
+      <div class="brand-logo">
+        <span class="logo-dot"></span>
+        <span data-i18n="brand_name">بودكاستك</span>
+      </div>
+      <button type="button" class="mobile-drawer-close" aria-label="إغلاق القائمة">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <ul class="mobile-drawer-links">
+      <li><a href="index.html" class="nav-item" data-i18n="nav_home">الرئيسية</a></li>
+      <li><a href="skills.html" class="nav-item active" data-i18n="nav_skills">مهارات</a></li>
+      <li><a href="fav.html" class="nav-item" data-i18n="nav_favorites">⭐ المفضلة</a></li>
+      <li><a href="right-sidebar.html" class="nav-item" data-i18n="nav_podcast">بودكاست</a></li>
+      <li><a href="left-sidebar.html" class="nav-item" data-i18n="nav_tips">نصائح ومقالات</a></li>
+      <li><a href="no-sidebar.html" class="nav-item" data-i18n="nav_books">كتب</a></li>
+      <li><a href="comments.html" class="nav-item" data-i18n="nav_comments">التواصل والتعليقات</a></li>
+    </ul>
+    <div class="mobile-drawer-controls">
+      <button type="button" class="control-btn lang-toggle" style="flex: 1;">
+        <span class="lang-flag">🇬🇧</span>
+        <span class="lang-label-text">English</span>
+      </button>
+      <button type="button" class="control-btn theme-toggle" aria-label="تبديل المظهر">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main id="main-content" class="container">
+    <section class="hero" style="padding-block: 3rem 2.2rem;">
+      <div class="hero-pill">
+        <span>💡</span>
+        <span data-i18n="skills_pill">مهارات المستقبل وسوق العمل</span>
+      </div>
+      <h1 class="hero-title" data-i18n="skills_hero_title">اتعلم مهارات العصر وافتح لنفسك فرص جديدة</h1>
+      <p class="hero-subtitle" data-i18n="skills_hero_sub">
+        برمجة، مونتاج، ذكاء اصطناعي، وتصميم.. جمعنالك أهم الشروحات والتجارب العملية من أفضل المتخصصين عشان تبدأ وتطور دخلك ومستقبلك.
+      </p>
+
+      <!-- Instant Search Input with Arabic normalization -->
+      <div class="search-wrap" style="max-width: 650px; margin: 1.8rem auto 1rem;">
+        <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input
+          type="search"
+          class="search-input"
+          placeholder="ابحث في المهارات (برمجة، مونتاج، ذكاء اصطناعي، عمل حر...)..."
+          data-i18n-placeholder="skills_search_placeholder"
+          aria-label="ابحث في المهارات"
+        />
+      </div>
+
+      <!-- Category Filter Pills -->
+      <div class="filter-bar" style="justify-content: center; margin-top: 1.2rem;">
+        <button type="button" class="filter-btn filter-pill active" data-filter="all" aria-selected="true" data-i18n="filter_all">جميع المهارات</button>
+        <button type="button" class="filter-btn filter-pill" data-filter="programming" aria-selected="false" data-i18n="filter_programming">💻 برمجة وويب</button>
+        <button type="button" class="filter-btn filter-pill" data-filter="ai-tools" aria-selected="false" data-i18n="filter_ai">🤖 ذكاء اصطناعي وميديا</button>
+        <button type="button" class="filter-btn filter-pill" data-filter="freelance" aria-selected="false" data-i18n="filter_freelance">🚀 عمل حر وتسويق</button>
+        <button type="button" class="filter-btn filter-pill" data-filter="digital-skills" aria-selected="false" data-i18n="filter_productivity">⚡ إنتاجية وعادات</button>
+      </div>
+
+      <!-- Live Search Meta Feedback -->
+      <div class="search-results-meta" style="justify-content: center;">
+        <span data-i18n="results_showing">النتائج المعروضة:</span>
+        <strong class="results-count">11</strong>
+        <button type="button" class="clear-filter-btn" data-i18n="results_reset">إعادة ضبط البحث</button>
+      </div>
+    </section>
+
+    <!-- Skills Video Cards Grid -->
+    <section class="content-section" style="margin-bottom: 4rem;">
+      <div class="card-grid">
+
+        <!-- 1. Elzero Programming -->
+        <article class="card" data-category="programming" data-video-id="TJVfyB7QR8I">
+          <div class="card-media">
+            <img src="https://i.ytimg.com/vi/TJVfyB7QR8I/hqdefault.jpg" alt="من أجمل طرق تعلم البرمجة" loading="lazy" data-category="programming" onerror="this.onerror=null;this.src=window.getFallbackThumbnail('programming');" />
+            <span class="card-tag" data-ar="برمجة وتطوير ويب" data-en="Coding & Web">برمجة وتطوير ويب</span>
+            <span class="card-new-badge" data-added-at="2026-11-20">✨ جديد</span>
+            <button type="button" class="card-fav-btn" data-fav-id="TJVfyB7QR8I" data-video-id="TJVfyB7QR8I" aria-label="إضافة إلى المفضلة" title="إضافة إلى المفضلة" aria-pressed="false">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </button>
+            <a href="https://youtu.be/TJVfyB7QR8I" class="card-play-overlay" aria-label="مشاهدة من أجمل طرق تعلم البرمجة" data-video-id="TJVfyB7QR8I" data-title-ar="من أجمل وأسهل طرق تعلم البرمجة من الصفر" data-title-en="One of the Best Ways to Learn Programming from Scratch" data-desc-ar="أسامة الزيرو بيشرح بأسلوب مبسط جداً إزاي تبدأ في عالم البرمجة من غير تعقيد وتختار مجالك الصح." data-desc-en="Osama Elzero explains clearly how to start learning coding without complications and choose your path." data-cat-ar="برمجة وتطوير ويب" data-cat-en="Coding & Web">
+              <div class="play-icon-circle">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </div>
+            </a>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">
+              <a href="https://youtu.be/TJVfyB7QR8I" data-video-id="TJVfyB7QR8I" data-title-ar="من أجمل وأسهل طرق تعلم البرمجة من الصفر" data-title-en="One of the Best Ways to Learn Programming from Scratch" data-desc-ar="أسامة الزيرو بيشرح بأسلوب مبسط جداً إزاي تبدأ في عالم البرمجة من غير تعقيد وتختار مجالك الصح." data-desc-en="Osama Elzero explains clearly how to start learning coding without complications and choose your path." data-cat-ar="برمجة وتطوير ويب" data-cat-en="Coding & Web" data-ar="من أجمل وأسهل طرق تعلم البرمجة من الصفر" data-en="One of the Best Ways to Learn Programming from Scratch">
+                من أجمل وأسهل طرق تعلم البرمجة من الصفر
+              </a>
+            </h3>
+            <p class="card-desc" data-ar="أسامة الزيرو بيشرح بأسلوب مبسط جداً إزاي تبدأ في عالم البرمجة من غير تعقيد وتختار مجالك الصح." data-en="Osama Elzero explains clearly how to start learning coding without complications and choose your path.">
+              أسامة الزيرو بيشرح بأسلوب مبسط جداً إزاي تبدأ في عالم البرمجة من غير تعقيد وتختار مجالك الصح.
+            </p>
+            <div class="card-footer">
+              <a href="https://youtu.be/TJVfyB7QR8I" class="card-cta" data-video-id="TJVfyB7QR8I" data-title-ar="من أجمل وأسهل طرق تعلم البرمجة من الصفر" data-title-en="One of the Best Ways to Learn Programming from Scratch" data-desc-ar="أسامة الزيرو بيشرح بأسلوب مبسط جداً إزاي تبدأ في عالم البرمجة من غير تعقيد وتختار مجالك الصح." data-desc-en="Osama Elzero explains clearly how to start learning coding without complications and choose your path." data-cat-ar="برمجة وتطوير ويب" data-cat-en="Coding & Web">
+                <span data-i18n="watch_lesson">شاهد الدرس الآن</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </a>
+              <div class="card-actions-right">
+                <button type="button" class="share-btn" data-url="https://youtu.be/TJVfyB7QR8I" aria-label="نسخ رابط الدرس"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg></button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 2. Remote Work Yehia Tech & Ahmed Nagdy -->
+        <article class="card" data-category="programming" data-video-id="hVPYTKcOGgU">
+          <div class="card-media">
+            <img src="https://i.ytimg.com/vi/hVPYTKcOGgU/hqdefault.jpg" alt="ازاي تشتغل عن بعد" loading="lazy" data-category="programming" onerror="this.onerror=null;this.src=window.getFallbackThumbnail('programming');" />
+            <span class="card-tag" data-ar="برمجة وعمل عن بعد" data-en="Coding & Remote Work">برمجة وعمل عن بعد</span>
+            <span class="card-new-badge" data-added-at="2026-11-20">✨ جديد</span>
+            <button type="button" class="card-fav-btn" data-fav-id="hVPYTKcOGgU" data-video-id="hVPYTKcOGgU" aria-label="إضافة إلى المفضلة" title="إضافة إلى المفضلة" aria-pressed="false">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </button>
+            <a href="https://youtu.be/hVPYTKcOGgU" class="card-play-overlay" aria-label="مشاهدة شغل الريموت" data-video-id="hVPYTKcOGgU" data-title-ar="شغل الريموت (Remote Work): ازاي تشتغل عن بعد وتدخل سوق العمل؟" data-title-en="Remote Work: How to Work Remotely & Break into the Market" data-desc-ar="يحيى تك مع أحمد نجدي في نقاش عملي دسم عن خطوات العمل الحر والريموت، وكيف تجهز نفسك للشركات العالمية." data-desc-en="Yehia Tech and Ahmed Nagdy discuss practical steps to land remote tech jobs and work globally." data-cat-ar="برمجة وعمل عن بعد" data-cat-en="Coding & Remote Work">
+              <div class="play-icon-circle">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </div>
+            </a>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">
+              <a href="https://youtu.be/hVPYTKcOGgU" data-video-id="hVPYTKcOGgU" data-title-ar="شغل الريموت (Remote Work): ازاي تشتغل عن بعد وتدخل سوق العمل؟" data-title-en="Remote Work: How to Work Remotely & Break into the Market" data-desc-ar="يحيى تك مع أحمد نجدي في نقاش عملي دسم عن خطوات العمل الحر والريموت، وكيف تجهز نفسك للشركات العالمية." data-desc-en="Yehia Tech and Ahmed Nagdy discuss practical steps to land remote tech jobs and work globally." data-cat-ar="برمجة وعمل عن بعد" data-cat-en="Coding & Remote Work" data-ar="شغل الريموت (Remote Work): ازاي تشتغل عن بعد وتدخل سوق العمل؟" data-en="Remote Work: How to Work Remotely & Break into the Market">
+                شغل الريموت (Remote Work): ازاي تشتغل عن بعد وتدخل سوق العمل؟
+              </a>
+            </h3>
+            <p class="card-desc" data-ar="يحيى تك مع أحمد نجدي في نقاش عملي دسم عن خطوات العمل الحر والريموت، وكيف تجهز نفسك للشركات العالمية." data-en="Yehia Tech and Ahmed Nagdy discuss practical steps to land remote tech jobs and work globally.">
+              يحيى تك مع أحمد نجدي في نقاش عملي دسم عن خطوات العمل الحر والريموت، وكيف تجهز نفسك للشركات العالمية.
+            </p>
+            <div class="card-footer">
+              <a href="https://youtu.be/hVPYTKcOGgU" class="card-cta" data-video-id="hVPYTKcOGgU" data-title-ar="شغل الريموت (Remote Work): ازاي تشتغل عن بعد وتدخل سوق العمل؟" data-title-en="Remote Work: How to Work Remotely & Break into the Market" data-desc-ar="يحيى تك مع أحمد نجدي في نقاش عملي دسم عن خطوات العمل الحر والريموت، وكيف تجهز نفسك للشركات العالمية." data-desc-en="Yehia Tech and Ahmed Nagdy discuss practical steps to land remote tech jobs and work globally." data-cat-ar="برمجة وعمل عن بعد" data-cat-en="Coding & Remote Work">
+                <span data-i18n="watch_lesson">شاهد الدرس الآن</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </a>
+              <div class="card-actions-right">
+                <button type="button" class="share-btn" data-url="https://youtu.be/hVPYTKcOGgU" aria-label="نسخ رابط الدرس"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg></button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 3. Ghareeb Elshaikh Stack Overflow -->
+        <article class="card" data-category="programming" data-video-id="9fuLFb1SmBA">
+          <div class="card-media">
+            <img src="https://i.ytimg.com/vi/9fuLFb1SmBA/hqdefault.jpg" alt="استطلاع ستاك أوفر فلو" loading="lazy" data-category="programming" onerror="this.onerror=null;this.src=window.getFallbackThumbnail('programming');" />
+            <span class="card-tag" data-ar="سوق البرمجة وAI" data-en="Tech Market & AI">سوق البرمجة وAI</span>
+            <span class="card-new-badge" data-added-at="2026-11-20">✨ جديد</span>
+            <button type="button" class="card-fav-btn" data-fav-id="9fuLFb1SmBA" data-video-id="9fuLFb1SmBA" aria-label="إضافة إلى المفضلة" title="إضافة إلى المفضلة" aria-pressed="false">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </button>
+            <a href="https://youtu.be/9fuLFb1SmBA" class="card-play-overlay" aria-label="مشاهدة استطلاع ستاك أوفر فلو" data-video-id="9fuLFb1SmBA" data-title-ar="استطلاع ستاك أوفر فلو: المرتبات ولغات البرمجة والذكاء الاصطناعي" data-title-en="Stack Overflow Survey: Salaries, Languages & AI Impact" data-desc-ar="غريب الشيخ بيحلل أحدث أرقام سوق البرمجة، والوظائف المطلوبة، وتأثير الذكاء الاصطناعي على المطورين." data-desc-en="Ghareeb Elshaikh analyzes market trends, demanded skills, salaries, and how AI impacts developers." data-cat-ar="سوق البرمجة وAI" data-cat-en="Tech Market & AI">
+              <div class="play-icon-circle">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </div>
+            </a>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">
+              <a href="https://youtu.be/9fuLFb1SmBA" data-video-id="9fuLFb1SmBA" data-title-ar="استطلاع ستاك أوفر فلو: المرتبات ولغات البرمجة والذكاء الاصطناعي" data-title-en="Stack Overflow Survey: Salaries, Languages & AI Impact" data-desc-ar="غريب الشيخ بيحلل أحدث أرقام سوق البرمجة، والوظائف المطلوبة، وتأثير الذكاء الاصطناعي على المطورين." data-desc-en="Ghareeb Elshaikh analyzes market trends, demanded skills, salaries, and how AI impacts developers." data-cat-ar="سوق البرمجة وAI" data-cat-en="Tech Market & AI" data-ar="استطلاع ستاك أوفر فلو: المرتبات ولغات البرمجة والذكاء الاصطناعي" data-en="Stack Overflow Survey: Salaries, Languages & AI Impact">
+                استطلاع ستاك أوفر فلو: المرتبات ولغات البرمجة والـ AI
+              </a>
+            </h3>
+            <p class="card-desc" data-ar="غريب الشيخ بيحلل أحدث أرقام سوق البرمجة، والوظائف المطلوبة، وتأثير الذكاء الاصطناعي على المطورين." data-en="Ghareeb Elshaikh analyzes market trends, demanded skills, salaries, and how AI impacts developers.">
+              غريب الشيخ بيحلل أحدث أرقام سوق البرمجة، والوظائف المطلوبة، وتأثير الذكاء الاصطناعي على المطورين.
+            </p>
+            <div class="card-footer">
+              <a href="https://youtu.be/9fuLFb1SmBA" class="card-cta" data-video-id="9fuLFb1SmBA" data-title-ar="استطلاع ستاك أوفر فلو: المرتبات ولغات البرمجة والذكاء الاصطناعي" data-title-en="Stack Overflow Survey: Salaries, Languages & AI Impact" data-desc-ar="غريب الشيخ بيحلل أحدث أرقام سوق البرمجة، والوظائف المطلوبة، وتأثير الذكاء الاصطناعي على المطورين." data-desc-en="Ghareeb Elshaikh analyzes market trends, demanded skills, salaries, and how AI impacts developers." data-cat-ar="سوق البرمجة وAI" data-cat-en="Tech Market & AI">
+                <span data-i18n="watch_lesson">شاهد الدرس الآن</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </a>
+              <div class="card-actions-right">
+                <button type="button" class="share-btn" data-url="https://youtu.be/9fuLFb1SmBA" aria-label="نسخ رابط الدرس"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg></button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 4. Mostafa Makram & Baraa Mohamed AI -->
+        <article class="card" data-category="ai-tools" data-video-id="xerhJdVjfK8">
+          <div class="card-media">
+            <img src="https://i.ytimg.com/vi/xerhJdVjfK8/hqdefault.jpg" alt="بودكاست الذكاء الاصطناعي" loading="lazy" data-category="ai-tools" onerror="this.onerror=null;this.src=window.getFallbackThumbnail('ai-tools');" />
+            <span class="card-tag purple" data-ar="ذكاء اصطناعي وميديا" data-en="AI & Media">ذكاء اصطناعي وميديا</span>
+            <span class="card-new-badge" data-added-at="2026-11-20">✨ جديد</span>
+            <button type="button" class="card-fav-btn" data-fav-id="xerhJdVjfK8" data-video-id="xerhJdVjfK8" aria-label="إضافة إلى المفضلة" title="إضافة إلى المفضلة" aria-pressed="false">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </button>
+            <a href="https://youtu.be/xerhJdVjfK8" class="card-play-overlay" aria-label="مشاهدة بودكاست الذكاء الاصطناعي" data-video-id="xerhJdVjfK8" data-title-ar="بودكاست مع خبير الذكاء الاصطناعي وصناعة المحتوى براء محمد" data-title-en="AI in Content Creation & Modern Work with Baraa Mohamed" data-desc-ar="مصطفى مكرم مع براء محمد في حوار شيق عن أدوات الذكاء الاصطناعي، المونتاج الذكي، وثورة صناعة المحتوى." data-desc-en="Mostafa Makram and Baraa Mohamed explore AI creative tools, video editing, and modern media." data-cat-ar="ذكاء اصطناعي وميديا" data-cat-en="AI & Media">
+              <div class="play-icon-circle">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </div>
+            </a>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">
+              <a href="https://youtu.be/xerhJdVjfK8" data-video-id="xerhJdVjfK8" data-title-ar="بودكاست مع خبير الذكاء الاصطناعي وصناعة المحتوى براء محمد" data-title-en="AI in Content Creation & Modern Work with Baraa Mohamed" data-desc-ar="مصطفى مكرم مع براء محمد في حوار شيق عن أدوات الذكاء الاصطناعي، المونتاج الذكي، وثورة صناعة المحتوى." data-desc-en="Mostafa Makram and Baraa Mohamed explore AI creative tools, video editing, and modern media." data-cat-ar="ذكاء اصطناعي وميديا" data-cat-en="AI & Media" data-ar="بودكاست مع خبير الذكاء الاصطناعي وصناعة المحتوى براء محمد" data-en="AI in Content Creation & Modern Work with Baraa Mohamed">
+                بودكاست مع خبير الذكاء الاصطناعي وصناعة المحتوى براء محمد
+              </a>
+            </h3>
+            <p class="card-desc" data-ar="مصطفى مكرم مع براء محمد في حوار شيق عن أدوات الذكاء الاصطناعي، المونتاج الذكي، وثورة صناعة المحتوى." data-en="Mostafa Makram and Baraa Mohamed explore AI creative tools, video editing, and modern media.">
+              مصطفى مكرم مع براء محمد في حوار شيق عن أدوات الذكاء الاصطناعي، المونتاج الذكي، وثورة صناعة المحتوى.
+            </p>
+            <div class="card-footer">
+              <a href="https://youtu.be/xerhJdVjfK8" class="card-cta" data-video-id="xerhJdVjfK8" data-title-ar="بودكاست مع خبير الذكاء الاصطناعي وصناعة المحتوى براء محمد" data-title-en="AI in Content Creation & Modern Work with Baraa Mohamed" data-desc-ar="مصطفى مكرم مع براء محمد في حوار شيق عن أدوات الذكاء الاصطناعي، المونتاج الذكي، وثورة صناعة المحتوى." data-desc-en="Mostafa Makram and Baraa Mohamed explore AI creative tools, video editing, and modern media." data-cat-ar="ذكاء اصطناعي وميديا" data-cat-en="AI & Media">
+                <span data-i18n="watch_lesson">شاهد الدرس الآن</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </a>
+              <div class="card-actions-right">
+                <button type="button" class="share-btn" data-url="https://youtu.be/xerhJdVjfK8" aria-label="نسخ رابط الدرس"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg></button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 5. Yehia Tech Showcase Skills -->
+        <article class="card" data-category="freelance" data-video-id="a6NlVqjQBbc">
+          <div class="card-media">
+            <img src="https://i.ytimg.com/vi/a6NlVqjQBbc/hqdefault.jpg" alt="إنت شاطر بس محدش شايفك" loading="lazy" data-category="freelance" onerror="this.onerror=null;this.src=window.getFallbackThumbnail('freelance');" />
+            <span class="card-tag amber" data-ar="عمل حر وتسويق" data-en="Freelance & Career">عمل حر وتسويق</span>
+            <span class="card-new-badge" data-added-at="2026-11-20">✨ جديد</span>
+            <button type="button" class="card-fav-btn" data-fav-id="a6NlVqjQBbc" data-video-id="a6NlVqjQBbc" aria-label="إضافة إلى المفضلة" title="إضافة إلى المفضلة" aria-pressed="false">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </button>
+            <a href="https://youtu.be/a6NlVqjQBbc" class="card-play-overlay" aria-label="مشاهدة إنت شاطر فعلا بس محدش شايفك" data-video-id="a6NlVqjQBbc" data-title-ar="إنت شاطر فعلاً.. بس محدش شايفك! (فن التسويق لمهاراتك)" data-title-en="You Are Truly Skilled, But Invisible: Showcasing Your Work" data-desc-ar="كتير مننا عنده مهارات قوية بس مش عارف يوصل للعملاء أو الشركات.. يحيى تك بيوضح لك إزاي تبني معرض أعمالك وتظهر قيمتك." data-desc-en="Yehia Tech reveals practical tactics to build your portfolio and attract clients and companies." data-cat-ar="عمل حر وتسويق" data-cat-en="Freelance & Career">
+              <div class="play-icon-circle">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </div>
+            </a>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">
+              <a href="https://youtu.be/a6NlVqjQBbc" data-video-id="a6NlVqjQBbc" data-title-ar="إنت شاطر فعلاً.. بس محدش شايفك! (فن التسويق لمهاراتك)" data-title-en="You Are Truly Skilled, But Invisible: Showcasing Your Work" data-desc-ar="كتير مننا عنده مهارات قوية بس مش عارف يوصل للعملاء أو الشركات.. يحيى تك بيوضح لك إزاي تبني معرض أعمالك وتظهر قيمتك." data-desc-en="Yehia Tech reveals practical tactics to build your portfolio and attract clients and companies." data-cat-ar="عمل حر وتسويق" data-cat-en="Freelance & Career" data-ar="إنت شاطر فعلاً.. بس محدش شايفك! (فن التسويق لمهاراتك)" data-en="You Are Truly Skilled, But Invisible: Showcasing Your Work">
+                إنت شاطر فعلاً.. بس محدش شايفك! (فن إبراز مهاراتك)
+              </a>
+            </h3>
+            <p class="card-desc" data-ar="كتير مننا عنده مهارات قوية بس مش عارف يوصل للعملاء أو الشركات.. يحيى تك بيوضح لك إزاي تبني معرض أعمالك وتظهر قيمتك." data-en="Yehia Tech reveals practical tactics to build your portfolio and attract clients and companies.">
+              كتير مننا عنده مهارات قوية بس مش عارف يوصل للعملاء أو الشركات.. يحيى تك بيوضح لك إزاي تبني معرض أعمالك وتظهر قيمتك.
+            </p>
+            <div class="card-footer">
+              <a href="https://youtu.be/a6NlVqjQBbc" class="card-cta" data-video-id="a6NlVqjQBbc" data-title-ar="إنت شاطر فعلاً.. بس محدش شايفك! (فن التسويق لمهاراتك)" data-title-en="You Are Truly Skilled, But Invisible: Showcasing Your Work" data-desc-ar="كتير مننا عنده مهارات قوية بس مش عارف يوصل للعملاء أو الشركات.. يحيى تك بيوضح لك إزاي تبني معرض أعمالك وتظهر قيمتك." data-desc-en="Yehia Tech reveals practical tactics to build your portfolio and attract clients and companies." data-cat-ar="عمل حر وتسويق" data-cat-en="Freelance & Career">
+                <span data-i18n="watch_lesson">شاهد الدرس الآن</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </a>
+              <div class="card-actions-right">
+                <button type="button" class="share-btn" data-url="https://youtu.be/a6NlVqjQBbc" aria-label="نسخ رابط الدرس"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg></button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 6. Ahmed Tarek GTalks -->
+        <article class="card" data-category="freelance" data-video-id="PfB9Sc92vYA">
+          <div class="card-media">
+            <img src="https://i.ytimg.com/vi/PfB9Sc92vYA/hqdefault.jpg" alt="لو مش بتحب شغلك" loading="lazy" data-category="freelance" onerror="this.onerror=null;this.src=window.getFallbackThumbnail('freelance');" />
+            <span class="card-tag amber" data-ar="تطوير مهني ووظيفي" data-en="Career Guidance">تطوير مهني ووظيفي</span>
+            <span class="card-new-badge" data-added-at="2026-11-20">✨ جديد</span>
+            <button type="button" class="card-fav-btn" data-fav-id="PfB9Sc92vYA" data-video-id="PfB9Sc92vYA" aria-label="إضافة إلى المفضلة" title="إضافة إلى المفضلة" aria-pressed="false">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </button>
+            <a href="https://youtu.be/PfB9Sc92vYA" class="card-play-overlay" aria-label="مشاهدة لو مش بتحب شغلك" data-video-id="PfB9Sc92vYA" data-title-ar="لو مش حابب شغلك.. عندك حل من الاتنين (أحمد طارق)" data-title-en="If You Dislike Your Job: The Two Viable Paths (Ahmed Tarek)" data-desc-ar="نصيحة ذهبية ومباشرة من أحمد طارق في GTalks لكل واحد حاسس بملل أو ضيق في وظيفته الحالية وإزاي يغير مساره بأمان." data-desc-en="Actionable guidance on handling career dissatisfaction and transitioning safely into what you love." data-cat-ar="تطوير مهني ووظيفي" data-cat-en="Career Guidance">
+              <div class="play-icon-circle">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </div>
+            </a>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">
+              <a href="https://youtu.be/PfB9Sc92vYA" data-video-id="PfB9Sc92vYA" data-title-ar="لو مش حابب شغلك.. عندك حل من الاتنين (أحمد طارق)" data-title-en="If You Dislike Your Job: The Two Viable Paths (Ahmed Tarek)" data-desc-ar="نصيحة ذهبية ومباشرة من أحمد طارق في GTalks لكل واحد حاسس بملل أو ضيق في وظيفته الحالية وإزاي يغير مساره بأمان." data-desc-en="Actionable guidance on handling career dissatisfaction and transitioning safely into what you love." data-cat-ar="تطوير مهني ووظيفي" data-cat-en="Career Guidance" data-ar="لو مش حابب شغلك.. عندك حل من الاتنين (أحمد طارق)" data-en="If You Dislike Your Job: The Two Viable Paths (Ahmed Tarek)">
+                لو مش حابب شغلك.. عندك حل من الاتنين (أحمد طارق)
+              </a>
+            </h3>
+            <p class="card-desc" data-ar="نصيحة ذهبية ومباشرة من أحمد طارق في GTalks لكل واحد حاسس بملل أو ضيق في وظيفته الحالية وإزاي يغير مساره بأمان." data-en="Actionable guidance on handling career dissatisfaction and transitioning safely into what you love.">
+              نصيحة ذهبية ومباشرة من أحمد طارق في GTalks لكل واحد حاسس بملل أو ضيق في وظيفته الحالية وإزاي يغير مساره بأمان.
+            </p>
+            <div class="card-footer">
+              <a href="https://youtu.be/PfB9Sc92vYA" class="card-cta" data-video-id="PfB9Sc92vYA" data-title-ar="لو مش حابب شغلك.. عندك حل من الاتنين (أحمد طارق)" data-title-en="If You Dislike Your Job: The Two Viable Paths (Ahmed Tarek)" data-desc-ar="نصيحة ذهبية ومباشرة من أحمد طارق في GTalks لكل واحد حاسس بملل أو ضيق في وظيفته الحالية وإزاي يغير مساره بأمان." data-desc-en="Actionable guidance on handling career dissatisfaction and transitioning safely into what you love." data-cat-ar="تطوير مهني ووظيفي" data-cat-en="Career Guidance">
+                <span data-i18n="watch_lesson">شاهد الدرس الآن</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </a>
+              <div class="card-actions-right">
+                <button type="button" class="share-btn" data-url="https://youtu.be/PfB9Sc92vYA" aria-label="نسخ رابط الدرس"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg></button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 7. Salah Abu Al-Majd Branding -->
+        <article class="card" data-category="freelance" data-video-id="kX7c9uWosDI">
+          <div class="card-media">
+            <img src="https://i.ytimg.com/vi/kX7c9uWosDI/hqdefault.jpg" alt="أسرار التسويق وبناء براند" loading="lazy" data-category="freelance" onerror="this.onerror=null;this.src=window.getFallbackThumbnail('freelance');" />
+            <span class="card-tag amber" data-ar="تسويق وبراند شخصي" data-en="Branding & Marketing">تسويق وبراند شخصي</span>
+            <span class="card-new-badge" data-added-at="2026-11-20">✨ جديد</span>
+            <button type="button" class="card-fav-btn" data-fav-id="kX7c9uWosDI" data-video-id="kX7c9uWosDI" aria-label="إضافة إلى المفضلة" title="إضافة إلى المفضلة" aria-pressed="false">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </button>
+            <a href="https://youtu.be/kX7c9uWosDI" class="card-play-overlay" aria-label="مشاهدة أسرار التسويق" data-video-id="kX7c9uWosDI" data-title-ar="أسرار التسويق: كيف تبني براند يجعلك الأول في مجالك؟" data-title-en="Marketing Secrets: How to Build a Standout Brand (Salah Abu Al-Majd)" data-desc-ar="صلاح أبو المجد بيفكك أسرار بناء العلامة التجارية الشخصية والتجارية وكيف تميز نفسك عن باقي المنافسين." data-desc-en="Salah Abu Al-Majd reveals foundational branding principles to dominate your niche with authenticity." data-cat-ar="تسويق وبراند شخصي" data-cat-en="Branding & Marketing">
+              <div class="play-icon-circle">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </div>
+            </a>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">
+              <a href="https://youtu.be/kX7c9uWosDI" data-video-id="kX7c9uWosDI" data-title-ar="أسرار التسويق: كيف تبني براند يجعلك الأول في مجالك؟" data-title-en="Marketing Secrets: How to Build a Standout Brand (Salah Abu Al-Majd)" data-desc-ar="صلاح أبو المجد بيفكك أسرار بناء العلامة التجارية الشخصية والتجارية وكيف تميز نفسك عن باقي المنافسين." data-desc-en="Salah Abu Al-Majd reveals foundational branding principles to dominate your niche with authenticity." data-cat-ar="تسويق وبراند شخصي" data-cat-en="Branding & Marketing" data-ar="أسرار التسويق: كيف تبني براند يجعلك الأول في مجالك؟" data-en="Marketing Secrets: How to Build a Standout Brand (Salah Abu Al-Majd)">
+                أسرار التسويق: كيف تبني براند يجعلك الأول في مجالك؟
+              </a>
+            </h3>
+            <p class="card-desc" data-ar="صلاح أبو المجد بيفكك أسرار بناء العلامة التجارية الشخصية والتجارية وكيف تميز نفسك عن باقي المنافسين." data-en="Salah Abu Al-Majd reveals foundational branding principles to dominate your niche with authenticity.">
+              صلاح أبو المجد بيفكك أسرار بناء العلامة التجارية الشخصية والتجارية وكيف تميز نفسك عن باقي المنافسين.
+            </p>
+            <div class="card-footer">
+              <a href="https://youtu.be/kX7c9uWosDI" class="card-cta" data-video-id="kX7c9uWosDI" data-title-ar="أسرار التسويق: كيف تبني براند يجعلك الأول في مجالك؟" data-title-en="Marketing Secrets: How to Build a Standout Brand (Salah Abu Al-Majd)" data-desc-ar="صلاح أبو المجد بيفكك أسرار بناء العلامة التجارية الشخصية والتجارية وكيف تميز نفسك عن باقي المنافسين." data-desc-en="Salah Abu Al-Majd reveals foundational branding principles to dominate your niche with authenticity." data-cat-ar="تسويق وبراند شخصي" data-cat-en="Branding & Marketing">
+                <span data-i18n="watch_lesson">شاهد الدرس الآن</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </a>
+              <div class="card-actions-right">
+                <button type="button" class="share-btn" data-url="https://youtu.be/kX7c9uWosDI" aria-label="نسخ رابط الدرس"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg></button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 8. Fnjan Podcast Career Growth -->
+        <article class="card" data-category="digital-skills" data-video-id="QPTwsoa47do">
+          <div class="card-media">
+            <img src="https://i.ytimg.com/vi/QPTwsoa47do/hqdefault.jpg" alt="كيف تحصل على وظيفة" loading="lazy" data-category="digital-skills" onerror="this.onerror=null;this.src=window.getFallbackThumbnail('digital-skills');" />
+            <span class="card-tag blue" data-ar="مهارات وظيفية" data-en="Career Skills">مهارات وظيفية</span>
+            <span class="card-new-badge" data-added-at="2026-11-20">✨ جديد</span>
+            <button type="button" class="card-fav-btn" data-fav-id="QPTwsoa47do" data-video-id="QPTwsoa47do" aria-label="إضافة إلى المفضلة" title="إضافة إلى المفضلة" aria-pressed="false">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </button>
+            <a href="https://youtu.be/QPTwsoa47do" class="card-play-overlay" aria-label="مشاهدة كيف تحصل على وظيفة" data-video-id="QPTwsoa47do" data-title-ar="كيف تحصل على وظيفة وتتطوّر مهنيًا في سوق متسارع؟" data-title-en="How to Land a Job & Advance Professionally (Fnjan Podcast)" data-desc-ar="حلقة مميزة من بودكاست فنجان تشرح مهارات المقابلات، والتفاوض، واكتساب المهارات المطلوبة في الشركات الحديثة." data-desc-en="An insightful episode on interview preparation, negotiation, and high-demand professional skills." data-cat-ar="مهارات وظيفية" data-cat-en="Career Skills">
+              <div class="play-icon-circle">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </div>
+            </a>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">
+              <a href="https://youtu.be/QPTwsoa47do" data-video-id="QPTwsoa47do" data-title-ar="كيف تحصل على وظيفة وتتطوّر مهنيًا في سوق متسارع؟" data-title-en="How to Land a Job & Advance Professionally (Fnjan Podcast)" data-desc-ar="حلقة مميزة من بودكاست فنجان تشرح مهارات المقابلات، والتفاوض، واكتساب المهارات المطلوبة في الشركات الحديثة." data-desc-en="An insightful episode on interview preparation, negotiation, and high-demand professional skills." data-cat-ar="مهارات وظيفية" data-cat-en="Career Skills" data-ar="كيف تحصل على وظيفة وتتطوّر مهنيًا في سوق متسارع؟" data-en="How to Land a Job & Advance Professionally (Fnjan Podcast)">
+                كيف تحصل على وظيفة وتتطوّر مهنيًا في سوق متسارع؟
+              </a>
+            </h3>
+            <p class="card-desc" data-ar="حلقة مميزة من بودكاست فنجان تشرح مهارات المقابلات، والتفاوض، واكتساب المهارات المطلوبة في الشركات الحديثة." data-en="An insightful episode on interview preparation, negotiation, and high-demand professional skills.">
+              حلقة مميزة من بودكاست فنجان تشرح مهارات المقابلات، والتفاوض، واكتساب المهارات المطلوبة في الشركات الحديثة.
+            </p>
+            <div class="card-footer">
+              <a href="https://youtu.be/QPTwsoa47do" class="card-cta" data-video-id="QPTwsoa47do" data-title-ar="كيف تحصل على وظيفة وتتطوّر مهنيًا في سوق متسارع؟" data-title-en="How to Land a Job & Advance Professionally (Fnjan Podcast)" data-desc-ar="حلقة مميزة من بودكاست فنجان تشرح مهارات المقابلات، والتفاوض، واكتساب المهارات المطلوبة في الشركات الحديثة." data-desc-en="An insightful episode on interview preparation, negotiation, and high-demand professional skills." data-cat-ar="مهارات وظيفية" data-cat-en="Career Skills">
+                <span data-i18n="watch_lesson">شاهد الدرس الآن</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </a>
+              <div class="card-actions-right">
+                <button type="button" class="share-btn" data-url="https://youtu.be/QPTwsoa47do" aria-label="نسخ رابط الدرس"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg></button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 9. Droos Online Ahmed Abou Zaid -->
+        <article class="card" data-category="digital-skills" data-video-id="3acWaDehEiU">
+          <div class="card-media">
+            <img src="https://i.ytimg.com/vi/3acWaDehEiU/hqdefault.jpg" alt="كيف تصلح حياتك في يوم واحد" loading="lazy" data-category="digital-skills" onerror="this.onerror=null;this.src=window.getFallbackThumbnail('digital-skills');" />
+            <span class="card-tag" data-ar="إنتاجية وعادات" data-en="Productivity & Habits">إنتاجية وعادات</span>
+            <span class="card-new-badge" data-added-at="2026-11-20">✨ جديد</span>
+            <button type="button" class="card-fav-btn" data-fav-id="3acWaDehEiU" data-video-id="3acWaDehEiU" aria-label="إضافة إلى المفضلة" title="إضافة إلى المفضلة" aria-pressed="false">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </button>
+            <a href="https://youtu.be/3acWaDehEiU" class="card-play-overlay" aria-label="مشاهدة كيف تصلح حياتك في يوم واحد" data-video-id="3acWaDehEiU" data-title-ar="كيف تصلح حياتك في يوم واحد وتبدأ بداية جديدة؟" data-title-en="How to Reset Your Life in One Single Day (Droos Online)" data-desc-ar="أحمد أبو زيد بيقدملك خطة عملية وسهلة لترتيب فوضى يومك، استعادة طاقتك، وبناء روتين يومي مريح وفعال." data-desc-en="Ahmed Abu Zaid shares a practical reset plan to clear clutter, regain energy, and establish routine." data-cat-ar="إنتاجية وعادات" data-cat-en="Productivity & Habits">
+              <div class="play-icon-circle">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </div>
+            </a>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">
+              <a href="https://youtu.be/3acWaDehEiU" data-video-id="3acWaDehEiU" data-title-ar="كيف تصلح حياتك في يوم واحد وتبدأ بداية جديدة؟" data-title-en="How to Reset Your Life in One Single Day (Droos Online)" data-desc-ar="أحمد أبو زيد بيقدملك خطة عملية وسهلة لترتيب فوضى يومك، استعادة طاقتك، وبناء روتين يومي مريح وفعال." data-desc-en="Ahmed Abu Zaid shares a practical reset plan to clear clutter, regain energy, and establish routine." data-cat-ar="إنتاجية وعادات" data-cat-en="Productivity & Habits" data-ar="كيف تصلح حياتك في يوم واحد وتبدأ بداية جديدة؟" data-en="How to Reset Your Life in One Single Day (Droos Online)">
+                كيف تصلح حياتك في يوم واحد وتبدأ بداية جديدة؟
+              </a>
+            </h3>
+            <p class="card-desc" data-ar="أحمد أبو زيد بيقدملك خطة عملية وسهلة لترتيب فوضى يومك، استعادة طاقتك، وبناء روتين يومي مريح وفعال." data-en="Ahmed Abu Zaid shares a practical reset plan to clear clutter, regain energy, and establish routine.">
+              أحمد أبو زيد بيقدملك خطة عملية وسهلة لترتيب فوضى يومك، استعادة طاقتك، وبناء روتين يومي مريح وفعال.
+            </p>
+            <div class="card-footer">
+              <a href="https://youtu.be/3acWaDehEiU" class="card-cta" data-video-id="3acWaDehEiU" data-title-ar="كيف تصلح حياتك في يوم واحد وتبدأ بداية جديدة؟" data-title-en="How to Reset Your Life in One Single Day (Droos Online)" data-desc-ar="أحمد أبو زيد بيقدملك خطة عملية وسهلة لترتيب فوضى يومك، استعادة طاقتك، وبناء روتين يومي مريح وفعال." data-desc-en="Ahmed Abu Zaid shares a practical reset plan to clear clutter, regain energy, and establish routine." data-cat-ar="إنتاجية وعادات" data-cat-en="Productivity & Habits">
+                <span data-i18n="watch_lesson">شاهد الدرس الآن</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </a>
+              <div class="card-actions-right">
+                <button type="button" class="share-btn" data-url="https://youtu.be/3acWaDehEiU" aria-label="نسخ رابط الدرس"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg></button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 10. Salah Abu Al-Majd Explosive Success -->
+        <article class="card" data-category="digital-skills" data-video-id="_IbDzak-z6c">
+          <div class="card-media">
+            <img src="https://i.ytimg.com/vi/_IbDzak-z6c/hqdefault.jpg" alt="النجاح الانفجاري وعدم التشتت" loading="lazy" data-category="digital-skills" onerror="this.onerror=null;this.src=window.getFallbackThumbnail('digital-skills');" />
+            <span class="card-tag" data-ar="إنتاجية وتركيز" data-en="Productivity & Focus">إنتاجية وتركيز</span>
+            <span class="card-new-badge" data-added-at="2026-11-20">✨ جديد</span>
+            <button type="button" class="card-fav-btn" data-fav-id="_IbDzak-z6c" data-video-id="_IbDzak-z6c" aria-label="إضافة إلى المفضلة" title="إضافة إلى المفضلة" aria-pressed="false">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </button>
+            <a href="https://youtu.be/_IbDzak-z6c" class="card-play-overlay" aria-label="مشاهدة النجاح الانفجاري" data-video-id="_IbDzak-z6c" data-title-ar="النجاح الانفجاري وعدم التشتت في زمن المغريات" data-title-en="Explosive Success & Zero Distraction (Salah Abu Al-Majd)" data-desc-ar="ليه معظم الناس بتبدأ ومبتكملش؟ صلاح أبو المجد بيشرح سيكولوجية التركيز المطلق وتجنب حرق الطاقة على الفاضي." data-desc-en="Master deep focus, overcome shiny object syndrome, and channel your effort into real achievements." data-cat-ar="إنتاجية وتركيز" data-cat-en="Productivity & Focus">
+              <div class="play-icon-circle">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </div>
+            </a>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">
+              <a href="https://youtu.be/_IbDzak-z6c" data-video-id="_IbDzak-z6c" data-title-ar="النجاح الانفجاري وعدم التشتت في زمن المغريات" data-title-en="Explosive Success & Zero Distraction (Salah Abu Al-Majd)" data-desc-ar="ليه معظم الناس بتبدأ ومبتكملش؟ صلاح أبو المجد بيشرح سيكولوجية التركيز المطلق وتجنب حرق الطاقة على الفاضي." data-desc-en="Master deep focus, overcome shiny object syndrome, and channel your effort into real achievements." data-cat-ar="إنتاجية وتركيز" data-cat-en="Productivity & Focus" data-ar="النجاح الانفجاري وعدم التشتت في زمن المغريات" data-en="Explosive Success & Zero Distraction (Salah Abu Al-Majd)">
+                النجاح الانفجاري وعدم التشتت في زمن المغريات
+              </a>
+            </h3>
+            <p class="card-desc" data-ar="ليه معظم الناس بتبدأ ومبتكملش؟ صلاح أبو المجد بيشرح سيكولوجية التركيز المطلق وتجنب حرق الطاقة على الفاضي." data-en="Master deep focus, overcome shiny object syndrome, and channel your effort into real achievements.">
+              ليه معظم الناس بتبدأ ومبتكملش؟ صلاح أبو المجد بيشرح سيكولوجية التركيز المطلق وتجنب حرق الطاقة على الفاضي.
+            </p>
+            <div class="card-footer">
+              <a href="https://youtu.be/_IbDzak-z6c" class="card-cta" data-video-id="_IbDzak-z6c" data-title-ar="النجاح الانفجاري وعدم التشتت في زمن المغريات" data-title-en="Explosive Success & Zero Distraction (Salah Abu Al-Majd)" data-desc-ar="ليه معظم الناس بتبدأ ومبتكملش؟ صلاح أبو المجد بيشرح سيكولوجية التركيز المطلق وتجنب حرق الطاقة على الفاضي." data-desc-en="Master deep focus, overcome shiny object syndrome, and channel your effort into real achievements." data-cat-ar="إنتاجية وتركيز" data-cat-en="Productivity & Focus">
+                <span data-i18n="watch_lesson">شاهد الدرس الآن</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </a>
+              <div class="card-actions-right">
+                <button type="button" class="share-btn" data-url="https://youtu.be/_IbDzak-z6c" aria-label="نسخ رابط الدرس"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg></button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 11. Sheikh Alaa Jaber Basmah Podcast -->
+        <article class="card" data-category="digital-skills" data-video-id="_LamsT4asMA">
+          <div class="card-media">
+            <img src="https://i.ytimg.com/vi/_LamsT4asMA/hqdefault.jpg" alt="لا تضيع عمرك في التفاهات" loading="lazy" data-category="digital-skills" onerror="this.onerror=null;this.src=window.getFallbackThumbnail('digital-skills');" />
+            <span class="card-tag" data-ar="قيمة الوقت والشباب" data-en="Time Management">قيمة الوقت والشباب</span>
+            <span class="card-new-badge" data-added-at="2026-11-20">✨ جديد</span>
+            <button type="button" class="card-fav-btn" data-fav-id="_LamsT4asMA" data-video-id="_LamsT4asMA" aria-label="إضافة إلى المفضلة" title="إضافة إلى المفضلة" aria-pressed="false">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </button>
+            <a href="https://youtu.be/_LamsT4asMA" class="card-play-overlay" aria-label="مشاهدة لا تضيع عمرك في التفاهات" data-video-id="_LamsT4asMA" data-title-ar="لا تضيع عمرك في التفاهات! كيف تستثمر وقتك قبل فوات الأوان؟" data-title-en="Do Not Waste Your Life on Trivia: Valuable Time Investment" data-desc-ar="الشيخ علاء جابر في حوار بودكاست بصمة يضع النقاط على الحروف حول قيمة الدقيقة في شبابك وأثرها على مستقبلك." data-desc-en="Sheikh Alaa Jaber emphasizes the preciousness of time and avoiding modern digital traps." data-cat-ar="قيمة الوقت والشباب" data-cat-en="Time Management">
+              <div class="play-icon-circle">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </div>
+            </a>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">
+              <a href="https://youtu.be/_LamsT4asMA" data-video-id="_LamsT4asMA" data-title-ar="لا تضيع عمرك في التفاهات! كيف تستثمر وقتك قبل فوات الأوان؟" data-title-en="Do Not Waste Your Life on Trivia: Valuable Time Investment" data-desc-ar="الشيخ علاء جابر في حوار بودكاست بصمة يضع النقاط على الحروف حول قيمة الدقيقة في شبابك وأثرها على مستقبلك." data-desc-en="Sheikh Alaa Jaber emphasizes the preciousness of time and avoiding modern digital traps." data-cat-ar="قيمة الوقت والشباب" data-cat-en="Time Management" data-ar="لا تضيع عمرك في التفاهات! كيف تستثمر وقتك قبل فوات الأوان؟" data-en="Do Not Waste Your Life on Trivia: Valuable Time Investment">
+                لا تضيع عمرك في التفاهات! استثمار الوقت قبل فوات الأوان
+              </a>
+            </h3>
+            <p class="card-desc" data-ar="الشيخ علاء جابر في حوار بودكاست بصمة يضع النقاط على الحروف حول قيمة الدقيقة في شبابك وأثرها على مستقبلك." data-en="Sheikh Alaa Jaber emphasizes the preciousness of time and avoiding modern digital traps.">
+              الشيخ علاء جابر في حوار بودكاست بصمة يضع النقاط على الحروف حول قيمة الدقيقة في شبابك وأثرها على مستقبلك.
+            </p>
+            <div class="card-footer">
+              <a href="https://youtu.be/_LamsT4asMA" class="card-cta" data-video-id="_LamsT4asMA" data-title-ar="لا تضيع عمرك في التفاهات! كيف تستثمر وقتك قبل فوات الأوان؟" data-title-en="Do Not Waste Your Life on Trivia: Valuable Time Investment" data-desc-ar="الشيخ علاء جابر في حوار بودكاست بصمة يضع النقاط على الحروف حول قيمة الدقيقة في شبابك وأثرها على مستقبلك." data-desc-en="Sheikh Alaa Jaber emphasizes the preciousness of time and avoiding modern digital traps." data-cat-ar="قيمة الوقت والشباب" data-cat-en="Time Management">
+                <span data-i18n="watch_lesson">شاهد الدرس الآن</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </a>
+              <div class="card-actions-right">
+                <button type="button" class="share-btn" data-url="https://youtu.be/_LamsT4asMA" aria-label="نسخ رابط الدرس"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg></button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Clean 4-Column Professional Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-main-grid">
+        <!-- Section 1: Website Identity -->
+        <div class="footer-brand-col">
+          <a href="index.html" class="brand-logo">
+            <span class="logo-dot" aria-hidden="true"></span>
+            <span data-i18n="brand_name">بودكاستك</span>
+          </a>
+          <p class="footer-tagline" data-i18n="footer_tagline">
+            منصة معرفية منظمة تجمع بين بناء المهارات، وتطوير الذات، والبودكاست التربوي، والفهم الديني الهادئ لتنير عقلك وقلبك.
+          </p>
+          <div class="footer-badge">
+            <span>✨</span>
+            <span data-i18n="footer_badge">محتوى تعليمي مجاني وموثوق 100%</span>
+          </div>
+        </div>
+
+        <!-- Section 2: Quick Links -->
+        <div>
+          <h3 class="footer-heading" data-i18n="footer_col_links">أقسام الموقع</h3>
+          <ul class="footer-nav-list">
+            <li><a href="index.html" data-i18n="nav_home">الرئيسية</a></li>
+            <li><a href="skills.html" data-i18n="nav_skills">مهارات العصر</a></li>
+            <li><a href="fav.html" data-i18n="nav_favorites">⭐ المفضلة</a></li>
+            <li><a href="right-sidebar.html" data-i18n="nav_podcast">بودكاست</a></li>
+            <li><a href="left-sidebar.html" data-i18n="nav_tips">نصائح ومقالات</a></li>
+            <li><a href="no-sidebar.html" data-i18n="nav_books">كتب ومراجع</a></li>
+            <li><a href="comments.html" data-i18n="nav_comments">التواصل والتعليقات</a></li>
+          </ul>
+        </div>
+
+        <!-- Section 3: Contact & Direct Info -->
+        <div>
+          <h3 class="footer-heading" data-i18n="footer_col_contact">تواصل معنا</h3>
+          <div class="footer-contact-list">
+            <a href="https://wa.me/201011052340" target="_blank" rel="noopener noreferrer" data-external="true" class="footer-contact-link">
+              <span class="footer-contact-icon" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </span>
+              <span dir="ltr">+20 101 105 2340</span>
+            </a>
+            <a href="mailto:moazaldebawy@gmail.com" data-external="true" class="footer-contact-link">
+              <span class="footer-contact-icon" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </span>
+              <span dir="ltr">moazaldebawy@gmail.com</span>
+            </a>
+            <a href="comments.html" class="footer-contact-link">
+              <span class="footer-contact-icon" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              </span>
+              <span data-i18n="footer_send_msg">أرسل تعليقاً أو اقتراحاً</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Section 4: Social Media -->
+        <div>
+          <h3 class="footer-heading" data-i18n="footer_col_social">تابعنا</h3>
+          <div class="footer-social-list">
+            <a href="https://wa.me/201011052340" target="_blank" rel="noopener noreferrer" data-external="true" class="footer-social-link" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span data-i18n="social_whatsapp">واتساب (WhatsApp)</span>
+            </a>
+            <a href="https://www.facebook.com/share/1Ctv5kz1CH/" target="_blank" rel="noopener noreferrer" data-external="true" class="footer-social-link" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+              <span data-i18n="social_facebook">فيسبوك (Facebook)</span>
+            </a>
+            <a href="https://www.instagram.com/moaz_eldepawy?igsh=OWx3bG9iNHo2emll" target="_blank" rel="noopener noreferrer" data-external="true" class="footer-social-link" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              <span data-i18n="social_instagram">إنستغرام (Instagram)</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copyright Bar -->
+      <div class="footer-bottom">
+        <p data-i18n-html="footer_copyright">&copy; منصة بودكاستك للتعلم والوعي وتطوير النفس | إعداد وتنسيق: <strong>معاذ مصطفى الديباوي</strong></p>
+        <p data-i18n="footer_rights">جميع الحقوق محفوظة • منصة معرفية مجانية</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/videos.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
